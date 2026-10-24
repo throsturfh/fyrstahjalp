@@ -91,7 +91,7 @@ function render(){({distance,close,debrief})[view]();}
 
 /* ---------- valmynd ---------- */
 function menu(){st=null;view='menu';const s0=S[0];
- app.innerHTML=`<div class="pano"><div class="track" id="track"><img id="bg" src="${s0?s0.images.wide:''}" alt=""></div></div><div class="drawer glass" style="height:auto;max-height:80dvh"><div class="dbody" style="padding-top:16px"><h1>Fyrsta hjálp</h1><p class="muted">Þú ert björgunarsveitarmaður. Þjálfunarleikur byggður á glærum Landsbjargar.</p>
+ app.innerHTML=`<div class="pano"><div class="track" id="track"><img id="bg" src="${s0?s0.images.wide:''}" alt=""></div></div><div class="drawer glass" style="height:auto;max-height:80dvh"><div class="dbody" style="padding-top:16px"><h1>Fyrsta hjálp <small class="muted" style="font-size:.5em">útgáfa 0.1</small></h1><p class="muted">Þú ert björgunarsveitarmaður. Þjálfunarleikur byggður á glærum Landsbjargar.</p>
  <h3>Braut 1 – Fyrsta hjálp 1</h3>${S.filter(s=>s.track===1).map(s=>`<button class="primary" data-s="${s.id}">${esc(s.title)}</button>`).join('')}
  <h3>Braut 2 – Óbyggðagrunnur</h3><button disabled>Væntanlegt</button><h3>Braut 3 – WFR</h3><button disabled>Væntanlegt</button></div></div>`;
  const img=$('#bg'),t=$('#track');const c=()=>{t.style.transform=`translateX(${Math.min(0,app.clientWidth/2-t.offsetWidth*0.5)}px)`;};img.complete?c():img.onload=c;
