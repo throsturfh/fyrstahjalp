@@ -4,9 +4,9 @@
  "title": "Kaldur göngumaður á hrauni",
  "intro": "Október, síðdegis. {nafn}, þú ert á leið eftir göngustíg yfir mosavaxið hraun þegar slydduél nálgast. Framundan liggur manneskja í hnipri á hrauninu við stóran klett og önnur veifar til þín.",
  "images": {
-  "distance": "img/fjarlaegd-skammsnid.jpg?v=0.2",
-  "close": "img/pano-naermynd.jpg?v=0.2",
-  "treated": "img/pano-naermynd-medhondlad.jpg?v=0.2"
+  "distance": "img/fjarlaegd-skammsnid.jpg?v=0.2.1",
+  "close": "img/pano-naermynd.jpg?v=0.2.1",
+  "treated": "img/pano-naermynd-medhondlad.jpg?v=0.2.1"
  },
  "patient": {
   "name": "Sigga",
