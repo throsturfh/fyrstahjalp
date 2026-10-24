@@ -6,6 +6,11 @@ Frumgerð af farsímaleik til æfinga í fyrstu hjálp fyrir björgunarsveitir (
 
 Útgáfa 0.3: smákort á víðmyndum, talblöðrur yfir höfði þess sem talar, skúffa sem nær alltaf að síðasta valkosti, tvær nýjar aðstæður (Fótbrot í skriðu, Mikil blæðing úr læri) og „Hvað vantaði upp á 100?“ í samantekt.
 
-Spila: https://throsturfh.github.io/fyrstahjalp/
+Útgáfa 0.4: skúffan helst opin og á sama stað eftir tal og val og talblöðrur birtast alltaf fyrir ofan hana, merki til hliðar við fólk og hluti með línu að réttum stað (líka á smákorti), notandanafn og niðurstöður hvers borðs skráðar í lokaðan tölfræðigrunn, og ný og erfiðari aðstæða: Alvarleg ofkæling á jökli.
 
-Kyrrstæð vefsíða (HTML/CSS/JS), engin uppsetning. `fyrsta-hjalp-leikur.html` er sama leikurinn í einni skrá.
+Hver útgáfa hefur sína slóð:
+- Nýjasta (0.4): https://throsturfh.github.io/fyrstahjalp/0.4/
+- Eldri (0.3): https://throsturfh.github.io/fyrstahjalp/0.3/
+- https://throsturfh.github.io/fyrstahjalp/ vísar alltaf á nýjustu útgáfu.
+
+Kyrrstæð vefsíða (HTML/CSS/JS), engin uppsetning. `0.4/fyrsta-hjalp-leikur.html` er sama leikurinn í einni skrá.
