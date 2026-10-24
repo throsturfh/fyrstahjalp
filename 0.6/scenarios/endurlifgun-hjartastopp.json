@@ -1,0 +1,1016 @@
+{
+ "id": "endurlifgun-hjartastopp",
+ "track": 1,
+ "order": 5,
+ "title": "Meðvitundarlaus maður sem andar ekki",
+ "intro": "Ágúst, kvöld. {nafn}, þú ert á heimleið af æfingu björgunarsveitarinnar og stoppar á bílastæðinu við upphaf gönguleiðar. Kona í rauðum jakka hrópar á hjálp: maðurinn hennar hneig niður á stígnum fyrir um mínútu. Hver mínúta skiptir máli – en fyrst: er vettvangurinn öruggur?",
+ "images": {
+  "distance": "img/fjarlaegd-endurlifgun.jpg?v=0.6",
+  "close": "img/pano-endurlifgun.jpg?v=0.6",
+  "treated": "img/pano-endurlifgun-medhondlad.jpg?v=0.6",
+  "treatedWhen": [
+   "flag:t_stud"
+  ]
+ },
+ "patient": {
+  "name": "Guðmundur",
+  "age": 64,
+  "cantAnswer": "(Guðmundur getur ekki svarað – Sigrún svarar fyrir hann)"
+ },
+ "felagiName": "Sigrún",
+ "startFlags": {
+  "arrest": true
+ },
+ "state": {
+  "start": 60,
+  "severeBelow": 30,
+  "ratePerSource": 0,
+  "warmRate": 1.2,
+  "max": 70,
+  "min": 0,
+  "trendEps": 0.5,
+  "recoverWhen": [
+   "allSources",
+   "flag:rosc"
+  ],
+  "severeLog": "Tíminn líður: án hnoðs og hjartastuðs minnka lífslíkurnar með hverri mínútu.",
+  "severeLabel": "lífslíkur dvína (hjartastopp of lengi án fullrar meðferðar)",
+  "mildLabel": "sláttur kominn aftur – andar sjálfur"
+ },
+ "problems": [
+  {
+   "id": "hnod",
+   "label": "Hjartahnoð og blástur (30:2)",
+   "rate": 4
+  },
+  {
+   "id": "stud",
+   "label": "Hjartastuð (AED)",
+   "rate": 2
+  },
+  {
+   "id": "skipti",
+   "label": "Gott hnoð – skipt á 2 mín fresti",
+   "rate": 1,
+   "activeWhen": [
+    "addressed:hnod",
+    "not:flag:rosc"
+   ]
+  },
+  {
+   "id": "ondunarvegur",
+   "label": "Öndunarvegur tryggður eftir að öndun kom",
+   "rate": 1.5,
+   "activeWhen": [
+    "flag:rosc"
+   ]
+  }
+ ],
+ "events": [
+  {
+   "id": "aed",
+   "when": [
+    "since:aed_sent>=2"
+   ],
+   "flags": [
+    "aed_here"
+   ],
+   "text": "🟩 Ungi göngumaðurinn kemur hlaupandi með hjartastuðtækið úr græna skápnum á skálanum.",
+   "cls": "info"
+  },
+  {
+   "id": "rosc",
+   "when": [
+    "addressed:stud",
+    "addressed:hnod",
+    "since:t_stud>=2",
+    "val>=20",
+    "flag:arrest"
+   ],
+   "flags": [
+    "rosc"
+   ],
+   "unflag": [
+    "arrest"
+   ],
+   "addVal": 10,
+   "cls": "good",
+   "text": "💓 SLÁTTUR KOMINN! Eftir 2 mínútna hnoð frá stuðinu greinir tækið aftur – Guðmundur hóstar, hreyfir sig og fer að anda sjálfur. Púls finnst á hálsslagæð. Hættið hnoði (púls greinist), hafið tækið áfram tengt og tryggið öndunarveginn."
+  }
+ ],
+ "vitals": [
+  {
+   "min": 45,
+   "VASE": "Á – opnar augun við ávarp, ruglaður",
+   "P": "92/mín, óreglulegur",
+   "O": "12/mín, sjálfkrafa",
+   "BTH": "Púls finnst í úlnlið",
+   "L": "Svalur viðkomu",
+   "H": "Föl og sveitt húð",
+   "shiver": "Andar sjálfur, ringlaður",
+   "talk": "(Stynur og muldrar: „Hvað… gerðist?“)"
+  },
+  {
+   "min": 0,
+   "VASE": "S – bregst aðeins við sársauka",
+   "P": "110/mín, veikur",
+   "O": "8/mín, óregluleg",
+   "BTH": "Púls finnst illa í úlnlið",
+   "L": "Kaldur viðkomu",
+   "H": "Grá-föl, sveitt",
+   "shiver": "Andar sjálfur en mjög slappur",
+   "talk": "(Stynur aðeins.)"
+  }
+ ],
+ "arrestVitals": {
+  "min": -99,
+  "VASE": "E – engin viðbrögð",
+  "P": "enginn púls",
+  "O": "engin eðlileg öndun – aðeins stök, óregluleg andköf",
+  "BTH": "enginn púls",
+  "L": "Hlýr viðkomu",
+  "H": "Grá-blá í andliti",
+  "shiver": "Hjartastopp",
+  "talk": "(Engin viðbrögð. Stök, óregluleg andköf.)"
+ },
+ "distance": {
+  "hotspots": [
+   {
+    "id": "sjuklingur",
+    "x": 47,
+    "y": 69,
+    "label": "Sjúklingur",
+    "text": "Maður á sjötugsaldri liggur hreyfingarlaus á bakinu á malarstígnum. Hann virðist ekki bregðast við konunni.",
+    "off": [
+     -30,
+     46
+    ]
+   },
+   {
+    "id": "kona",
+    "x": 42,
+    "y": 57,
+    "label": "Konan",
+    "text": "Kona í rauðum jakka krýpur hjá honum og veifar: „Hjálp! Hann bara hneig niður – hann andar eitthvað skringilega!“",
+    "off": [
+     -52,
+     -36
+    ]
+   },
+   {
+    "id": "vegfarendur",
+    "x": 56,
+    "y": 45,
+    "label": "Vegfarendur",
+    "text": "Tveir göngumenn standa hjá og vita ekki hvað þeir eiga að gera. Þeir geta hjálpað: sótt hjartastuðtæki og skipst á að hnoða.",
+    "off": [
+     22,
+     -46
+    ]
+   },
+   {
+    "id": "aed",
+    "x": 87,
+    "y": 46,
+    "label": "Grænn skápur",
+    "text": "Grænn skápur með hvítu hjarta á skálaveggnum – hjartastuðtæki (AED) fyrir almenning. Hjartastuð sem fyrst: tækið virkar best fyrstu 5 mínúturnar.",
+    "off": [
+     -30,
+     40
+    ]
+   },
+   {
+    "id": "bill",
+    "x": 19,
+    "y": 48,
+    "label": "Umferð",
+    "text": "Bíll ekur hægt um bílastæðið. Lítil hætta – en líttu eftir umferð áður en þú ferð yfir.",
+    "off": [
+     16,
+     -46
+    ]
+   },
+   {
+    "id": "fjall",
+    "x": 60,
+    "y": 18,
+    "label": "Aðstæður",
+    "text": "Kvöldsól, logn og þurrt. Bílastæði við þjóðveg – sjúkrabíll kemst alveg að. Engin hætta á vettvangi önnur en umferð á bílastæðinu.",
+    "off": [
+     -34,
+     30
+    ]
+   }
+  ],
+  "approach": [
+   {
+    "id": "hlaupa",
+    "label": "Líta eftir umferð og hlaupa beint til hans",
+    "minutes": 1,
+    "score": 10,
+    "flag": "safeApproach",
+    "text": "Þú lítur eftir bílnum, ferð yfir og ert komin(n) til hans á nokkrum sekúndum. Rétt: vettvangur kannaður – öruggt – og ekkert sem tefur."
+   },
+   {
+    "id": "taska",
+    "label": "Sækja fyrst sjúkratöskuna og búnaðinn í bílinn",
+    "minutes": 3,
+    "score": -10,
+    "flag": "slow",
+    "text": "Þrjár dýrmætar mínútur fóru í að tína til búnað. Í hjartastoppi skiptir hver mínúta máli – hanskar og blástursgríma eru í vasanum og hnoð þarf engan búnað."
+   },
+   {
+    "id": "beint",
+    "label": "Hlaupa þvert yfir bílastæðið án þess að líta",
+    "minutes": 1,
+    "score": -10,
+    "flag": "reckless",
+    "text": "Bíll sem ekur um bílastæðið snarhemlar rétt hjá þér. Þú slappst – en ef þú slasast eru tveir sjúklingar og enginn til að hnoða. Eigið öryggi fyrst."
+   }
+  ],
+  "fit": true
+ },
+ "close": {
+  "groups": [
+   {
+    "id": "vettvangur",
+    "label": "1. Vettvangur kannaður"
+   },
+   {
+    "id": "frumskodun",
+    "label": "2. Frumskoðun"
+   },
+   {
+    "id": "endurlifgun",
+    "label": "Endurlífgun"
+   },
+   {
+    "id": "saga",
+    "label": "3. Sjúkrasaga og líkamsskoðun"
+   }
+  ],
+  "groupIntro": {
+   "frumskodun": "Engin meðvitund + engin eðlileg öndun = endurlífgun. Athugið öndun í hámark 10 sekúndur – stök og óregluleg andköf eru ekki eðlileg öndun.",
+   "endurlifgun": "Hringja strax í 112. Fullorðnir: 30:2, 100–120 hnoð á mínútu. Hjartastuð sem fyrst og skipta um hnoðara á 2 mínútna fresti."
+  },
+  "hotspots": [
+   {
+    "id": "c_kona",
+    "x": 23,
+    "y": 44,
+    "label": "Sigrún",
+    "text": "Sigrún, eiginkona hans, heldur á síma. Hún getur hringt í 112 með þér á hátalara og skipst á að hnoða.",
+    "off": [
+     40,
+     -150
+    ]
+   },
+   {
+    "id": "c_sjuklingur",
+    "x": 50,
+    "y": 52,
+    "label": "Guðmundur",
+    "text": "Guðmundur liggur á bakinu, grár í andliti með lokuð augu. Brjóstkassinn hreyfist ekki – öðru hverju heyrist stakt, hrjúft andkaf.",
+    "off": [
+     -80,
+     -60
+    ]
+   },
+   {
+    "id": "c_vegfarandi",
+    "x": 68,
+    "y": 28,
+    "label": "Göngumaður",
+    "text": "Ungur göngumaður stendur hjá. Hann getur sótt hjartastuðtækið og hnoðað á móti þér.",
+    "off": [
+     -60,
+     40
+    ]
+   },
+   {
+    "id": "c_aed",
+    "x": 88,
+    "y": 28,
+    "label": "Hjartastuðtæki",
+    "text": "Græni skápurinn á skálanum geymir hjartastuðtæki (AED). Það gefur talaðar leiðbeiningar – sendu einhvern eftir því strax.",
+    "off": [
+     -36,
+     70
+    ]
+   },
+   {
+    "id": "c_bilar",
+    "x": 6,
+    "y": 41,
+    "label": "Bílastæðið",
+    "text": "Bílastæðið er við þjóðveginn – sjúkrabíllinn kemst alveg að. Gott að einhver taki á móti honum og vísi veginn.",
+    "off": [
+     40,
+     60
+    ]
+   }
+  ],
+  "hotspotsTreated": [
+   {
+    "id": "c_kona",
+    "x": 23,
+    "y": 42,
+    "label": "Sigrún",
+    "text": "Sigrún heldur í höndina á honum. Hún hefur skipst á að hnoða við göngumanninn.",
+    "off": [
+     40,
+     -140
+    ]
+   },
+   {
+    "id": "c_sjuklingur",
+    "x": 50,
+    "y": 64,
+    "label": "Rafskaut",
+    "text": "Rafskaut tækisins eru á berum brjóstkassanum: annað hægra megin undir viðbeininu, hitt vinstra megin á síðunni. Látið þau vera á þar til sjúkraflutningamenn taka við.",
+    "off": [
+     40,
+     -70
+    ]
+   },
+   {
+    "id": "c_taeki",
+    "x": 22,
+    "y": 82,
+    "label": "Hjartastuðtækið",
+    "text": "Tækið greinir hjartsláttinn á 2 mínútna fresti og segir til um hvort gefa eigi stuð. Enginn má snerta sjúklinginn meðan það greinir eða gefur stuð.",
+    "off": [
+     -10,
+     -62
+    ]
+   },
+   {
+    "id": "c_vegfarandi",
+    "x": 60,
+    "y": 24,
+    "label": "Göngumaður",
+    "text": "Göngumaðurinn hnoðar á móti þér – skiptið á 2 mín fresti svo hnoðið haldist kröftugt.",
+    "off": [
+     -56,
+     30
+    ]
+   },
+   {
+    "id": "c_aed",
+    "x": 88,
+    "y": 28,
+    "label": "Skápurinn",
+    "text": "Skápurinn er tómur. Látið vita (112) að tækið hafi verið notað.",
+    "off": [
+     -36,
+     70
+    ]
+   }
+  ],
+  "speakers": {
+   "sjuklingur": {
+    "x": 50,
+    "y": 38,
+    "name": "Guðmundur",
+    "side": "right"
+   },
+   "felagi": {
+    "x": 25,
+    "y": 14,
+    "name": "Sigrún",
+    "side": "right"
+   }
+  },
+  "speakersTreated": {
+   "sjuklingur": {
+    "x": 50,
+    "y": 40,
+    "name": "Guðmundur",
+    "side": "right"
+   },
+   "felagi": {
+    "x": 25,
+    "y": 14,
+    "name": "Sigrún",
+    "side": "right"
+   }
+  },
+  "hnodRule": {
+   "goodWhen": [
+    "flag:ondun10"
+   ],
+   "okFlag": "t_hnod_ok",
+   "goodScore": 10,
+   "badScore": -5,
+   "addressAlways": true,
+   "goodText": "Þú krýpur við hlið hans, leggur hendurnar á miðjan brjóstkassann og hnoðar 30 sinnum, 100–120 á mínútu, og blæst svo 2 sinnum með blástursgrímunni. Endurlífgun hafin – innan 10 mínútna frá hjartastoppi skiptir sköpum.",
+   "badText": "Þú byrjar að hnoða – en athugaðir ekki fyrst hvort hann andaði. Meðvitundarleysi + engin eðlileg öndun (metið á hámark 10 sek) er ástæða endurlífgunar.",
+   "fix": "Meta meðvitund, opna öndunarveg og athuga öndun í hámark 10 sekúndur – og hefja svo strax 30:2."
+  },
+  "studRule": {
+   "goodWhen": [
+    "flag:aed_here"
+   ],
+   "okFlag": "t_stud_ok",
+   "goodScore": 10,
+   "badScore": 0,
+   "retry": true,
+   "goodText": "Þú kveikir á tækinu og fylgir töluðu leiðbeiningunum: rafskautin á beran brjóstkassann, allir frá meðan tækið greinir – „Stuð ráðlagt“. „Allir frá!“ – stuð gefið. Strax á eftir: 2 mínútur af hnoði og blæstri áður en tækið greinir aftur.",
+   "badText": "Tækið er ekki komið. Sendu einhvern eftir því strax – og hnoðaðu á meðan."
+  },
+  "skiptiRule": {
+   "goodWhen": [
+    "addressed:hnod"
+   ],
+   "goodScore": 5,
+   "badScore": 0,
+   "retry": true,
+   "goodText": "Þú semur við göngumanninn og Sigrúnu: skipt um hnoðara á 2 mínútna fresti (eða eftir 5 umferðir) án þess að hlé verði á hnoðinu. Hjartahnoð er mjög erfitt líkamlega og hnoðið dofnar ef sami maður hnoðar lengi.",
+   "badText": "Endurlífgun er ekki hafin enn – byrjaðu að hnoða fyrst."
+  },
+  "aframRule": {
+   "goodWhen": [
+    "not:flag:rosc",
+    "addressed:hnod"
+   ],
+   "goodScore": 0,
+   "badScore": -10,
+   "goodText": "Þið haldið áfram 30:2, 100–120 á mínútu, og skiptið á 2 mínútna fresti. Ekki hætta fyrr en hann andar á ný, sérhæfð aðstoð tekur við eða þið örmagnist.",
+   "badText": "Rangt: hann andar og púls finnst – hættið endurlífgun (hætta ef púls greinist) og fylgist náið með öndun. Eða: endurlífgun var ekki hafin.",
+   "fix": "Hætta hnoði þegar púls greinist; hefja hnoð strax ef engin öndun."
+  },
+  "hlidRule": {
+   "goodWhen": [
+    "flag:rosc"
+   ],
+   "okFlag": "t_hlid_ok",
+   "goodScore": 10,
+   "badScore": -20,
+   "retry": true,
+   "goodText": "Guðmundur andar sjálfur. Þið leggið hann í læsta hliðarlegu svo öndunarvegurinn haldist opinn og fylgist stöðugt með önduninni – rafskautin áfram á og tækið í gangi ef hann fer aftur í hjartastopp.",
+   "badText": "Rangt! Stök og óregluleg andköf eru ekki eðlileg öndun. Læst hliðarlega á aðeins við þegar öndun er til staðar – hann er í hjartastoppi og þarf hnoð.",
+   "fix": "Læst hliðarlega aðeins ef meðvitundarlaus og andar eðlilega; engin eðlileg öndun = endurlífgun."
+  },
+  "actions": [
+   {
+    "id": "hanskar",
+    "group": "vettvangur",
+    "label": "Hanskar og blástursgríma – vettvangur öruggur?",
+    "minutes": 0,
+    "flag": "gloves",
+    "text": "Þú smellir á þig hönskum og tekur blástursgrímuna úr vasanum. Bílastæðið er rólegt – engin önnur hætta."
+   },
+   {
+    "id": "atvik",
+    "group": "vettvangur",
+    "label": "Spyrja Sigrúnu hvað gerðist",
+    "minutes": 0,
+    "flag": "askedPartner",
+    "speaker": "felagi",
+    "say": "Hvað gerðist?",
+    "reply": "„Hann kvartaði undan verk í brjóstinu á leiðinni niður, settist og stóð svo upp – og hneig bara niður, fyrir svona mínútu. Hann datt ekki á neitt. Hann var að tala við mig rétt áður!“"
+   },
+   {
+    "id": "tala",
+    "group": "frumskodun",
+    "label": "Ávarpa hann",
+    "minutes": 0,
+    "flag": "talked",
+    "speaker": "sjuklingur",
+    "say": "Guðmundur! Heyrirðu í mér?",
+    "reply": "{talk}"
+   },
+   {
+    "id": "vase",
+    "group": "frumskodun",
+    "label": "Meta meðvitund: kalla hátt og hrista axlir (VÁSE)",
+    "minutes": 0,
+    "flag": "vase",
+    "text": "VÁSE: {VASE}."
+   },
+   {
+    "id": "ondun10",
+    "group": "frumskodun",
+    "label": "Opna öndunarveg og athuga öndun (hámark 10 sek)",
+    "minutes": 0,
+    "flag": "ondun10",
+    "text": "Þú hallar höfðinu aftur og lyftir hökunni, horfir á brjóstkassann, hlustar og finnur í 10 sekúndur. Aðeins stök, hrjúf og óregluleg andköf – það er EKKI eðlileg öndun. Meðvitundarlaus + andar ekki = endurlífgun!"
+   },
+   {
+    "id": "ondun_long",
+    "group": "frumskodun",
+    "label": "Fylgjast með andardrættinum og leita að púlsi í heila mínútu",
+    "minutes": 1,
+    "flag": "ondun_long",
+    "score": -10,
+    "text": "Rangt: þú eyðir heilli mínútu í að horfa og þreifa. Hann tekur annað slagið andkaf – en það er ekki öndun. Á meðan berst ekkert súrefni til heilans.",
+    "fix": "Athuga öndun í hámark 10 sekúndur – stök og óregluleg andköf eru ekki eðlileg öndun. (Löng leit að lífsmörkum á aðeins við í alvarlegri ofkælingu.)"
+   },
+   {
+    "id": "blaedingar",
+    "group": "frumskodun",
+    "label": "Leita að miklum blæðingum og áverkum",
+    "minutes": 0,
+    "flag": "bleeding",
+    "text": "Smá skráma á enninu eftir fallið – engar miklar blæðingar og engin merki um alvarlega áverka. Þetta er skyndilegt hjartastopp, ekki slys (endurlífgun ber ekki árangur í hjartastoppi eftir áverka)."
+   },
+   {
+    "id": "ekki_hefja",
+    "group": "frumskodun",
+    "label": "Hefja ekki endurlífgun – hann er orðinn grár og blár og virðist látinn",
+    "minutes": 0,
+    "flag": "ekki_hefja",
+    "score": -20,
+    "text": "Rangt! Grár eða blár litur er ekki augljóst andlátsmerki. Endurlífgun er aðeins sleppt ef augljós andlátsmerki eða banvænir áverkar eru til staðar, eða ef viðkomandi hefur verið í kafi í vatni í meira en 60 mínútur. Annars á að hefja endurlífgun.",
+    "fix": "Hefja endurlífgun nema augljós andlátsmerki/banvænir áverkar séu til staðar eða viðkomandi hafi verið í kafi >60 mín."
+   },
+   {
+    "id": "senda",
+    "group": "endurlifgun",
+    "label": "Senda göngumanninn eftir hjartastuðtækinu",
+    "minutes": 0,
+    "flag": "aed_sent",
+    "treat": true,
+    "text": "Þú bendir á unga göngumanninn: „Þú í grænu úlpunni – sæktu hjartastuðtækið í græna skápinn á skálanum og komdu strax með það!“ Hann hleypur af stað.",
+    "sagaText": "Hjartastuðtæki sótt"
+   },
+   {
+    "id": "hnod",
+    "group": "endurlifgun",
+    "label": "Hefja endurlífgun: 30 hnoð og 2 blástrar",
+    "minutes": 2,
+    "flag": "t_hnod",
+    "rule": "hnodRule",
+    "addresses": [
+     "hnod"
+    ],
+    "treat": true,
+    "sagaText": "Endurlífgun 30:2 hafin"
+   },
+   {
+    "id": "skipti",
+    "group": "endurlifgun",
+    "label": "Skipta um hnoðara á 2 mínútna fresti",
+    "minutes": 0,
+    "flag": "t_skipti",
+    "rule": "skiptiRule",
+    "addresses": [
+     "skipti"
+    ],
+    "treat": true,
+    "sagaText": "Skipt um hnoðara á 2 mín fresti"
+   },
+   {
+    "id": "stud",
+    "group": "endurlifgun",
+    "label": "Tengja hjartastuðtækið og fylgja leiðbeiningum þess",
+    "minutes": 1,
+    "flag": "t_stud",
+    "rule": "studRule",
+    "addresses": [
+     "stud"
+    ],
+    "treat": true,
+    "sagaText": "Hjartastuðtæki tengt – stuð gefið"
+   },
+   {
+    "id": "afram",
+    "group": "endurlifgun",
+    "label": "Halda endurlífgun áfram (30:2)",
+    "minutes": 2,
+    "flag": "t_afram",
+    "rule": "aframRule",
+    "repeatable": true,
+    "treat": true,
+    "sagaText": "Endurlífgun haldið áfram"
+   },
+   {
+    "id": "hlid",
+    "group": "endurlifgun",
+    "label": "Læst hliðarlega og fylgjast stöðugt með öndun",
+    "minutes": 1,
+    "flag": "t_hlid",
+    "rule": "hlidRule",
+    "addresses": [
+     "ondunarvegur"
+    ],
+    "treat": true,
+    "sagaText": "Læst hliðarlega eftir að öndun kom, öndun vöktuð"
+   },
+   {
+    "id": "o",
+    "group": "saga",
+    "label": "O – Ofnæmi",
+    "minutes": 0,
+    "flag": "olsena_o",
+    "speaker": "felagi",
+    "say": "Er hann með ofnæmi fyrir einhverju?",
+    "reply": "„Pensilíni.“"
+   },
+   {
+    "id": "l",
+    "group": "saga",
+    "label": "L – Lyf",
+    "minutes": 0,
+    "flag": "olsena_l",
+    "speaker": "felagi",
+    "say": "Tekur hann einhver lyf?",
+    "reply": "„Blóðþrýstingslyf og blóðfitulyf.“"
+   },
+   {
+    "id": "s",
+    "group": "saga",
+    "label": "S – Sjúkrasaga",
+    "minutes": 0,
+    "flag": "olsena_s",
+    "speaker": "felagi",
+    "say": "Er hann með einhverja sjúkdóma?",
+    "reply": "„Of háan blóðþrýsting – og hann fékk hjartaöng í fyrra.“"
+   },
+   {
+    "id": "e",
+    "group": "saga",
+    "label": "E – Einkenni",
+    "minutes": 0,
+    "flag": "olsena_e",
+    "speaker": "felagi",
+    "say": "Kvartaði hann undan einhverju?",
+    "reply": "„Verk í brjóstinu, mæði og hann svitnaði mikið á leiðinni niður.“",
+    "note": "Brjóstverkur, mæði og sviti á undan – líklega hjartaáfall sem endaði í hjartastoppi."
+   },
+   {
+    "id": "n",
+    "group": "saga",
+    "label": "N – Neysla",
+    "minutes": 0,
+    "flag": "olsena_n",
+    "speaker": "felagi",
+    "say": "Hvenær borðaði hann og drakk síðast?",
+    "reply": "„Samloku á toppnum fyrir tveimur tímum og vatn.“"
+   },
+   {
+    "id": "a",
+    "group": "saga",
+    "label": "A – Atvik",
+    "minutes": 0,
+    "flag": "olsena_a",
+    "speaker": "felagi",
+    "say": "Hvað gerðist nákvæmlega?",
+    "reply": "„Hann hneig niður fyrir svona mínútu – datt ekki fram af neinu og fékk ekkert högg.“"
+   },
+   {
+    "id": "lifsmork",
+    "group": "saga",
+    "label": "Lífsmörk (P, Ö, BÞ, L, H)",
+    "minutes": 2,
+    "flag": "vitals",
+    "text": "P: {P} · Ö: {O} · BÞ: {BTH} · L: {L} · H: {H} · VÁSE: {VASE}."
+   },
+   {
+    "id": "skodun",
+    "group": "saga",
+    "label": "Líkamsskoðun frá toppi til táar",
+    "minutes": 1,
+    "flag": "exam",
+    "text": "Skráma á enni eftir fallið, engir aðrir áverkar. Engin augljós andlátsmerki og engir banvænir áverkar. Engin lyfjamerki (Medic Alert) á honum."
+   }
+  ]
+ },
+ "report": {
+  "options": [
+   {
+    "id": "afhenda",
+    "label": "Halda áfram (hnoði eða eftirliti) þar til sjúkraflutningamenn taka við – hann fer með sjúkrabíl á sjúkrahús",
+    "goodWhen": [
+     "call:sjukrabill",
+     "flag:rosc",
+     "flag:t_hlid_ok"
+    ],
+    "okWhen": [
+     "call:sjukrabill",
+     "flag:t_hnod"
+    ],
+    "goodText": "Rétt: sláttur kom aftur eftir hnoð og stuð. Þið haldið honum í læstri hliðarlegu með tækið tengt og fylgist með öndun þar til sjúkraflutningamenn taka við og flytja hann á sjúkrahús.",
+    "okText": "Rétt að halda áfram þar til sérhæfð aðstoð tekur við – en endurlífgunin var ekki nógu snögg eða fullkláruð (sjá hér að neðan).",
+    "badText": "Hringja þarf í 112 og hefja endurlífgun – annars kemur engin sérhæfð aðstoð og enginn fær hjartað í gang."
+   },
+   {
+    "id": "haetta",
+    "label": "Hætta endurlífgun – hann hefur ekki rankað við sér eftir 10 mínútur",
+    "badText": "Rangt: hætta á endurlífgun aðeins ef púls greinist, sérhæfð aðstoð tekur við (eða heilbrigðisstarfsmaður ákveður það), björgunarmenn örmagnast eða eru í hættu, banvænir áverkar koma í ljós – eða eftir 30 mín án árangurs (í óbyggðum; annað gildir í alvarlegri ofkælingu)."
+   },
+   {
+    "id": "thyrla",
+    "label": "Bera hann að þyrlu sem lendir á bílastæðinu",
+    "badText": "Rangt: sjúkrabíll kemst alveg að og er fljótari. Burður truflar hnoðið – haldið endurlífgun/eftirliti áfram á staðnum þar til sjúkraflutningamenn taka við."
+   }
+  ]
+ },
+ "debrief": [
+  {
+   "id": "safe",
+   "label": "Örugg og snögg nálgun",
+   "ok": [
+    "flag:safeApproach"
+   ],
+   "points": 10,
+   "okText": "Þú leist eftir umferð og varst komin(n) til hans strax.",
+   "badText": "Þú tókst áhættu í umferðinni eða tafðir þig.",
+   "rule": "Vettvangur kannaður: eigið öryggi fyrst – en í hjartastoppi skiptir hver mínúta máli.",
+   "fix": "Líta eftir hættum (umferð) og fara strax til sjúklingsins – hnoð þarf engan búnað."
+  },
+  {
+   "id": "hotspots",
+   "label": "Vettvangur kannaður (hættur, hjálp, búnaður)",
+   "ok": [
+    "hotspots>=4"
+   ],
+   "points": 5,
+   "okText": "Þú sást hættuna, vegfarendurna og hjartastuðtækið.",
+   "badText": "Þú kannaðir vettvanginn lítið.",
+   "rule": "Vettvangur kannaður: hætta, fjöldi, hvað gerðist – og hvaða hjálp og búnaður er til staðar."
+  },
+  {
+   "id": "mat",
+   "label": "Meðvitund og öndun metin (hámark 10 sek)",
+   "ok": [
+    "flag:vase",
+    "flag:ondun10",
+    "not:flag:ondun_long"
+   ],
+   "points": 10,
+   "okText": "Engin meðvitund og engin eðlileg öndun – greint á innan við 10 sekúndum.",
+   "badText": "Meðvitund/öndun ekki metin, eða of langur tími fór í að meta öndun.",
+   "rule": "Hámark 10 sekúndur til að athuga öndun – stök og óregluleg andköf eru ekki eðlileg öndun."
+  },
+  {
+   "id": "call",
+   "label": "112 strax",
+   "ok": [
+    "resourcesOk"
+   ],
+   "points": 15,
+   "okText": "Hringt strax í 112 – sjúkrabíll á leiðinni.",
+   "badText": "Of seint eða rangt kallað eftir aðstoð – sjá sundurliðun.",
+   "rule": "HRINGJA STRAX í 112 um leið og meðvitundarleysi er staðfest.",
+   "fix": "Hringja strax í 112 (sjúkrabíll). Þyrla er óþörf þar sem sjúkrabíll kemst að."
+  },
+  {
+   "id": "cpr",
+   "label": "Endurlífgun hafin strax (30:2)",
+   "ok": [
+    "flag:t_hnod_ok",
+    "addressedBy:hnod:4",
+    "not:flag:ekki_hefja"
+   ],
+   "points": 15,
+   "okText": "Hnoð og blástur hófust innan fárra mínútna.",
+   "badText": "Endurlífgun hófst seint, án mats á öndun – eða alls ekki.",
+   "rule": "Endurlífgun þarf að hefjast innan 10 mín – því fyrr því betra. Fullorðnir 30:2, 100–120 á mínútu.",
+   "fix": "Meta meðvitund og öndun (≤10 sek), hringja í 112 og hefja strax 30:2."
+  },
+  {
+   "id": "aed",
+   "label": "Hjartastuð sem fyrst",
+   "ok": [
+    "flag:aed_sent",
+    "addressedBy:stud:6"
+   ],
+   "points": 15,
+   "okText": "Hjartastuðtæki sótt strax og stuð gefið innan 5 mínútna frá því hann hneig niður.",
+   "badText": "Hjartastuðtækið var sótt of seint eða ekki notað.",
+   "rule": "Hjartastuðtæki virka best fyrstu 5 mínúturnar. Eitt stuð og svo 2 mínútur af hnoði og blæstri áður en næsta greining fer fram.",
+   "fix": "Senda einhvern strax eftir hjartastuðtækinu og hnoða á meðan; tengja það um leið og það kemur."
+  },
+  {
+   "id": "skipti",
+   "label": "Skipt um hnoðara á 2 mínútna fresti",
+   "ok": [
+    "flag:t_skipti"
+   ],
+   "points": 5,
+   "okText": "Þið skiptuð á 2 mín fresti svo hnoðið hélst kröftugt.",
+   "badText": "Ekki var skipt um hnoðara.",
+   "rule": "Hjartahnoð er mjög erfitt líkamlega – skipta eftir 2 mínútur eða 5 umferðir."
+  },
+  {
+   "id": "eftir",
+   "label": "Rétt viðbrögð þegar öndun kom (læst hliðarlega, endurmat)",
+   "ok": [
+    "flag:t_hlid_ok",
+    "reassess>=2"
+   ],
+   "points": 10,
+   "okText": "Hætt að hnoða þegar púls greindist, læst hliðarlega og öndun endurmetin reglulega.",
+   "badText": "Ekki brugðist rétt við (eða ekki endurmetið) eftir að öndun kom – eða sláttur kom aldrei.",
+   "rule": "Hætta endurlífgun ef púls greinist. Öndun til staðar = læst hliðarlega og stöðugt eftirlit."
+  },
+  {
+   "id": "history",
+   "label": "OLSENA frá Sigrúnu",
+   "ok": [
+    "olsena>=3"
+   ],
+   "points": 5,
+   "okText": "Saga fengin frá eiginkonunni.",
+   "badText": "Saga vantar.",
+   "rule": "Þegar sjúklingur getur ekki svarað er spurt aðstandendur/vitni (OLSENA) – það hjálpar sérhæfðri aðstoð."
+  }
+ ],
+ "location": {
+  "type": "bilastaedi",
+  "label": "Bílastæði við upphaf gönguleiðar, við þjóðveg",
+  "callText": "Meðvitundarlaus karlmaður, 64 ára, andar ekki – endurlífgun hafin. Staðsetning: bílastæðið við upphaf gönguleiðarinnar við þjóðveginn. Hjartastuðtæki á staðnum."
+ },
+ "resources": [
+  {
+   "id": "sjukrabill",
+   "label": "112 – sjúkrabíll",
+   "icon": "🚑",
+   "eta": 9,
+   "role": "Neyðarlínan sendir sjúkrabíl með sérhæfða aðstoð. Neyðarvörðurinn getur leiðbeint í síma.",
+   "arriveText": "Sjúkrabíllinn ekur inn á bílastæðið – sjúkraflutningamenn taka við.",
+   "needWhen": [
+    "always"
+   ],
+   "callBy": 3,
+   "strictCallBy": true,
+   "needPoints": 10,
+   "unneededWhen": [],
+   "needText": "Meðvitundarlaus og andar ekki: hringja strax í 112 um leið og meðvitundarleysi er staðfest.",
+   "neutralText": ""
+  },
+  {
+   "id": "thyrla",
+   "label": "Þyrla (LHG)",
+   "icon": "🚁",
+   "eta": 35,
+   "role": "Landhelgisgæslan: alvarlega veikir/slasaðir á afskekktum stöðum.",
+   "arriveText": "Þyrlan lendir við bílastæðið.",
+   "needWhen": [],
+   "unneededWhen": [
+    "always"
+   ],
+   "unneededPoints": -5,
+   "unneededText": "Þyrla var óþörf: sjúkrabíll kemst alveg að og er fljótari.",
+   "neutralText": "Ekki kölluð – rétt, sjúkrabíll kemst alveg að."
+  },
+  {
+   "id": "bjorgunarsveit",
+   "label": "Fleiri björgunarsveitarmenn",
+   "icon": "🧑‍🚒",
+   "eta": 20,
+   "role": "Fleiri hendur og búnaður.",
+   "arriveText": "Björgunarsveitarfélagar koma á staðinn.",
+   "needWhen": [],
+   "unneededWhen": [],
+   "neutralText": "Ekki nauðsynlegt hér – vegfarendur hjálpa við hnoðið og sjúkrabíll kemur fljótt."
+  },
+  {
+   "id": "logregla",
+   "label": "Lögregla",
+   "icon": "🚓",
+   "eta": 10,
+   "role": "Öryggi á vettvangi, umferðarstjórnun.",
+   "arriveText": "Lögreglubíll kemur á bílastæðið.",
+   "needWhen": [],
+   "unneededWhen": [],
+   "neutralText": "Ekki þörf að kalla sérstaklega – Neyðarlínan sendir það sem þarf."
+  }
+ ],
+ "pan": {
+  "wideStart": 50,
+  "closeStart": 48
+ },
+ "reassess": {
+  "feelSay": "Guðmundur, heyrirðu í mér?",
+  "feelLabel": "Ávarpa hann (svarar hann?)",
+  "feel": {
+   "severe": "{talk}",
+   "better": "{talk}",
+   "same": "{talk}",
+   "worse": "{talk}"
+  },
+  "complaints": {},
+  "vitalsLabel": "Endurmeta öndun, púls og VÁSE",
+  "sources": {
+   "hnod": [
+    "Hnoð og blástur 30:2 í gangi.",
+    "Enginn hnoðar!"
+   ],
+   "stud": [
+    "Hjartastuðtækið tengt og greinir á 2 mín fresti.",
+    "Hjartastuðtækið ekki tengt."
+   ],
+   "skipti": [
+    "Skipt um hnoðara á 2 mín fresti.",
+    "Sami maður hnoðar – hnoðið dofnar."
+   ],
+   "ondunarvegur": [
+    "Í læstri hliðarlegu – öndunarvegur opinn.",
+    "Liggur á bakinu – öndunarvegur ótryggður."
+   ]
+  },
+  "rule": "Endurmetið öndun og púls reglulega – hann getur farið aftur í hjartastopp.",
+  "allText": "Allt sem hægt er að gera á staðnum er í gangi.",
+  "notAllText": "Meðferð ekki fullkláruð.",
+  "statusSevere": "Ástand: lífslíkur dvína með hverri mínútu.",
+  "statusPrefix": "Ástand: ",
+  "lines": [
+   [
+    {
+     "when": [
+      "flag:rosc"
+     ],
+     "text": "✓ Sláttur kominn – fylgist stöðugt með öndun; tækið áfram tengt."
+    },
+    {
+     "when": [
+      "flag:arrest"
+     ],
+     "text": "✗ Enn í hjartastoppi – haldið endurlífgun áfram."
+    }
+   ]
+  ]
+ },
+ "hud": {
+  "icon": "❤️",
+  "title": "Endurlífgun"
+ },
+ "saga": {
+  "S": [
+   {
+    "when": [
+     "or:flag:askedPartner|flag:olsena_a"
+    ],
+    "text": "64 ára karlmaður, hneig niður á göngustíg eftir brjóstverk; ekkert högg."
+   },
+   {
+    "when": [
+     "flag:olsena_o"
+    ],
+    "text": "Ofnæmi: pensilín."
+   },
+   {
+    "when": [
+     "flag:olsena_l"
+    ],
+    "text": "Lyf: blóðþrýstings- og blóðfitulyf."
+   },
+   {
+    "when": [
+     "flag:olsena_s"
+    ],
+    "text": "Sjúkrasaga: háþrýstingur, hjartaöng."
+   },
+   {
+    "when": [
+     "flag:olsena_e"
+    ],
+    "text": "Einkenni á undan: brjóstverkur, mæði, sviti."
+   },
+   {
+    "when": [
+     "flag:olsena_n"
+    ],
+    "text": "Neysla: samloka og vatn fyrir 2 klst."
+   }
+  ],
+  "A": [
+   {
+    "when": [
+     "flag:vase"
+    ],
+    "text": "Meðvitundarlaus (E á VÁSE)."
+   },
+   {
+    "when": [
+     "flag:ondun10"
+    ],
+    "text": "Engin eðlileg öndun – stök andköf."
+   },
+   {
+    "when": [
+     "flag:t_stud_ok"
+    ],
+    "text": "Hjartastuðtæki: stuð ráðlagt og gefið."
+   },
+   {
+    "when": [
+     "flag:rosc"
+    ],
+    "text": "Sláttur kom aftur, andar sjálfur."
+   },
+   {
+    "when": [
+     "flag:vitals"
+    ],
+    "text": "P: {P}. Ö: {O}. H: {H}."
+   }
+  ],
+  "Gsevere": "Hjartastopp (líklega vegna hjartaáfalls). G': langvarandi súrefnisskortur í heila.",
+  "Gmild": "Hjartastopp – sláttur kominn aftur. G': nýtt hjartastopp."
+ },
+ "short": "Hjartastopp – endurlífgun og hjartastuðtæki.",
+ "thumb": "img/smamynd-endurlifgun-hjartastopp.jpg?v=0.6"
+}

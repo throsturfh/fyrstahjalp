@@ -1,0 +1,1035 @@
+{
+ "id": "skrida-fotbrot",
+ "track": 1,
+ "order": 2,
+ "title": "Fótbrot í skriðu",
+ "intro": "September, síðdegis. {nafn}, þú ert á bakaleið niður að veginum þegar þú heyrir hróp úr hlíðinni fyrir ofan. Í lausri skriðu undir grýttu gili situr maður og heldur um fótinn og félagi hans veifar til þín.",
+ "images": {
+  "distance": "img/fjarlaegd-skrida.jpg?v=0.6",
+  "close": "img/pano-skrida.jpg?v=0.6",
+  "treated": "img/pano-skrida-medhondlad.jpg?v=0.6",
+  "treatedWhen": [
+   "flag:t_spelka",
+   "flag:t_einangra"
+  ]
+ },
+ "patient": {
+  "name": "Óli",
+  "age": 28,
+  "cantAnswer": "(Óli er sljór og svarar óskýrt – félaginn svarar fyrir hann)"
+ },
+ "felagiName": "Félaginn",
+ "state": {
+  "start": 80,
+  "severeBelow": 50,
+  "ratePerSource": 0.5,
+  "warmRate": 0.2,
+  "max": 80,
+  "trendEps": 0.05,
+  "recoverWhen": [
+   "allSources"
+  ],
+  "severeLog": "Ástand versnar! Óli er orðinn grár, sveittur og sljór – merki um lost og kælingu.",
+  "severeLabel": "versnandi ástand (lost og kæling)",
+  "mildLabel": "stöðugt ástand"
+ },
+ "problems": [
+  {
+   "id": "brot",
+   "label": "Óstöðugur áverki (óspelkaður, skert BSH)",
+   "rate": 0.6
+  },
+  {
+   "id": "kuldi",
+   "label": "Hitatap (situr í kaldri skriðunni)",
+   "rate": 0.5
+  }
+ ],
+ "stretcherWhen": [
+  "always"
+ ],
+ "vitals": [
+  {
+   "min": 70,
+   "VASE": "V – vakandi og áttaður",
+   "P": "96/mín, reglulegur, sterkur",
+   "O": "20/mín, eðlileg dýpt",
+   "BTH": "Púls finnst vel í úlnlið (BÞ líklega eðlilegur)",
+   "L": "Kaldur viðkomu",
+   "H": "Föl, sveitt af verkjum",
+   "shiver": "Mikill verkur í sköflungi",
+   "talk": "„Aaah, fóturinn! Ég heyrði smell þegar ég rann. Ég get ekki hreyft hann.“"
+  },
+  {
+   "min": 50,
+   "VASE": "V – vakandi, verkjaður og kaldur",
+   "P": "112/mín, hraður",
+   "O": "24/mín",
+   "BTH": "Púls finnst í úlnlið",
+   "L": "Kaldur viðkomu, skelfur",
+   "H": "Föl, köld, rök húð",
+   "shiver": "Skelfur af kulda og verkjum",
+   "talk": "„Mér er orðið svo kalt… og verkurinn er hræðilegur.“ (tennurnar glamra)"
+  },
+  {
+   "min": 0,
+   "VASE": "V – sljór, hægur í svörum",
+   "P": "128/mín, hraður og veikur",
+   "O": "28/mín, grunn",
+   "BTH": "Púls finnst illa í úlnlið",
+   "L": "Ískaldur viðkomu",
+   "H": "Grá-föl, köld og þvöl húð",
+   "shiver": "Sljór, skelfur ekki lengur",
+   "talk": "„Hvað… gerðist?“ (sljór og óskýr)"
+  }
+ ],
+ "distance": {
+  "fit": true,
+  "hotspots": [
+   {
+    "id": "grjothrun",
+    "x": 72,
+    "y": 14,
+    "label": "Gil og grjóthrun",
+    "text": "Upp af skriðunni er bratt, grýtt gil. Steinar losna öðru hvoru og skoppa niður fallínuna – beint í átt að mönnunum. Það má ekki fara upp eftir fallínunni undir gilinu."
+   },
+   {
+    "id": "vedur",
+    "x": 18,
+    "y": 18,
+    "label": "Veður",
+    "text": "Skýjað og svalt, gola og þokuslæðingur í fjallinu. Það kólnar þegar líður á daginn – sá sem situr hreyfingarlaus í skriðunni kólnar hratt."
+   },
+   {
+    "id": "felagi",
+    "x": 51,
+    "y": 44,
+    "label": "Félagi",
+    "text": "Göngufélagi veifar: „Hjálp! Óli rann í skriðunni og fóturinn er alveg skakkur!“ Hann virðist ómeiddur – hann er auka hendur og vitni um atvikið.",
+    "off": [
+     -40,
+     -30
+    ]
+   },
+   {
+    "id": "sjuklingur",
+    "x": 66,
+    "y": 49,
+    "label": "Sjúklingur",
+    "text": "Maður situr í lausri skriðunni og heldur um hægri fótlegginn. Hann hreyfir hendur og talar – engin augljós blæðing að sjá úr fjarlægð.",
+    "off": [
+     10,
+     -48
+    ]
+   },
+   {
+    "id": "bakpoki",
+    "x": 75,
+    "y": 53,
+    "label": "Bakpoki",
+    "text": "Rauður bakpoki liggur við hlið hans – kannski aukaföt og nesti.",
+    "off": [
+     40,
+     24
+    ]
+   },
+   {
+    "id": "varda",
+    "x": 8,
+    "y": 50,
+    "label": "Varðaður stígur",
+    "text": "Vörðuð leið liggur í sveig upp hlíðina á föstu undirlagi vinstra megin og þverar skriðuna utan fallínunnar frá gilinu. Lengri, en öruggari leið."
+   },
+   {
+    "id": "skrida",
+    "x": 40,
+    "y": 62,
+    "label": "Laus skriða",
+    "text": "Skriðan er laus og brött – steinar renna undan fæti. Beint upp er stysta leiðin, en þar er bæði hætta á að renna og á grjóthruni ofan úr gilinu."
+   },
+   {
+    "id": "vegur",
+    "x": 70,
+    "y": 83,
+    "label": "Vegur og bíll",
+    "text": "Malarvegurinn og bíllinn þinn eru u.þ.b. 300 m neðan við slysstaðinn. Sjúkrabíll kemst að veginum en ekki upp skriðuna – bera þarf sjúkling niður."
+   }
+  ],
+  "approach": [
+   {
+    "id": "vardad",
+    "label": "Fara vörðuðu leiðina og þvera skriðuna utan fallínu gilsins",
+    "minutes": 4,
+    "score": 10,
+    "flag": "safeApproach",
+    "text": "Þú ferð vörðuðu leiðina á föstu undirlagi og þverar skriðuna utan fallínunnar frá gilinu. Þú kemst örugglega að þeim. Rétt: eigið öryggi fyrst."
+   },
+   {
+    "id": "beint",
+    "label": "Hlaupa beint upp lausa skriðuna undir gilinu",
+    "minutes": 2,
+    "score": -10,
+    "flag": "fell",
+    "text": "Skriðan rennur undan þér og steinn skoppar niður úr gilinu rétt við þig. Þú kemst upp en hruflaður og skelkaður – nú gætu tveir verið slasaðir. Vettvangur: þitt öryggi fyrst!"
+   },
+   {
+    "id": "bida",
+    "label": "Bíða við bílinn eftir aðstoð",
+    "minutes": 8,
+    "score": -15,
+    "flag": "waited",
+    "text": "Þú bíður í 8 mínútur við bílinn. Óli situr á meðan í kaldri skriðunni með óspelkaðan fót. Hægt var að komast örugglega að honum eftir vörðuðu leiðinni – að bíða hjálpaði engum. Að lokum ferðu af stað."
+   }
+  ]
+ },
+ "close": {
+  "groups": [
+   {
+    "id": "vettvangur",
+    "label": "1. Vettvangur kannaður"
+   },
+   {
+    "id": "frumskodun",
+    "label": "2. Frumskoðun"
+   },
+   {
+    "id": "saga",
+    "label": "3. Sjúkrasaga og líkamsskoðun"
+   },
+   {
+    "id": "medferd",
+    "label": "Meðferð"
+   }
+  ],
+  "groupIntro": {
+   "medferd": "Óstöðugur áverki á útlim: Meta BSH → Toga í rétta stöðu (ef skert BSH) → Halda stöðugu → Spelka → Meta BSH eftir spelkun."
+  },
+  "hotspots": [
+   {
+    "id": "c_felagi",
+    "x": 31,
+    "y": 50,
+    "label": "Félaginn",
+    "text": "Félaginn krýpur hjá Óla í skriðunni. Hann getur haldið við fótinn og hjálpað – gefðu honum verkefni.",
+    "off": [
+     96,
+     -96
+    ]
+   },
+   {
+    "id": "c_sjuklingur",
+    "x": 58,
+    "y": 45,
+    "label": "Óli",
+    "text": "Óli situr í lausri skriðunni, fölur og sveittur af verkjum. Hann hallar sér aftur á hendurnar og hreyfir sig sem minnst.",
+    "off": [
+     70,
+     30
+    ]
+   },
+   {
+    "id": "c_fotur",
+    "x": 42,
+    "y": 72,
+    "label": "Hægri fótleggur",
+    "text": "Hægri sköflungur er greinilega aflagaður – skekkja um miðjan legginn og fóturinn snýr út. Óli getur ekki notað útliminn. Óstöðugur áverki.",
+    "off": [
+     10,
+     64
+    ]
+   },
+   {
+    "id": "c_bakpoki",
+    "x": 69,
+    "y": 50,
+    "label": "Bakpoki",
+    "text": "Bakpoki Óla með ullarpeysu, húfu og nesti.",
+    "off": [
+     -90,
+     -40
+    ]
+   },
+   {
+    "id": "c_bunadur",
+    "x": 81,
+    "y": 62,
+    "label": "Búnaður",
+    "text": "Björgunarsveitartaskan þín: SAM-spelkur, teygjubindi, bólstrun, einangrunardýna og hitateppi.",
+    "off": [
+     20,
+     -150
+    ]
+   },
+   {
+    "id": "c_vegur",
+    "x": 90,
+    "y": 55,
+    "label": "Niður að vegi",
+    "text": "Vegurinn og bíllinn sjást um 300 m neðar. Óslétt, laus skriða á milli – að bera á börum krefst nokkurra manna."
+   },
+   {
+    "id": "c_varda",
+    "x": 8,
+    "y": 72,
+    "label": "Varða",
+    "text": "Varðan við leiðina sem þú komst – þar er fast undirlag fyrir burð niður.",
+    "off": [
+     -44,
+     -36
+    ]
+   }
+  ],
+  "hotspotsTreated": [
+   {
+    "id": "c_felagi",
+    "x": 31,
+    "y": 50,
+    "label": "Félaginn",
+    "text": "Félaginn heldur áfram að styðja við og fylgist með Óla.",
+    "off": [
+     96,
+     -96
+    ]
+   },
+   {
+    "id": "c_spelka",
+    "x": 46,
+    "y": 72,
+    "label": "Spelka",
+    "text": "SAM-spelka nær yfir hné og ökkla, bólstruð, ekki beint við húð og engir þrýstipunktar. Auðvelt að laga ef BSH skerðist.",
+    "off": [
+     60,
+     90
+    ]
+   },
+   {
+    "id": "c_teppi",
+    "x": 54,
+    "y": 47,
+    "label": "Óli",
+    "text": "Óli situr á einangrunardýnu með hitateppi og húfu. Hann er rólegri."
+   },
+   {
+    "id": "c_bunadur",
+    "x": 64,
+    "y": 72,
+    "label": "Búnaður",
+    "text": "Opin taskan – teygjubindi og afgangs bólstrun."
+   },
+   {
+    "id": "c_vegur",
+    "x": 90,
+    "y": 55,
+    "label": "Niður að vegi",
+    "text": "Vegurinn og bíllinn um 300 m neðar. Burður á börum niður skriðuna krefst nokkurra manna."
+   }
+  ],
+  "speakers": {
+   "sjuklingur": {
+    "x": 59.5,
+    "y": 17,
+    "name": "Óli",
+    "side": "right"
+   },
+   "felagi": {
+    "x": 33,
+    "y": 15,
+    "name": "Félaginn",
+    "side": "left"
+   }
+  },
+  "speakersTreated": {
+   "sjuklingur": {
+    "x": 59.5,
+    "y": 17,
+    "name": "Óli",
+    "side": "right"
+   },
+   "felagi": {
+    "x": 33,
+    "y": 15,
+    "name": "Félaginn",
+    "side": "left"
+   }
+  },
+  "togRule": {
+   "goodWhen": [
+    "flag:bsh1"
+   ],
+   "okFlag": "t_tog_ok",
+   "goodScore": 5,
+   "goodText": "BSH var skert, svo þú togar rólega og jafnt í langás fótleggsins þar til hann er kominn í rétta stöðu. Engin mótstaða og verkurinn minnkar. Markmið með togi er að leiðrétta skert BSH.",
+   "badText": "Rangt: þú togaðir án þess að meta BSH fyrst. Markmið með togi er að leiðrétta skert BSH – metið BSH fyrir neðan áverkann áður en togað er.",
+   "badScore": -5,
+   "fix": "Meta BSH fyrir neðan áverkann fyrst; toga aðeins ef BSH er skert."
+  },
+  "spelkaRule": {
+   "goodWhen": [
+    "flag:t_tog_ok",
+    "flag:t_halda"
+   ],
+   "okFlag": "t_spelka_ok",
+   "goodScore": 10,
+   "addressAlways": true,
+   "goodText": "Þið spelkið fótlegginn í réttri stöðu með SAM-spelku sem nær yfir hnéð og ökklann (liðinn fyrir ofan og neðan langa beinið), bólstrið svo engir þrýstipunktar séu og spelkan liggi ekki beint við húð.",
+   "badText": "Spelkað, en fóturinn var ekki togaður í rétta stöðu og haldið stöðugum fyrst – skert BSH var ekki leiðrétt. Röð: Meta BSH → Toga → Halda stöðugu → Spelka → Meta BSH.",
+   "badScore": -5,
+   "fix": "Meta BSH → toga í rétta stöðu ef BSH er skert → halda stöðugu → spelka í réttri stöðu yfir liðinn fyrir ofan og neðan → meta BSH eftir spelkun."
+  },
+  "bsh2Rule": {
+   "goodWhen": [
+    "flag:t_spelka"
+   ],
+   "okFlag": "bsh2ok",
+   "goodScore": 5,
+   "retry": true,
+   "goodText": "BSH eftir spelkun: fóturinn hlýnar og roðnar, púls finnst á ristinni, Óli finnur snertingu og hreyfir tærnar. BSH leiðrétt – fylgjast þarf áfram með BSH (í 24 klst eftir slys).",
+   "badText": "Engin spelka komin enn – BSH er endurmetið eftir spelkun.",
+   "badScore": 0
+  },
+  "actions": [
+   {
+    "id": "hanskar",
+    "group": "vettvangur",
+    "label": "Hanskar og eigið öryggi",
+    "minutes": 0,
+    "flag": "gloves",
+    "text": "Þú setur á þig hanska og kemur þér fyrir á stöðugum stað. Þið eruð utan fallínunnar frá gilinu – fylgstu áfram með grjóthruni."
+   },
+   {
+    "id": "atvik",
+    "group": "vettvangur",
+    "label": "Spyrja félagann hvað gerðist",
+    "minutes": 1,
+    "flag": "askedPartner",
+    "speaker": "felagi",
+    "say": "Hvað gerðist?",
+    "reply": "„Við vorum að fara niður skriðuna fyrir svona hálftíma. Hann rann, fóturinn festist á milli steina og hann datt fram fyrir sig. Ég heyrði smell. Hann rak ekki höfuðið.“"
+   },
+   {
+    "id": "tala",
+    "group": "frumskodun",
+    "label": "Tala við sjúkling",
+    "minutes": 1,
+    "flag": "talked",
+    "speaker": "sjuklingur",
+    "say": "Ég heiti {nafn} og er í björgunarsveitinni. Má ég hjálpa þér?",
+    "reply": "{talk}"
+   },
+   {
+    "id": "vase",
+    "group": "frumskodun",
+    "label": "Meta meðvitund (VÁSE)",
+    "minutes": 1,
+    "flag": "vase",
+    "text": "VÁSE: {VASE}."
+   },
+   {
+    "id": "ondun",
+    "group": "frumskodun",
+    "label": "Öndunarvegur og öndun",
+    "minutes": 1,
+    "flag": "breathing",
+    "text": "Öndunarvegur opinn, talar. Öndun: {O}."
+   },
+   {
+    "id": "puls",
+    "group": "frumskodun",
+    "label": "Púls",
+    "minutes": 1,
+    "flag": "pulse",
+    "text": "Púls: {P}."
+   },
+   {
+    "id": "blaedingar",
+    "group": "frumskodun",
+    "label": "Leita að miklum blæðingum",
+    "minutes": 1,
+    "flag": "bleeding",
+    "text": "Þú þreifar hratt yfir allan líkamann – engar miklar blæðingar. Húðin er heil yfir aflöguninni."
+   },
+   {
+    "id": "hryggur",
+    "group": "frumskodun",
+    "label": "Tryggja háls og hrygg",
+    "minutes": 1,
+    "flag": "spine",
+    "text": "Fall í skriðu – þú styður við höfuð og háls og spyrð. Óli rak ekki höfuðið, er ekki með eymsli í hálsi eða baki og hreyfir hendur og hinn fótinn eðlilega. Hann fær að vera í þeirri stöðu sem hann vill vera í; við flutning er notuð grjónadýna/börur."
+   },
+   {
+    "id": "aflogun",
+    "group": "frumskodun",
+    "label": "Er greinilegur áverki sjáanlegur (aflögun)?",
+    "minutes": 0,
+    "flag": "deform",
+    "text": "Já: hægri sköflungur er greinilega aflagaður og Óli getur ekki notað útliminn – óstöðugur áverki sem þarf að spelka og hlífa."
+   },
+   {
+    "id": "o",
+    "group": "saga",
+    "label": "O – Ofnæmi",
+    "minutes": 0,
+    "flag": "olsena_o",
+    "speaker": "sjuklingur",
+    "say": "Ertu með ofnæmi fyrir einhverju?",
+    "reply": "„Nei, ekki svo ég viti.“"
+   },
+   {
+    "id": "l",
+    "group": "saga",
+    "label": "L – Lyf",
+    "minutes": 0,
+    "flag": "olsena_l",
+    "speaker": "sjuklingur",
+    "say": "Tekurðu einhver lyf?",
+    "reply": "„Engin lyf.“"
+   },
+   {
+    "id": "s",
+    "group": "saga",
+    "label": "S – Sjúkrasaga",
+    "minutes": 0,
+    "flag": "olsena_s",
+    "speaker": "sjuklingur",
+    "say": "Ertu með einhverja sjúkdóma eða fyrri meiðsli?",
+    "reply": "„Nei, ég er hraustur. Aldrei brotnað áður.“"
+   },
+   {
+    "id": "e",
+    "group": "saga",
+    "label": "E – Einkenni",
+    "minutes": 0,
+    "flag": "olsena_e",
+    "speaker": "sjuklingur",
+    "say": "Hvar finnurðu til? Finnurðu fyrir tánum?",
+    "reply": "„Það er ógeðslega vont í leggnum. Tærnar eru dofnar og mér er orðið kalt.“"
+   },
+   {
+    "id": "n",
+    "group": "saga",
+    "label": "N – Neysla (og útskilnaður)",
+    "minutes": 0,
+    "flag": "olsena_n",
+    "speaker": "sjuklingur",
+    "say": "Hvenær borðaðirðu og drakkst síðast? Hvenær pissaðirðu síðast?",
+    "reply": "„Við borðuðum nesti uppi á toppnum fyrir tveimur tímum. Pissaði þá líka.“"
+   },
+   {
+    "id": "a",
+    "group": "saga",
+    "label": "A – Atvik",
+    "minutes": 0,
+    "flag": "olsena_a",
+    "speaker": "sjuklingur",
+    "say": "Hvað gerðist?",
+    "reply": "„Fóturinn festist á milli steina og ég datt fram fyrir mig. Ég heyrði smell.“"
+   },
+   {
+    "id": "lifsmork",
+    "group": "saga",
+    "label": "Lífsmörk (P, Ö, BÞ, L, H)",
+    "minutes": 2,
+    "flag": "vitals",
+    "text": "P: {P} · Ö: {O} · BÞ: {BTH} · L: {L} · H: {H} · VÁSE: {VASE}. {shiver}."
+   },
+   {
+    "id": "skodun",
+    "group": "saga",
+    "label": "Líkamsskoðun frá toppi til táar",
+    "minutes": 2,
+    "flag": "exam",
+    "text": "Engin önnur meiðsli fundust. Hægri sköflungur aflagaður og bólginn, mikil eymsli. Fóturinn fyrir neðan er fölur og kaldur. {shiver}."
+   },
+   {
+    "id": "bsh1",
+    "group": "medferd",
+    "label": "1. Meta BSH fyrir neðan áverkann",
+    "minutes": 1,
+    "flag": "bsh1",
+    "treat": true,
+    "text": "Skert BSH: fóturinn fyrir neðan brotið er fölur og kaldur (blóðflæði), púls á ristinni finnst illa, Óli finnur illa snertingu á tánum (skyn) og hreyfir þær varla (hreyfing).",
+    "sagaText": "BSH metið fyrir neðan áverka (skert)"
+   },
+   {
+    "id": "tog",
+    "group": "medferd",
+    "label": "2. Toga í rétta stöðu",
+    "minutes": 1,
+    "flag": "t_tog",
+    "rule": "togRule",
+    "sagaText": "Togað í rétta stöðu"
+   },
+   {
+    "id": "halda",
+    "group": "medferd",
+    "label": "3. Halda stöðugu",
+    "minutes": 0,
+    "flag": "t_halda",
+    "text": "Félaginn heldur fótleggnum stöðugum í réttri stöðu á meðan þú undirbýrð spelkuna.",
+    "sagaText": "Haldið stöðugu"
+   },
+   {
+    "id": "spelka",
+    "group": "medferd",
+    "label": "4. Spelka í réttri stöðu (yfir hné og ökkla, bólstrað)",
+    "minutes": 3,
+    "flag": "t_spelka",
+    "rule": "spelkaRule",
+    "addresses": [
+     "brot"
+    ],
+    "sagaText": "Spelkað yfir hné og ökkla (SAM-spelka, bólstrað)"
+   },
+   {
+    "id": "bsh2",
+    "group": "medferd",
+    "label": "5. Endurmeta BSH eftir spelkun",
+    "minutes": 1,
+    "flag": "t_bsh2",
+    "rule": "bsh2Rule",
+    "sagaText": "BSH endurmetið eftir spelkun"
+   },
+   {
+    "id": "einangra",
+    "group": "medferd",
+    "label": "Einangra frá jörðu og hlýja (dýna, hitateppi, húfa)",
+    "minutes": 2,
+    "flag": "t_einangra",
+    "addresses": [
+     "kuldi"
+    ],
+    "score": 5,
+    "text": "Þið lyftið Óla varlega yfir á einangrunardýnu, setjið á hann húfu og hitateppi. Hann situr ekki lengur á kaldri skriðunni.",
+    "sagaText": "Einangraður frá jörðu, hitateppi og húfa"
+   },
+   {
+    "id": "togfast",
+    "group": "medferd",
+    "label": "Halda áfram að toga þótt hann kvarti undan miklum verk og fótur standi á móti",
+    "minutes": 1,
+    "flag": "t_togfast",
+    "score": -10,
+    "text": "Rangt: mótstaða eða mikil aukning verkja – hættum togi. Áframhaldandi tog getur valdið frekari skaða.",
+    "fix": "Hætta togi við mótstöðu eða mikla aukningu verkja og spelka í þeirri stöðu sem komið er að."
+   },
+   {
+    "id": "stutt",
+    "group": "medferd",
+    "label": "Spelka aðeins yfir brotstaðinn (stutt spelka)",
+    "minutes": 2,
+    "flag": "t_stutt",
+    "score": -10,
+    "text": "Rangt: of stutt spelka styður ekki við brotið. Löng bein: spelka liðinn fyrir ofan og neðan (hné og ökkla).",
+    "fix": "Spelka sköflunginn þannig að spelkan nái yfir liðinn fyrir ofan og neðan (hné og ökkla), bólstruð og ekki beint við húð."
+   },
+   {
+    "id": "hvil",
+    "group": "medferd",
+    "label": "HVÍL: hvíla, vefja, ís og lyfta fætinum",
+    "minutes": 2,
+    "flag": "t_hvil",
+    "score": -5,
+    "text": "Rangt hér: HVÍL er meðferð við stöðugum áverkum. Þetta er óstöðugur áverki (greinileg aflögun, getur ekki notað útliminn) sem þarf að toga, halda stöðugum og spelka.",
+    "fix": "Óstöðugur áverki: meta BSH, toga í rétta stöðu ef BSH er skert, halda stöðugu, spelka og meta BSH aftur. HVÍL á við stöðuga áverka."
+   }
+  ]
+ },
+ "report": {
+  "options": [
+   {
+    "id": "borur",
+    "label": "Bera hann á börum með björgunarsveitarmönnum niður að sjúkrabílnum við veginn og endurmeta BSH reglulega",
+    "goodWhen": [
+     "flag:t_spelka_ok",
+     "flag:bsh2ok",
+     "call:bjorgunarsveit",
+     "call:sjukrabill"
+    ],
+    "okWhen": [
+     "flag:t_spelka"
+    ],
+    "goodText": "Rétt: óstöðugur áverki, spelkaður í réttri stöðu og BSH leiðrétt. Hann er borinn á börum niður lausa skriðuna með fleiri björgunarsveitarmönnum að sjúkrabílnum og BSH endurmetið reglulega.",
+    "okText": "Flutningur á börum er rétt leið, en meðferðin eða aðstoðin var ekki fullkláruð (sjá hér að neðan).",
+    "badText": "Ekki tilbúið: fóturinn er ekki spelkaður."
+   },
+   {
+    "id": "ganga",
+    "label": "Styðja hann gangandi niður skriðuna",
+    "badText": "Rangt: óstöðugur áverki – hann getur ekki notað útliminn. Spelka og bera á börum með fleiri björgunarsveitarmönnum."
+   },
+   {
+    "id": "thyrla",
+    "label": "Bíða á staðnum eftir þyrlu",
+    "goodWhen": [
+     "severe",
+     "call:thyrla"
+    ],
+    "goodText": "Ástandið er orðið alvarlegt og þyrla var kölluð – réttlætanlegt að flytja með þyrlu.",
+    "badText": "Óþarfi: vegurinn og sjúkrabíll eru aðeins um 300 m neðar og ástandið stöðugt – burður á börum með björgunarsveitarmönnum er fljótlegri. Þyrla er takmörkuð auðlind fyrir alvarleg tilfelli á afskekktum stöðum."
+   }
+  ]
+ },
+ "debrief": [
+  {
+   "id": "safe",
+   "label": "Örugg nálgun (utan fallínu gilsins)",
+   "ok": [
+    "flag:safeApproach"
+   ],
+   "points": 10,
+   "okText": "Þú fórst örugga, varðaða leið utan fallínunnar.",
+   "badText": "Þú tókst áhættu eða beiðst að óþörfu.",
+   "rule": "Vettvangur kannaður: er hætta á vettvangi? Eigið öryggi fyrst.",
+   "fix": "Kanna hættur (grjóthrun, laus skriða) og fara vörðuðu leiðina utan fallínu gilsins – eigið öryggi fyrst, en ekki bíða að óþörfu."
+  },
+  {
+   "id": "hotspots",
+   "label": "Vettvangur: hættur og vísbendingar kannaðar",
+   "ok": [
+    "hotspots>=4"
+   ],
+   "points": 10,
+   "okText": "Þú kannaðir hættur, leiðir, fjölda og aðstæður.",
+   "badText": "Þú kannaðir vettvanginn lítið áður en þú fórst af stað.",
+   "rule": "Vettvangur kannaður: hætta, fjöldi sjúklinga og hvað gerðist (áverkaferli).",
+   "fix": "Skoða vettvanginn áður en farið er af stað: hættur (gil, skriða, veður), fjölda sjúklinga, áverkaferli og flutningsleið."
+  },
+  {
+   "id": "call",
+   "label": "Kallað eftir aðstoð (val og tímasetning)",
+   "ok": [
+    "resourcesOk"
+   ],
+   "points": 10,
+   "okText": "Rétt aðstoð kölluð til í tæka tíð.",
+   "badText": "Röng, óþörf eða of sein beiðni um aðstoð – sjá sundurliðun.",
+   "rule": "Þarf ég aðstoð? Kallaðu eftir þeirri aðstoð sem ástand og flutningur krefjast, frekar of snemma en of seint.",
+   "fix": "Kalla strax eftir fleiri björgunarsveitarmönnum (burður á börum niður skriðuna) og sjúkrabíl að veginum. Lögregla og þyrla eru ekki nauðsynlegar meðan ástandið er stöðugt og stutt í veg."
+  },
+  {
+   "id": "primary",
+   "label": "Frumskoðun kláruð (meðvitund, öndun, púls, blæðingar, háls og hryggur)",
+   "ok": [
+    "flag:vase",
+    "flag:breathing",
+    "flag:pulse",
+    "flag:bleeding",
+    "flag:spine"
+   ],
+   "points": 15,
+   "okText": "Öll lífsnauðsynleg kerfi metin og háls og hryggur tryggður.",
+   "badText": "Frumskoðun ófullkomin.",
+   "rule": "Frumskoðun: öndunarvegur, öndun, blóðrás, meðvitund (VÁSE), tryggja háls og hrygg – er greinilegur áverki sjáanlegur?",
+   "fix": "Ljúka frumskoðun: VÁSE, öndunarvegur og öndun, púls, leita að miklum blæðingum og tryggja háls og hrygg eftir fall."
+  },
+  {
+   "id": "history",
+   "label": "OLSENA og lífsmörk",
+   "ok": [
+    "olsena>=4",
+    "flag:vitals"
+   ],
+   "points": 10,
+   "okText": "Góð saga og lífsmörk.",
+   "badText": "Saga eða lífsmörk vantar.",
+   "rule": "Sjúkrasaga (OLSENA) og lífsmörk.",
+   "fix": "Taka OLSENA-sögu (a.m.k. 4 atriði) og mæla lífsmörk."
+  },
+  {
+   "id": "bsh1",
+   "label": "BSH metið fyrir neðan áverkann",
+   "ok": [
+    "flag:bsh1"
+   ],
+   "points": 10,
+   "okText": "Skert BSH fannst áður en meðhöndlað var.",
+   "badText": "BSH var ekki metið fyrir neðan áverkann.",
+   "rule": "Óstöðugir áverkar: 1. Meta BSH – er skert BSH fyrir neðan áverka?",
+   "fix": "Meta blóðflæði, skyn og hreyfingu (BSH) fyrir neðan áverkann áður en togað er og spelkað."
+  },
+  {
+   "id": "spelka",
+   "label": "Toga í rétta stöðu, halda stöðugu og spelka rétt",
+   "ok": [
+    "flag:t_tog_ok",
+    "flag:t_spelka_ok"
+   ],
+   "points": 15,
+   "okText": "Togað í rétta stöðu, haldið stöðugu og spelkað yfir hné og ökkla.",
+   "badText": "Röð togs, stöðugleika og spelkunar var ekki rétt eða spelkun vantaði.",
+   "rule": "Markmið með togi er að leiðrétta skert BSH. Spelka: nógu löng (löng bein: liðinn fyrir ofan og neðan), engir þrýstipunktar, ekki beint við húð, auðvelt að laga ef BSH skerðist.",
+   "fix": "Eftir BSH-mat: toga rólega í rétta stöðu (hætta við mótstöðu eða mikla aukningu verkja), halda stöðugu og spelka í réttri stöðu yfir hné og ökkla, bólstrað."
+  },
+  {
+   "id": "bsh2",
+   "label": "BSH endurmetið eftir spelkun",
+   "ok": [
+    "flag:bsh2ok"
+   ],
+   "points": 10,
+   "okText": "BSH endurmetið eftir spelkun – leiðrétt.",
+   "badText": "BSH var ekki endurmetið eftir spelkun.",
+   "rule": "5. Meta BSH – endurmeta BSH eftir spelkun. Fylgjumst með BSH í 24 klst eftir slys.",
+   "fix": "Endurmeta BSH strax eftir spelkun og reglulega eftir það."
+  },
+  {
+   "id": "warm",
+   "label": "Hitatap stöðvað (dýna, hitateppi, húfa)",
+   "ok": [
+    "addressed:kuldi"
+   ],
+   "points": 10,
+   "okText": "Óli einangraður frá kaldri jörðinni og hlýjað.",
+   "badText": "Óli sat áfram í kaldri skriðunni án einangrunar.",
+   "rule": "Kyrrsetinn slasaður einstaklingur kólnar hratt: einangra frá jörðu og hylja.",
+   "fix": "Einangra frá jörðu með dýnu og hylja með hitateppi og húfu meðan beðið er eftir burði."
+  },
+  {
+   "id": "reassess",
+   "label": "Endurmat reglulega eftir að meðferð hófst",
+   "ok": [
+    "reassess>=2"
+   ],
+   "points": 10,
+   "okText": "Þú endurmast lífsmörk og VÁSE reglulega.",
+   "badText": "Lífsmörk voru ekki endurmetin nógu oft eftir að meðferð hófst (a.m.k. tvisvar).",
+   "rule": "Lífsmörk eru endurmetin og skráð reglulega – oftar ef ástand er óstöðugt.",
+   "fix": "Endurmeta VÁSE og lífsmörk a.m.k. tvisvar eftir að meðferð hefst (flipinn Endurmat)."
+  },
+  {
+   "id": "state",
+   "label": "Ástand sjúklings í lokin",
+   "ok": [
+    "mild"
+   ],
+   "points": 10,
+   "okText": "Ástand Óla hélst stöðugt.",
+   "badText": "Ástand Óla versnaði (lost og kæling) – of mikill tími leið án meðferðar.",
+   "rule": "Óspelkaður óstöðugur áverki og kæling auka álag og verki – bregðumst strax við.",
+   "fix": "Vinna hratt og kerfisbundið: spelka óstöðuga áverkann og stöðva hitatap snemma."
+  }
+ ],
+ "location": {
+  "type": "skrida-nalaegt-vegi",
+  "label": "Laus skriða undir gili, u.þ.b. 300 m ofan við malarveg",
+  "callText": "Staðsetning: skriða undir gili, ~300 m ofan við malarveg. Einn karlmaður, aflagaður sköflungur með skertu BSH, vakandi. Þarf burð á börum niður lausa skriðu."
+ },
+ "resources": [
+  {
+   "id": "logregla",
+   "label": "Lögregla",
+   "icon": "🚓",
+   "eta": 30,
+   "role": "Umferðarstjórnun, lokun vegar, öryggi á vettvangi, rannsókn slysa.",
+   "arriveText": "Lögreglubíll kemur að veginum. Hér er engin umferð að stýra og engin ógn á vettvangi.",
+   "needWhen": [],
+   "unneededWhen": [
+    "always"
+   ],
+   "unneededText": "Lögregla var ekki nauðsynleg: engin umferð eða ógn á vettvangi.",
+   "unneededPoints": -3,
+   "neutralText": "Lögregla ekki kölluð – rétt, ekki þörf hér."
+  },
+  {
+   "id": "sjukrabill",
+   "label": "Sjúkrabíll",
+   "icon": "🚑",
+   "eta": 30,
+   "role": "Flutningur á sjúkrahús og sérhæfð meðferð. Kemst aðeins eftir vegi.",
+   "arriveText": "Sjúkrabíllinn er kominn á veginn, ~300 m neðan við. Hann kemst ekki upp skriðuna – bera þarf sjúkling niður.",
+   "needWhen": [
+    "always"
+   ],
+   "callBy": 15,
+   "strictCallBy": true,
+   "needPoints": 5,
+   "unneededWhen": [],
+   "needText": "Óstöðugur áverki með skertu BSH þarf flutning á sjúkrahús – sjúkrabíll bíður við veginn.",
+   "neutralText": ""
+  },
+  {
+   "id": "bjorgunarsveit",
+   "label": "Fleiri björgunarsveitarmenn",
+   "icon": "🧑‍🚒",
+   "eta": 25,
+   "role": "Fleiri hendur, börur, burður yfir erfitt landslag, búnaður og skjól.",
+   "arriveText": "Björgunarsveitarfélagar koma upp vörðuðu leiðina með börur og grjónadýnu.",
+   "needWhen": [
+    "always"
+   ],
+   "callBy": 15,
+   "strictCallBy": true,
+   "needPoints": 10,
+   "unneededWhen": [],
+   "needText": "Burður á börum niður lausa skriðu krefst fleiri björgunarsveitarmanna – sjúkrabíll kemst ekki upp.",
+   "neutralText": ""
+  },
+  {
+   "id": "thyrla",
+   "label": "Þyrla (LHG)",
+   "icon": "🚁",
+   "eta": 50,
+   "role": "Landhelgisgæslan: alvarlega veikir/slasaðir á afskekktum stöðum þar sem landflutningur er of hægur.",
+   "arriveText": "Þyrla Landhelgisgæslunnar kemur yfir hlíðina.",
+   "needWhen": [],
+   "unneededWhen": [
+    "mild"
+   ],
+   "unneededText": "Þyrla var óþörf: ástandið stöðugt og aðeins ~300 m í veg og sjúkrabíl. Þyrla er takmörkuð auðlind fyrir alvarleg tilfelli á afskekktum stöðum.",
+   "unneededPoints": -5,
+   "neutralText": "Þyrla er réttlætanleg ef ástand verður alvarlegt eða burður ómögulegur; hér er stutt í veg og sjúkrabíl."
+  }
+ ],
+ "pan": {
+  "wideStart": 50,
+  "closeStart": 50
+ },
+ "reassess": {
+  "feelSay": "Hvernig líður þér núna? Hvernig er fóturinn?",
+  "feelLabel": "Spyrja hvernig honum líður",
+  "feel": {
+   "severe": "(Svarar hægt og óskýrt, grár og sveittur.)",
+   "better": "„Þetta er aðeins skárra núna… mér er hlýrra.“",
+   "same": "„Ennþá mjög vont…“",
+   "worse": "„Mér líður verr… mér er svo kalt.“"
+  },
+  "complaints": {
+   "brot": "„Fóturinn… hann er svo skakkur og dofinn.“",
+   "kuldi": "„Mér er orðið svo kalt á rassinum á þessum steinum.“"
+  },
+  "sources": {
+   "brot": [
+    "Spelkað í réttri stöðu yfir hné og ökkla.",
+    "Fótleggurinn er enn óspelkaður og aflagaður."
+   ],
+   "kuldi": [
+    "Situr á dýnu með hitateppi og húfu.",
+    "Situr enn beint í kaldri skriðunni."
+   ]
+  },
+  "allText": "Óstöðugi áverkinn spelkaður og hitatap stöðvað.",
+  "notAllText": "Meðferð ekki lokið.",
+  "statusSevere": "Líðan: sljór, grár og sveittur – versnandi ástand.",
+  "statusPrefix": "Líðan: ",
+  "lines": [
+   [
+    {
+     "when": [
+      "flag:bsh2ok"
+     ],
+     "text": "✓ BSH eftir spelkun: púls á rist, skyn og hreyfing í tám."
+    },
+    {
+     "when": [
+      "flag:bsh1"
+     ],
+     "text": "✗ BSH fyrir neðan áverkann er skert."
+    }
+   ]
+  ],
+  "rule": "Lífsmörk og BSH eru endurmetin og skráð reglulega – oftar ef ástand er óstöðugt."
+ },
+ "hud": {
+  "icon": "🦴",
+  "title": "Vandamál leyst"
+ },
+ "saga": {
+  "S": [
+   {
+    "when": [
+     "flag:askedPartner",
+     "flag:olsena_a"
+    ],
+    "text": "28 ára karl, rann í lausri skriðu fyrir u.þ.b. 30 mín, fóturinn festist og hann féll fram fyrir sig. Rak ekki höfuðið."
+   },
+   {
+    "when": [
+     "flag:olsena_o"
+    ],
+    "text": "Ofnæmi: ekkert."
+   },
+   {
+    "when": [
+     "flag:olsena_l"
+    ],
+    "text": "Lyf: engin."
+   },
+   {
+    "when": [
+     "flag:olsena_s"
+    ],
+    "text": "Sjúkrasaga: hraustur."
+   },
+   {
+    "when": [
+     "flag:olsena_e"
+    ],
+    "text": "Einkenni: mikill verkur í hægri legg, dofi í tám, kuldi."
+   },
+   {
+    "when": [
+     "flag:olsena_n"
+    ],
+    "text": "Neysla: nesti og drykkur fyrir 2 klst."
+   }
+  ],
+  "A": [
+   {
+    "when": [
+     "flag:vase",
+     "flag:vitals"
+    ],
+    "text": "VÁSE: {VASE}."
+   },
+   {
+    "when": [
+     "flag:pulse",
+     "flag:vitals"
+    ],
+    "text": "P: {P}."
+   },
+   {
+    "when": [
+     "flag:breathing",
+     "flag:vitals"
+    ],
+    "text": "Ö: {O}."
+   },
+   {
+    "when": [
+     "flag:vitals"
+    ],
+    "text": "H: {H}."
+   },
+   {
+    "when": [
+     "flag:deform",
+     "flag:exam"
+    ],
+    "text": "Greinileg aflögun á hægri sköflungi, getur ekki notað útliminn."
+   },
+   {
+    "when": [
+     "flag:bsh1"
+    ],
+    "text": "BSH fyrir neðan áverka skert (fölur, kaldur fótur, veikur púls á rist, dofi)."
+   },
+   {
+    "when": [
+     "flag:bsh2ok"
+    ],
+    "text": "BSH eftir spelkun: leiðrétt."
+   },
+   {
+    "when": [
+     "flag:spine"
+    ],
+    "text": "Engin eymsli í hálsi eða baki."
+   }
+  ],
+  "Gmild": "Óstöðugur áverki – líklegt brot á hægri sköflungi með skertu BSH. G': blóðþurrð, lost, ofkæling.",
+  "Gsevere": "Óstöðugur áverki á hægri sköflungi, versnandi ástand (lost og kæling). G': blóðþurrð, alvarlegt lost, ofkæling."
+ },
+ "short": "Óstöðugt fótbrot eftir grjóthrun – BSH, tog og spelka.",
+ "thumb": "img/smamynd-skrida-fotbrot.jpg?v=0.6"
+}
