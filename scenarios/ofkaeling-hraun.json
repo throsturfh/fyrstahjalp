@@ -5,9 +5,9 @@
  "intro": "Október, síðdegis. Þú ert á leið eftir göngustíg yfir mosavaxið hraun þegar slydduél skellur á. Framundan liggur manneskja í hnipri á hrauninu við klett og önnur veifar til þín.",
  "source": "FH1 9 – Hitastjórnun (2024); FH1 2 – Þríhyrningakerfið",
  "images": {
-  "wide": "img/fjarlaegd.jpg",
-  "close": "img/naermynd.jpg",
-  "treated": "img/naermynd-medhondlad.jpg"
+  "wide": "img/pano-fjarlaegd.jpg",
+  "close": "img/pano-naermynd.jpg",
+  "treated": "img/pano-naermynd-medhondlad.jpg"
  },
  "patient": {
   "name": "Sigga",
@@ -75,39 +75,46 @@
  "distance": {
   "hotspots": [
    {
-    "id": "vedur",
-    "x": 50,
-    "y": 12,
-    "label": "Veður",
-    "text": "Dökk ský, slydda og strekkingsvindur (vindkæling). Það mun kólna enn meira. Vindur er óvinurinn – streymi eykur hitatap."
-   },
-   {
-    "id": "hraun",
-    "x": 45,
-    "y": 72,
-    "label": "Landslag",
-    "text": "Úfið hraun með djúpri sprungu og hálum mosa beint fram undan. Göngustígurinn liggur í sveig að klettinum – lengri en öruggari leið."
+    "id": "bill",
+    "x": 8,
+    "y": 42,
+    "label": "Vegur, bíll og skilti",
+    "text": "Malarvegur með bíl og vegvísi við göngustíginn, u.þ.b. 1 km í burtu – mögulegt skjól og flutningsleið. Sjúkrabíll kemst ekki alla leið að klettinum."
    },
    {
     "id": "felagi",
-    "x": 38,
-    "y": 38,
+    "x": 47,
+    "y": 40,
     "label": "Félagi",
     "text": "Göngufélagi í rauðum jakka veifar: „Hjálp! Sigga er orðin svo köld, hún lagðist bara niður!“ Hann virðist ómeiddur. Hann er auka hendur og vitni um atvikið."
    },
    {
     "id": "sjuklingur",
-    "x": 55,
-    "y": 47,
+    "x": 51,
+    "y": 66,
     "label": "Sjúklingur",
     "text": "Ein manneskja liggur hreyfingarlítil í hnipri beint á blautu hrauninu við klett. Engin augljós blæðing eða slys að sjá. Bakpoki við hlið."
    },
    {
-    "id": "bill",
-    "x": 19,
-    "y": 31,
-    "label": "Vegur og bíll",
-    "text": "Malarvegur og bíll u.þ.b. 1 km í burtu – mögulegt skjól og flutningsleið. Sjúkrabíll kemst ekki alla leið að klettinum."
+    "id": "bakpoki",
+    "x": 56,
+    "y": 68,
+    "label": "Bakpoki",
+    "text": "Rauður bakpoki liggur við hlið sjúklingsins – kannski þurr föt og nesti í honum."
+   },
+   {
+    "id": "vedur",
+    "x": 88,
+    "y": 22,
+    "label": "Veður",
+    "text": "Til hægri nálgast dimmur veggur af slyddu og snjó. Strekkingsvindur (vindkæling) – það mun kólna enn meira. Vindur er óvinurinn: streymi eykur hitatap."
+   },
+   {
+    "id": "hraun",
+    "x": 87,
+    "y": 72,
+    "label": "Sprunga í hrauni",
+    "text": "Djúp, hættuleg sprunga liggur þvert yfir hraunið hægra megin og grjótið er úfið og hált af mosa. Göngustígurinn liggur í sveig að klettinum – lengri en öruggari leið."
    }
   ],
   "approach": [
@@ -382,7 +389,30 @@
    "goodScore": 5,
    "badText": "Of snemmt! Hvetja skal til hreyfingar aðeins þegar viðkomandi hefur borðað og líður betur (og hitatap stöðvað). Við alvarlega ofkælingu á að hreyfa varlega og láta liggja.",
    "badScore": -10
-  }
+  },
+  "hotspots": [
+   {
+    "id": "c_felagi",
+    "x": 10,
+    "y": 62,
+    "label": "Félaginn",
+    "text": "Félaginn krýpur hjá og heldur á bakpoka. Hann getur hjálpað – gefðu honum verkefni."
+   },
+   {
+    "id": "c_sjuklingur",
+    "x": 56,
+    "y": 40,
+    "label": "Sigga",
+    "text": "Sigga liggur í hnipri beint á blautum mosanum við klettinn. Föt hennar eru blaut og hún er húfulaus."
+   },
+   {
+    "id": "c_bunadur",
+    "x": 84,
+    "y": 62,
+    "label": "Búnaður",
+    "text": "Opinn bakpoki Siggu með þurrum fötum, ullarhúfu og hitabrúsa. Við hliðina er björgunarsveitartaskan með einangrunardýnu, neyðarskýli og hitateppi."
+   }
+  ]
  },
  "report": {
   "options": [
@@ -579,5 +609,9 @@
    "unneededPoints": -8,
    "neutralText": "Þyrla er réttlætanleg ef ástand er alvarlegt, en hér er stutt í veg og sjúkrabíll yfirleitt fljótari."
   }
- ]
+ ],
+ "pan": {
+  "wideStart": 48,
+  "closeStart": 50
+ }
 }
