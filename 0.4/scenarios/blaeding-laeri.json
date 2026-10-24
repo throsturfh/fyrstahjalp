@@ -1,0 +1,1021 @@
+{
+ "id": "blaeding-laeri",
+ "track": 1,
+ "order": 3,
+ "title": "Mikil blæðing úr læri",
+ "intro": "Maí, morgunn. {nafn}, þú ekur skógarslóða í skógræktinni þegar maður í gulu vesti hleypur að bílnum: „Keðjusögin hrökk í lærið á Gunnari – það fossblæðir!“ Inni á milli trjánna liggur maður við nýfellt tré og sögin er enn í gangi.",
+ "images": {
+  "distance": "img/fjarlaegd-blaeding.jpg?v=0.4",
+  "close": "img/pano-blaeding.jpg?v=0.4",
+  "treated": "img/pano-blaeding-medhondlad.jpg?v=0.4",
+  "treatedWhen": [
+   "addressed:blaeding",
+   "flag:t_hlyja"
+  ]
+ },
+ "patient": {
+  "name": "Gunnar",
+  "age": 42,
+  "cantAnswer": "(Gunnar er sljór og svarar varla – félaginn svarar fyrir hann)"
+ },
+ "felagiName": "Félaginn",
+ "state": {
+  "start": 70,
+  "severeBelow": 45,
+  "ratePerSource": 0.4,
+  "warmRate": 0.15,
+  "max": 70,
+  "trendEps": 0.05,
+  "recoverWhen": [
+   "allSources"
+  ],
+  "severeLog": "Ástand versnar! Gunnar er orðinn grár, kaldsveittur og sljór – púlsinn hraður og veikur. Versnandi vökvatapslost.",
+  "severeLabel": "versnandi lost",
+  "mildLabel": "lost undir stjórn"
+ },
+ "problems": [
+  {
+   "id": "thrystingur",
+   "label": "Blæðing hægð (beinn þrýstingur)",
+   "rate": 1.5
+  },
+  {
+   "id": "blaeding",
+   "label": "Blæðing stöðvuð (snarvöndull)",
+   "rate": 1.5
+  },
+  {
+   "id": "alag",
+   "label": "Álag minnkað (liggur, rólegur)",
+   "rate": 0.4
+  },
+  {
+   "id": "kuldi",
+   "label": "Líkamshita viðhaldið (dýna, teppi)",
+   "rate": 0.4
+  }
+ ],
+ "stretcherWhen": [
+  "always"
+ ],
+ "vitals": [
+  {
+   "min": 60,
+   "VASE": "V – vakandi og áttaður, hræddur",
+   "P": "110/mín, hraður",
+   "O": "22/mín",
+   "BTH": "Púls finnst í úlnlið",
+   "L": "Eðlilegur viðkomu",
+   "H": "Föl, köld og sveitt húð",
+   "shiver": "Kvíðinn og órólegur",
+   "talk": "„Æ, lærið! Það blæðir svo mikið… stoppaðu þetta!“"
+  },
+  {
+   "min": 45,
+   "VASE": "V – vakandi en ringlaður",
+   "P": "128/mín, hraður og veikur",
+   "O": "28/mín, hröð og grunn",
+   "BTH": "Púls finnst illa í úlnlið",
+   "L": "Kaldur viðkomu",
+   "H": "Grá-föl, köld og sveitt",
+   "shiver": "Þyrstur, órólegur, ógleði",
+   "talk": "„Mér… líður svo illa. Ég er svo þyrstur.“"
+  },
+  {
+   "min": 0,
+   "VASE": "Á – opnar augu við ávarp, svarar varla",
+   "P": "140/mín, varla finnanlegur",
+   "O": "32/mín, grunn",
+   "BTH": "Púls finnst ekki í úlnlið",
+   "L": "Kaldur viðkomu",
+   "H": "Grá, köld og þvöl húð",
+   "shiver": "Sljór, svarar varla",
+   "talk": "(Muldrar og svarar varla.)"
+  }
+ ],
+ "distance": {
+  "fit": true,
+  "hotspots": [
+   {
+    "id": "bill",
+    "x": 16,
+    "y": 27,
+    "label": "Pallbíll á slóðanum",
+    "text": "Pallbíll skógarhöggsmannanna stendur á slóðanum. Slóðinn er fær – sjúkrabíll kemst eftir honum alveg að skógarjaðrinum."
+   },
+   {
+    "id": "girding",
+    "x": 33,
+    "y": 30,
+    "label": "Gaddavírsgirðing",
+    "text": "Gömul gaddavírsgirðing liggur meðfram slóðanum – farið í gegnum hliðið, ekki yfir vírinn."
+   },
+   {
+    "id": "felagi",
+    "x": 63,
+    "y": 33,
+    "label": "Félagi",
+    "text": "Félaginn í gulu vesti hefur hlaupið til baka að Gunnari og þrýstir höndunum að lærinu. „Það spýtist úr þessu!“ Hann er óslasaður – auka hendur og vitni."
+   },
+   {
+    "id": "tre",
+    "x": 85,
+    "y": 28,
+    "label": "Hallandi tré",
+    "text": "Tré sem var fellt hefur hangið fast í öðru tré og hallar yfir greinahrúgunni. Það getur fallið hvenær sem er – farið ekki undir það.",
+    "off": [
+     10,
+     -46
+    ]
+   },
+   {
+    "id": "sjuklingur",
+    "x": 45,
+    "y": 46,
+    "label": "Sjúklingur",
+    "text": "Maður í keðjusagarbuxum liggur á jörðinni og heldur um vinstra lærið. Hann er vakandi og hrópar.",
+    "off": [
+     -44,
+     -40
+    ]
+   },
+   {
+    "id": "blod",
+    "x": 40,
+    "y": 53,
+    "label": "Blóð",
+    "text": "Stór blóðpollur hefur myndast á skógarbotninum á örfáum mínútum – lífshættuleg blæðing.",
+    "off": [
+     -40,
+     26
+    ]
+   },
+   {
+    "id": "sog",
+    "x": 73,
+    "y": 51,
+    "label": "Keðjusög í gangi",
+    "text": "Keðjusögin liggur á jörðinni enn í gangi og reykir. Það þarf að slökkva á henni áður en farið er að sjúklingnum.",
+    "off": [
+     36,
+     -36
+    ]
+   },
+   {
+    "id": "greinar",
+    "x": 75,
+    "y": 75,
+    "label": "Greinahrúga",
+    "text": "Þétt hrúga af greinum og trjábolum – hált og ótryggt, og hún liggur beint undir hallandi trénu."
+   },
+   {
+    "id": "slodi",
+    "x": 15,
+    "y": 65,
+    "label": "Opinn slóði",
+    "text": "Opinn útkeyrsluslóði liggur vinstra megin að sjúklingnum, utan við fallsvið hallandi trésins.",
+    "off": [
+     30,
+     36
+    ]
+   }
+  ],
+  "approach": [
+   {
+    "id": "slodi",
+    "label": "Fara opna slóðann, láta slökkva á söginni og fylgjast með hallandi trénu",
+    "minutes": 1,
+    "score": 10,
+    "flag": "safeApproach",
+    "text": "Þú hleypur eftir opna slóðanum utan við fallsvið trésins og kallar til félagans að slökkva á söginni – hann gerir það. Vettvangurinn er tryggður á innan við mínútu. Rétt: tryggja öryggi og finna blæðingarstað."
+   },
+   {
+    "id": "beint",
+    "label": "Stytta sér leið í gegnum greinahrúguna undir hallandi trénu",
+    "minutes": 1,
+    "score": -10,
+    "flag": "fell",
+    "text": "Þú hrasar í greinunum beint undir hallandi trénu og sögin gengur enn við hliðina á þér. Þú sleppur, en settir þig í mikla hættu – nú gætu tveir verið slasaðir. Tryggja öryggi fyrst!"
+   },
+   {
+    "id": "bida",
+    "label": "Bíða við bílinn eftir sjúkrabílnum",
+    "minutes": 6,
+    "score": -15,
+    "flag": "waited",
+    "text": "Þú bíður í 6 mínútur. Gunnari blæðir á meðan – mikil blæðing getur orðið banvæn á örfáum mínútum. Vettvangurinn var ekki of hættulegur til að nálgast eftir slóðanum. Að lokum ferðu af stað."
+   }
+  ]
+ },
+ "close": {
+  "groups": [
+   {
+    "id": "vettvangur",
+    "label": "1. Vettvangur kannaður"
+   },
+   {
+    "id": "frumskodun",
+    "label": "2. Frumskoðun"
+   },
+   {
+    "id": "saga",
+    "label": "3. Sjúkrasaga og líkamsskoðun"
+   },
+   {
+    "id": "medferd",
+    "label": "Meðferð"
+   }
+  ],
+  "groupIntro": {
+   "frumskodun": "Stöðvun blæðingar: Tryggja öryggi → Finna blæðingarstað → Stöðva blæðingu (beinn þrýstingur → snarvöndull).",
+   "medferd": "Vökvatapslost: stöðva blæðingu, minnka álag, viðhalda líkamshita og BROS."
+  },
+  "hotspots": [
+   {
+    "id": "c_felagi",
+    "x": 35,
+    "y": 26,
+    "label": "Félaginn",
+    "text": "Félaginn er búinn að slökkva á söginni og þrýstir höndunum á lærið, skelkaður. Hann getur haldið þrýstingi og sótt búnað.",
+    "off": [
+     96,
+     -40
+    ]
+   },
+   {
+    "id": "c_sjuklingur",
+    "x": 45,
+    "y": 38,
+    "label": "Gunnar",
+    "text": "Gunnar situr hálfuppréttur við trjábol, fölur og sveittur. Hann er hræddur og reynir að standa upp.",
+    "off": [
+     -70,
+     10
+    ]
+   },
+   {
+    "id": "c_sar",
+    "x": 46.3,
+    "y": 68,
+    "label": "Sár á læri",
+    "text": "Djúpur skurður á vinstra læri rétt ofan við hné, í gegnum keðjusagarbuxurnar. Blóðið pulsar út úr sárinu – mikil blæðing.",
+    "off": [
+     -100,
+     70
+    ]
+   },
+   {
+    "id": "c_sog",
+    "x": 62.9,
+    "y": 58,
+    "label": "Keðjusög",
+    "text": "Sögin er komin í slökkt stöðu. Vettvangurinn er öruggari.",
+    "off": [
+     0,
+     -90
+    ]
+   },
+   {
+    "id": "c_taska",
+    "x": 71.4,
+    "y": 58,
+    "label": "Sjúkrataska",
+    "text": "Sjúkrataskan þín: snarvöndull, grisjur, þrýstiumbúðir, skæri, merkipenni, einangrunardýna og hitateppi.",
+    "off": [
+     0,
+     -110
+    ]
+   },
+   {
+    "id": "c_tre",
+    "x": 85.6,
+    "y": 30,
+    "label": "Hallandi tré",
+    "text": "Hallandi tréð hangir enn fast. Þið eruð utan við fallsviðið – fylgstu áfram með því."
+   }
+  ],
+  "hotspotsTreated": [
+   {
+    "id": "c_felagi",
+    "x": 35,
+    "y": 26,
+    "label": "Félaginn",
+    "text": "Félaginn fylgist með Gunnari og heldur honum rólegum.",
+    "off": [
+     96,
+     -40
+    ]
+   },
+   {
+    "id": "c_teppi",
+    "x": 42,
+    "y": 52,
+    "label": "Gunnar",
+    "text": "Gunnar liggur út af á einangrunardýnu undir hitateppi. Hann er fölur en rólegri."
+   },
+   {
+    "id": "c_snarv",
+    "x": 47,
+    "y": 66,
+    "label": "Snarvöndull",
+    "text": "Snarvöndullinn er ofarlega á lærinu, vel ofan við sárið, beint á húð. Tíminn er skráður á miðann. Blæðingin er stöðvuð.",
+    "off": [
+     -80,
+     100
+    ]
+   },
+   {
+    "id": "c_sog",
+    "x": 62.9,
+    "y": 58,
+    "label": "Keðjusög",
+    "text": "Slökkt á söginni.",
+    "off": [
+     0,
+     -90
+    ]
+   },
+   {
+    "id": "c_tre",
+    "x": 85.6,
+    "y": 30,
+    "label": "Hallandi tré",
+    "text": "Hallandi tréð hangir enn fast – þið eruð utan fallsviðsins."
+   }
+  ],
+  "speakers": {
+   "sjuklingur": {
+    "x": 46.6,
+    "y": 16,
+    "name": "Gunnar",
+    "side": "right"
+   },
+   "felagi": {
+    "x": 35,
+    "y": 4,
+    "name": "Félaginn",
+    "side": "left"
+   }
+  },
+  "speakersTreated": {
+   "sjuklingur": {
+    "x": 40,
+    "y": 31,
+    "name": "Gunnar",
+    "side": "right"
+   },
+   "felagi": {
+    "x": 35,
+    "y": 4,
+    "name": "Félaginn",
+    "side": "left"
+   }
+  },
+  "snarvRule": {
+   "goodWhen": [
+    "flag:t_thrystingur"
+   ],
+   "okFlag": "snarv_ok",
+   "badFlag": "snarv_noPress",
+   "goodScore": 10,
+   "badScore": -5,
+   "addressAlways": true,
+   "goodText": "Beinn þrýstingur dugði ekki – blóðið seytlaði enn í gegn. Þú setur snarvöndul ofarlega á lærið, a.m.k. 5 cm ofan við sárið, ekki yfir hnéð og beint á húð (buxurnar klipptar frá), og herðir þar til blæðingin stöðvast. Blæðingin er stöðvuð.",
+   "badText": "Snarvöndullinn stöðvar blæðinguna – en röðin var röng: byrjaðu á að fjarlægja föt og þrýsta beint á sárið. Venjulega er hægt að stöðva blæðingar með þrýstingi beint á upptökin; snarvöndull ef það dugar ekki.",
+   "fix": "Fjarlægja föt af sárinu og þrýsta fast beint á það fyrst; ef það dugar ekki: snarvöndull."
+  },
+  "timiRule": {
+   "goodWhen": [
+    "addressed:blaeding"
+   ],
+   "okFlag": "timi_ok",
+   "goodScore": 5,
+   "badScore": 0,
+   "retry": true,
+   "goodText": "Þú skrifar tímann á miðann á snarvöndlinum og í skráninguna. Það sem er ekki skráð var ekki gert – þeir sem taka við þurfa að vita hvenær hann var settur á.",
+   "badText": "Enginn snarvöndull kominn á enn – ekkert að skrá."
+  },
+  "actions": [
+   {
+    "id": "hanskar",
+    "group": "vettvangur",
+    "label": "Hanskar og eigið öryggi",
+    "minutes": 0,
+    "flag": "gloves",
+    "text": "Þú setur á þig hanska. Sögin er slökkt og þið eruð utan fallsviðs hallandi trésins – fylgstu með því."
+   },
+   {
+    "id": "atvik",
+    "group": "vettvangur",
+    "label": "Spyrja félagann hvað gerðist",
+    "minutes": 0,
+    "flag": "askedPartner",
+    "speaker": "felagi",
+    "say": "Hvað gerðist?",
+    "reply": "„Sögin hrökk til baka af bolnum og beint í lærið á honum, fyrir svona fimm mínútum. Það spýtist blóð úr þessu!“"
+   },
+   {
+    "id": "thrystingur",
+    "group": "frumskodun",
+    "label": "Stöðva blæðingu: fjarlægja föt og beinn þrýstingur á sárið",
+    "minutes": 1,
+    "flag": "t_thrystingur",
+    "treat": true,
+    "addresses": [
+     "thrystingur"
+    ],
+    "score": 5,
+    "text": "Þú klippir buxurnar frá sárinu og þrýstir fast beint á það með grisju. Blæðingin minnkar, en blóðið seytlar enn í gegnum grisjuna – mjög mikil blæðing.",
+    "sagaText": "Beinn þrýstingur á sár"
+   },
+   {
+    "id": "snarv",
+    "group": "frumskodun",
+    "label": "Snarvöndull ofarlega á læri, a.m.k. 5 cm ofan við sárið, á bera húð",
+    "minutes": 2,
+    "flag": "t_snarv",
+    "treat": true,
+    "rule": "snarvRule",
+    "addresses": [
+     "blaeding",
+     "thrystingur"
+    ],
+    "sagaText": "Snarvöndull ofarlega á vinstra læri"
+   },
+   {
+    "id": "snarv_rangt",
+    "group": "frumskodun",
+    "label": "Snarvöndull yfir hnéð, utan yfir keðjusagarbuxurnar",
+    "minutes": 2,
+    "flag": "t_snarv_rangt",
+    "treat": true,
+    "score": -10,
+    "text": "Rangt: snarvöndullinn yfir liðinn og utan yfir þykkar buxurnar nær ekki að stöðva blæðinguna – blóðið heldur áfram að streyma. Forðist liði; ekki áhrifaríkt yfir mikinn fatnað.",
+    "fix": "Snarvöndull a.m.k. 5 cm ofan við sárið, ekki yfir lið og ekki yfir mikinn fatnað (fjarlægja buxurnar)."
+   },
+   {
+    "id": "timi",
+    "group": "frumskodun",
+    "label": "Skrá tímann sem snarvöndullinn var settur á",
+    "minutes": 0,
+    "flag": "t_timi",
+    "treat": true,
+    "rule": "timiRule",
+    "sagaText": "Tími snarvönduls skráður"
+   },
+   {
+    "id": "tala",
+    "group": "frumskodun",
+    "label": "Tala við sjúkling",
+    "minutes": 1,
+    "flag": "talked",
+    "speaker": "sjuklingur",
+    "say": "Ég heiti {nafn} og er í björgunarsveitinni. Ég ætla að hjálpa þér.",
+    "reply": "{talk}"
+   },
+   {
+    "id": "vase",
+    "group": "frumskodun",
+    "label": "Meta meðvitund (VÁSE)",
+    "minutes": 1,
+    "flag": "vase",
+    "text": "VÁSE: {VASE}."
+   },
+   {
+    "id": "ondun",
+    "group": "frumskodun",
+    "label": "Öndunarvegur og öndun",
+    "minutes": 1,
+    "flag": "breathing",
+    "text": "Öndunarvegur opinn, talar. Öndun: {O}."
+   },
+   {
+    "id": "puls",
+    "group": "frumskodun",
+    "label": "Púls",
+    "minutes": 1,
+    "flag": "pulse",
+    "text": "Púls: {P}."
+   },
+   {
+    "id": "hryggur",
+    "group": "frumskodun",
+    "label": "Stuðningur við hrygg?",
+    "minutes": 0,
+    "flag": "spine",
+    "text": "Hann féll ekki og fékk ekki högg – engin eymsli í hálsi eða baki. Ekki þörf á að styðja við hrygg."
+   },
+   {
+    "id": "o",
+    "group": "saga",
+    "label": "O – Ofnæmi",
+    "minutes": 0,
+    "flag": "olsena_o",
+    "speaker": "sjuklingur",
+    "say": "Ertu með ofnæmi fyrir einhverju?",
+    "reply": "„Nei.“"
+   },
+   {
+    "id": "l",
+    "group": "saga",
+    "label": "L – Lyf",
+    "minutes": 0,
+    "flag": "olsena_l",
+    "speaker": "sjuklingur",
+    "say": "Tekurðu einhver lyf?",
+    "reply": "„Blóðþrýstingslyf… á morgnana.“"
+   },
+   {
+    "id": "s",
+    "group": "saga",
+    "label": "S – Sjúkrasaga",
+    "minutes": 0,
+    "flag": "olsena_s",
+    "speaker": "sjuklingur",
+    "say": "Ertu með einhverja sjúkdóma?",
+    "reply": "„Bara of háan blóðþrýsting.“"
+   },
+   {
+    "id": "e",
+    "group": "saga",
+    "label": "E – Einkenni",
+    "minutes": 0,
+    "flag": "olsena_e",
+    "speaker": "sjuklingur",
+    "say": "Hvernig líður þér? Hvar finnurðu til?",
+    "reply": "„Lærið brennur… og mér er óglatt og svo þyrstur.“"
+   },
+   {
+    "id": "n",
+    "group": "saga",
+    "label": "N – Neysla (og útskilnaður)",
+    "minutes": 0,
+    "flag": "olsena_n",
+    "speaker": "sjuklingur",
+    "say": "Hvenær borðaðirðu og drakkst síðast? Hvenær pissaðirðu síðast?",
+    "reply": "„Kaffi og brauð kl. sjö. Pissaði fyrir klukkutíma.“"
+   },
+   {
+    "id": "a",
+    "group": "saga",
+    "label": "A – Atvik",
+    "minutes": 0,
+    "flag": "olsena_a",
+    "speaker": "sjuklingur",
+    "say": "Hvað gerðist?",
+    "reply": "„Sögin hrökk af bolnum og beint í lærið.“"
+   },
+   {
+    "id": "lifsmork",
+    "group": "saga",
+    "label": "Lífsmörk (P, Ö, BÞ, L, H)",
+    "minutes": 2,
+    "flag": "vitals",
+    "text": "P: {P} · Ö: {O} · BÞ: {BTH} · L: {L} · H: {H} · VÁSE: {VASE}. {shiver}."
+   },
+   {
+    "id": "skodun",
+    "group": "saga",
+    "label": "Líkamsskoðun frá toppi til táar",
+    "minutes": 2,
+    "flag": "exam",
+    "text": "Engin önnur meiðsli. Djúpur skurður á vinstra læri rétt ofan við hné. Húðin föl, köld og sveitt. {shiver}."
+   },
+   {
+    "id": "leggja",
+    "group": "medferd",
+    "label": "Leggja hann út af og róa – minnka álag",
+    "minutes": 1,
+    "flag": "t_leggja",
+    "addresses": [
+     "alag"
+    ],
+    "score": 5,
+    "text": "Þið leggið Gunnar varlega út af og þú talar rólega við hann. Hann hættir að reyna að standa upp – minna álag.",
+    "sagaText": "Lagður út af, róaður (minnka álag)"
+   },
+   {
+    "id": "hlyja",
+    "group": "medferd",
+    "label": "Viðhalda líkamshita (dýna undir, hitateppi)",
+    "minutes": 2,
+    "flag": "t_hlyja",
+    "addresses": [
+     "kuldi"
+    ],
+    "score": 5,
+    "text": "Einangrunardýna undir og hitateppi yfir. Viðhalda líkamshita – sjúklingur í losti kólnar hratt.",
+    "sagaText": "Dýna undir og hitateppi"
+   },
+   {
+    "id": "losa",
+    "group": "medferd",
+    "label": "Losa snarvöndulinn öðru hvoru til að hleypa blóði í fótinn",
+    "minutes": 1,
+    "flag": "t_losa",
+    "score": -10,
+    "text": "Rangt: snarvöndull sem hefur stöðvað lífshættulega blæðingu er látinn vera á. Blóðið byrjar strax að streyma aftur og þú þarft að herða hann á ný.",
+    "fix": "Láta snarvöndulinn vera á, skrá tímann og flytja sjúkling í sérhæfða aðstoð."
+   },
+   {
+    "id": "ganga",
+    "group": "medferd",
+    "label": "Hjálpa honum á fætur til að ganga að bílnum",
+    "minutes": 1,
+    "flag": "t_ganga",
+    "score": -10,
+    "text": "Rangt: í losti á að minnka álag – Gunnar á að liggja. Hann sundlar strax og þið leggið hann aftur.",
+    "fix": "Minnka álag: láta hann liggja og bera hann á börum."
+   }
+  ]
+ },
+ "report": {
+  "options": [
+   {
+    "id": "flutningur",
+    "label": "Forgangsflutningur á börum að sjúkrabíl: snarvöndull áfram á, tíminn skráður, liggjandi og hlýtt, endurmeta reglulega",
+    "goodWhen": [
+     "addressed:blaeding",
+     "call:sjukrabill",
+     "flag:timi_ok"
+    ],
+    "okWhen": [
+     "addressed:blaeding",
+     "call:sjukrabill"
+    ],
+    "goodText": "Rétt: blæðingin stöðvuð með snarvöndli sem fær að vera á og tíminn skráður. Sjúklingur í losti liggur, er hlýjað og fluttur strax í sérhæfða aðstoð með sjúkrabíl – endurmetið á leiðinni.",
+    "okText": "Rétt að flytja strax, en tíminn sem snarvöndullinn var settur á var ekki skráður – þeir sem taka við þurfa að vita það.",
+    "badText": "Ekki tilbúið: blæðingin er ekki stöðvuð eða ekki búið að kalla eftir sjúkrabíl."
+   },
+   {
+    "id": "losa",
+    "label": "Losa snarvöndulinn og athuga hvort blæðingin sé hætt áður en farið er af stað",
+    "badText": "Rangt: snarvöndull sem stöðvar lífshættulega blæðingu er látinn vera á – blæðingin getur hafist strax aftur. Flytja í sérhæfða aðstoð."
+   },
+   {
+    "id": "ganga",
+    "label": "Láta hann ganga með stuðningi að sjúkrabílnum",
+    "badText": "Rangt: í losti á að minnka álag – sjúklingur liggur og er borinn á börum."
+   }
+  ]
+ },
+ "debrief": [
+  {
+   "id": "safe",
+   "label": "Öruggur vettvangur (sög slökkt, utan fallsviðs trésins)",
+   "ok": [
+    "flag:safeApproach"
+   ],
+   "points": 10,
+   "okText": "Þú tryggðir öryggi hratt og fórst örugga leið.",
+   "badText": "Þú tókst áhættu eða beiðst að óþörfu.",
+   "rule": "Stöðvun blæðingar: Tryggja öryggi → Finna blæðingarstað → Stöðva blæðingu.",
+   "fix": "Fara opna slóðann utan fallsviðs hallandi trésins, láta slökkva á söginni – og fara strax að sjúklingnum, ekki bíða."
+  },
+  {
+   "id": "hotspots",
+   "label": "Vettvangur: hættur og vísbendingar kannaðar",
+   "ok": [
+    "hotspots>=4"
+   ],
+   "points": 5,
+   "okText": "Þú sást hætturnar og blæðinguna.",
+   "badText": "Þú kannaðir vettvanginn lítið áður en þú fórst af stað.",
+   "rule": "Vettvangur kannaður: hætta, fjöldi sjúklinga og hvað gerðist.",
+   "fix": "Líta hratt yfir vettvanginn: sög í gangi, hallandi tré, greinahrúga, blæðing og örugg leið."
+  },
+  {
+   "id": "call",
+   "label": "Kallað eftir aðstoð (sjúkrabíll strax)",
+   "ok": [
+    "resourcesOk"
+   ],
+   "points": 15,
+   "okText": "Sjúkrabíll kallaður strax.",
+   "badText": "Röng, óþörf eða of sein beiðni um aðstoð – sjá sundurliðun.",
+   "rule": "Mikil blæðing og lost: sérhæfð aðstoð strax – hringja í 112 eftir sjúkrabíl.",
+   "fix": "Kalla strax (fyrir mín 5) eftir sjúkrabíl gegnum 112 – hann kemst eftir slóðanum. Þyrla er hægari hér."
+  },
+  {
+   "id": "pressure",
+   "label": "Beinn þrýstingur fyrst",
+   "ok": [
+    "flag:t_thrystingur",
+    "not:flag:snarv_noPress"
+   ],
+   "points": 10,
+   "okText": "Föt fjarlægð og þrýst beint á sárið fyrst.",
+   "badText": "Beinn þrýstingur var ekki reyndur fyrst.",
+   "rule": "„Venjulega er hægt að stöðva blæðingar með þrýstingi beint á upptök blæðingarinnar. Til að það gangi eftir þarf að fjarlægja föt og annað sem getur hulið sárið.“",
+   "fix": "Fjarlægja föt af sárinu og þrýsta fast beint á upptök blæðingarinnar áður en snarvöndull er settur á."
+  },
+  {
+   "id": "tq",
+   "label": "Snarvöndull rétt settur",
+   "ok": [
+    "addressed:blaeding"
+   ],
+   "points": 15,
+   "okText": "Snarvöndull ofan við sárið, ekki yfir lið, á bera húð – blæðingin stöðvuð.",
+   "badText": "Blæðingin var ekki stöðvuð með rétt settum snarvöndli.",
+   "rule": "Snarvöndull: staðsetjið a.m.k. 5 cm fyrir ofan áverka; forðist liði; ekki áhrifaríkt yfir mikinn fatnað. Ef hann stöðvar ekki blæðinguna: annar snarvöndull eða þrýstiumbúðir.",
+   "fix": "Þegar beinn þrýstingur dugar ekki: snarvöndull ofarlega á lærið, a.m.k. 5 cm ofan við sárið, ekki yfir hnéð, á bera húð – herða þar til blæðingin stöðvast."
+  },
+  {
+   "id": "fast",
+   "label": "Blæðing stöðvuð fljótt (innan 8 mín)",
+   "ok": [
+    "addressedBy:blaeding:8"
+   ],
+   "points": 10,
+   "okText": "Blæðingin stöðvuð á fyrstu mínútunum.",
+   "badText": "Of langur tími leið þar til blæðingin var stöðvuð.",
+   "rule": "Mikil blæðing er forgangsatriði í frumskoðun – á undan sögu og öðru.",
+   "fix": "Stöðva blæðinguna strax í frumskoðun, á undan sögu, lífsmörkum og öðru."
+  },
+  {
+   "id": "time",
+   "label": "Tími snarvönduls skráður",
+   "ok": [
+    "flag:timi_ok"
+   ],
+   "points": 5,
+   "okText": "Tíminn skráður á snarvöndulinn og í skráninguna.",
+   "badText": "Tíminn sem snarvöndullinn var settur á var ekki skráður.",
+   "rule": "Það sem er ekki skráð var ekki gert.",
+   "fix": "Skrá tímann sem snarvöndullinn var settur á (á miðann og í skráninguna) svo þeir sem taka við viti það."
+  },
+  {
+   "id": "primary",
+   "label": "Frumskoðun kláruð (meðvitund, öndun, púls, hryggur)",
+   "ok": [
+    "flag:vase",
+    "flag:breathing",
+    "flag:pulse",
+    "flag:spine"
+   ],
+   "points": 5,
+   "okText": "Lífsnauðsynleg kerfi metin.",
+   "badText": "Frumskoðun ófullkomin.",
+   "rule": "Frumskoðun: öndunarvegur, öndun, blóðrás (miklar blæðingar), meðvitund (VÁSE) og stuðningur við hrygg.",
+   "fix": "Eftir að blæðingin er stöðvuð: VÁSE, öndunarvegur og öndun, púls og meta þörf á stuðningi við hrygg."
+  },
+  {
+   "id": "shock",
+   "label": "Lostmeðferð: minnka álag og viðhalda líkamshita",
+   "ok": [
+    "addressed:alag",
+    "addressed:kuldi"
+   ],
+   "points": 10,
+   "okText": "Lagður út af, róaður, dýna og hitateppi.",
+   "badText": "Lostmeðferð ófullnægjandi.",
+   "rule": "Vökvatapslost – meðferð: stöðva blæðingu, minnka álag, viðhalda líkamshita (BROS), sérhæfð aðstoð.",
+   "fix": "Leggja sjúkling út af og róa (minnka álag), dýna undir og hitateppi yfir (viðhalda líkamshita)."
+  },
+  {
+   "id": "history",
+   "label": "OLSENA og lífsmörk",
+   "ok": [
+    "olsena>=4",
+    "flag:vitals"
+   ],
+   "points": 5,
+   "okText": "Góð saga og lífsmörk.",
+   "badText": "Saga eða lífsmörk vantar.",
+   "rule": "Sjúkrasaga (OLSENA) og lífsmörk – fylgjast með merkjum um lost (púls, öndun, húð, VÁSE).",
+   "fix": "Taka OLSENA-sögu (a.m.k. 4 atriði) og mæla lífsmörk þegar blæðingin er stöðvuð."
+  },
+  {
+   "id": "reassess",
+   "label": "Endurmat reglulega eftir að meðferð hófst",
+   "ok": [
+    "reassess>=2"
+   ],
+   "points": 5,
+   "okText": "Þú endurmast lífsmörk og VÁSE reglulega.",
+   "badText": "Lífsmörk voru ekki endurmetin nógu oft (a.m.k. tvisvar).",
+   "rule": "Lífsmörk eru endurmetin og skráð reglulega – oftar ef ástand er óstöðugt.",
+   "fix": "Endurmeta VÁSE og lífsmörk a.m.k. tvisvar eftir að meðferð hefst (flipinn Endurmat)."
+  },
+  {
+   "id": "state",
+   "label": "Ástand sjúklings í lokin",
+   "ok": [
+    "mild"
+   ],
+   "points": 10,
+   "okText": "Lostið versnaði ekki.",
+   "badText": "Gunnar fór í versnandi lost – of mikið blóð tapaðist.",
+   "rule": "Mikil blæðing getur orðið banvæn á örfáum mínútum – bregðumst strax við.",
+   "fix": "Tryggja öryggi hratt og stöðva blæðinguna strax: beinn þrýstingur og snarvöndull."
+  }
+ ],
+ "location": {
+  "type": "skogur-slodi",
+  "label": "Skógrækt, við skógarslóða, u.þ.b. 100 m frá færum slóða",
+  "callText": "Staðsetning: skógrækt við skógarslóða. Karlmaður, keðjusagarskurður á læri, mikil blæðing, merki um lost. Snarvöndull. Sjúkrabíll kemst eftir slóðanum."
+ },
+ "resources": [
+  {
+   "id": "logregla",
+   "label": "Lögregla",
+   "icon": "🚓",
+   "eta": 25,
+   "role": "Umferðarstjórnun, lokun vegar, öryggi á vettvangi, rannsókn slysa.",
+   "arriveText": "Lögreglan kemur eftir slóðanum.",
+   "needWhen": [],
+   "unneededWhen": [],
+   "neutralText": "Lögregla ekki nauðsynleg fyrir meðferð sjúklings – í lagi hvort sem er.",
+   "calledNeutralText": "Í lagi: lögregla sinnir m.a. rannsókn slysa, en hún skiptir ekki máli fyrir meðferð sjúklingsins."
+  },
+  {
+   "id": "sjukrabill",
+   "label": "Sjúkrabíll",
+   "icon": "🚑",
+   "eta": 20,
+   "role": "Flutningur á sjúkrahús og sérhæfð meðferð. Kemst aðeins eftir vegi.",
+   "arriveText": "Sjúkrabíllinn er kominn eftir slóðanum að skógarjaðrinum. Sjúkraflutningamenn koma með börur.",
+   "needWhen": [
+    "always"
+   ],
+   "callBy": 5,
+   "strictCallBy": true,
+   "needPoints": 10,
+   "unneededWhen": [],
+   "needText": "Mikil blæðing og lost: sérhæfð aðstoð strax. Sjúkrabíll kemst eftir slóðanum.",
+   "neutralText": ""
+  },
+  {
+   "id": "bjorgunarsveit",
+   "label": "Fleiri björgunarsveitarmenn",
+   "icon": "🧑‍🚒",
+   "eta": 25,
+   "role": "Fleiri hendur, börur, burður yfir erfitt landslag, búnaður og skjól.",
+   "arriveText": "Björgunarsveitarfélagar koma með börur og búnað.",
+   "needWhen": [],
+   "unneededWhen": [],
+   "neutralText": "Ekki nauðsynlegir: sjúkrabíll kemst eftir slóðanum og sjúkraflutningamenn bera með ykkur stuttan spöl.",
+   "calledNeutralText": "Í lagi: fleiri hendur hjálpa við burð, en sjúkrabíllinn kemst nærri og er kominn á undan."
+  },
+  {
+   "id": "thyrla",
+   "label": "Þyrla (LHG)",
+   "icon": "🚁",
+   "eta": 45,
+   "role": "Landhelgisgæslan: alvarlega veikir/slasaðir á afskekktum stöðum þar sem landflutningur er of hægur.",
+   "arriveText": "Þyrla Landhelgisgæslunnar kemur yfir skóginn.",
+   "needWhen": [],
+   "unneededWhen": [
+    "mild"
+   ],
+   "unneededText": "Þyrla var óþörf: sjúkrabíll kemst eftir slóðanum og er fljótari. Þyrla er fyrir afskekkta staði þar sem landflutningur er of hægur.",
+   "unneededPoints": -3,
+   "neutralText": "Þyrla er réttlætanleg ef langt er í sjúkrabíl; hér kemst sjúkrabíll eftir slóðanum."
+  }
+ ],
+ "pan": {
+  "wideStart": 50,
+  "closeStart": 46
+ },
+ "reassess": {
+  "feelSay": "Hvernig líður þér núna?",
+  "feelLabel": "Spyrja hvernig honum líður",
+  "feelSevereBy": "felagi",
+  "feel": {
+   "severe": "„Hann svarar varla lengur… er orðinn alveg grár!“",
+   "better": "„Aðeins skárra… mér er ekki eins kalt.“",
+   "same": "„Mér líður illa… svo þyrstur.“",
+   "worse": "„Mér… líður verr… allt hringsnýst.“"
+  },
+  "complaints": {
+   "thrystingur": "„Það blæðir ennþá!“",
+   "blaeding": "„Það seytlar ennþá blóð…“",
+   "alag": "„Ég verð að standa upp…“",
+   "kuldi": "„Mér er svo kalt.“"
+  },
+  "sources": {
+   "thrystingur": [
+    "Beinn þrýstingur / snarvöndull á sárinu.",
+    "Enginn þrýstingur á sárinu – blæðir óhindrað."
+   ],
+   "blaeding": [
+    "Snarvöndull ofan við sárið – engin blæðing.",
+    "Blóð seytlar enn úr sárinu."
+   ],
+   "alag": [
+    "Liggur út af og er rólegri.",
+    "Situr uppi og reynir að standa upp."
+   ],
+   "kuldi": [
+    "Dýna undir og hitateppi yfir.",
+    "Liggur beint á köldum skógarbotninum."
+   ]
+  },
+  "allText": "Blæðing stöðvuð og lostmeðferð í gangi.",
+  "notAllText": "Meðferð ekki lokið.",
+  "statusSevere": "Líðan: sljór, grár og kaldsveittur – versnandi lost.",
+  "statusPrefix": "Líðan: ",
+  "lines": [
+   [
+    {
+     "when": [
+      "flag:timi_ok"
+     ],
+     "text": "✓ Tími snarvönduls skráður."
+    },
+    {
+     "when": [
+      "addressed:blaeding"
+     ],
+     "text": "✗ Tími snarvönduls ekki skráður."
+    }
+   ]
+  ],
+  "rule": "Lífsmörk eru endurmetin og skráð reglulega – oftar ef ástand er óstöðugt."
+ },
+ "hud": {
+  "icon": "🩸",
+  "title": "Vandamál leyst"
+ },
+ "saga": {
+  "S": [
+   {
+    "when": [
+     "flag:askedPartner",
+     "flag:olsena_a"
+    ],
+    "text": "42 ára karl, skógarhöggsmaður; keðjusög hrökk í vinstra læri fyrir u.þ.b. 5 mín."
+   },
+   {
+    "when": [
+     "flag:olsena_o"
+    ],
+    "text": "Ofnæmi: ekkert."
+   },
+   {
+    "when": [
+     "flag:olsena_l"
+    ],
+    "text": "Lyf: blóðþrýstingslyf."
+   },
+   {
+    "when": [
+     "flag:olsena_s"
+    ],
+    "text": "Sjúkrasaga: hár blóðþrýstingur."
+   },
+   {
+    "when": [
+     "flag:olsena_e"
+    ],
+    "text": "Einkenni: verkur í læri, ógleði, þorsti."
+   },
+   {
+    "when": [
+     "flag:olsena_n"
+    ],
+    "text": "Neysla: kaffi og brauð kl. 7."
+   }
+  ],
+  "A": [
+   {
+    "when": [
+     "flag:t_thrystingur",
+     "flag:t_snarv",
+     "flag:exam"
+    ],
+    "text": "Djúpur skurður á vinstra læri ofan við hné, mikil blæðing."
+   },
+   {
+    "when": [
+     "flag:vase",
+     "flag:vitals"
+    ],
+    "text": "VÁSE: {VASE}."
+   },
+   {
+    "when": [
+     "flag:pulse",
+     "flag:vitals"
+    ],
+    "text": "P: {P}."
+   },
+   {
+    "when": [
+     "flag:breathing",
+     "flag:vitals"
+    ],
+    "text": "Ö: {O}."
+   },
+   {
+    "when": [
+     "flag:vitals"
+    ],
+    "text": "H: {H}."
+   }
+  ],
+  "Gmild": "Mikil blæðing úr læri með merkjum um vökvatapslost. G': versnandi lost.",
+  "Gsevere": "Mikil blæðing úr læri, versnandi vökvatapslost. G': hjartastopp."
+ }
+}
