@@ -2,12 +2,11 @@
  "id": "ofkaeling-hraun",
  "track": 1,
  "title": "Kaldur göngumaður á hrauni",
- "intro": "Október, síðdegis. Þú ert á leið eftir göngustíg yfir mosavaxið hraun þegar slydduél skellur á. Framundan liggur manneskja í hnipri á hrauninu við klett og önnur veifar til þín.",
- "source": "FH1 9 – Hitastjórnun (2024); FH1 2 – Þríhyrningakerfið",
+ "intro": "Október, síðdegis. {nafn}, þú ert á leið eftir göngustíg yfir mosavaxið hraun þegar slydduél nálgast. Framundan liggur manneskja í hnipri á hrauninu við stóran klett og önnur veifar til þín.",
  "images": {
-  "wide": "img/pano-fjarlaegd.jpg",
-  "close": "img/pano-naermynd.jpg",
-  "treated": "img/pano-naermynd-medhondlad.jpg"
+  "distance": "img/fjarlaegd-skammsnid.jpg?v=0.2",
+  "close": "img/pano-naermynd.jpg?v=0.2",
+  "treated": "img/pano-naermynd-medhondlad.jpg?v=0.2"
  },
  "patient": {
   "name": "Sigga",
@@ -38,6 +37,17 @@
   }
  ],
  "vitals": [
+  {
+   "min": 35.0,
+   "VASE": "V – vakandi og áttuð, svarar skýrar",
+   "P": "92/mín, reglulegur, sterkur",
+   "O": "18/mín, eðlileg dýpt",
+   "BTH": "Púls finnst vel í úlnlið (BÞ líklega eðlilegur)",
+   "L": "Köld viðkomu en að hlýna",
+   "H": "Föl, húðin að hlýna",
+   "shiver": "Skjálfti minnkandi",
+   "talk": "„Mér er aðeins farið að hlýna… takk.“ (talar skýrar)"
+  },
   {
    "min": 33.0,
    "VASE": "V – vakandi en hæg/ur í svörum, svolítið ringluð",
@@ -76,45 +86,45 @@
   "hotspots": [
    {
     "id": "bill",
-    "x": 8,
-    "y": 42,
+    "x": 18,
+    "y": 22,
     "label": "Vegur, bíll og skilti",
-    "text": "Malarvegur með bíl og vegvísi við göngustíginn, u.þ.b. 1 km í burtu – mögulegt skjól og flutningsleið. Sjúkrabíll kemst ekki alla leið að klettinum."
+    "text": "Malarvegur með bíl og vegvísi við göngustíginn, u.þ.b. 1 km í burtu – mögulegt skjól og flutningsleið. Sjúkrabíll kemst eftir veginum en ekki yfir hraunið að klettinum."
    },
    {
     "id": "felagi",
-    "x": 47,
-    "y": 40,
+    "x": 75,
+    "y": 35,
     "label": "Félagi",
     "text": "Göngufélagi í rauðum jakka veifar: „Hjálp! Sigga er orðin svo köld, hún lagðist bara niður!“ Hann virðist ómeiddur. Hann er auka hendur og vitni um atvikið."
    },
    {
     "id": "sjuklingur",
-    "x": 51,
-    "y": 66,
+    "x": 56,
+    "y": 51,
     "label": "Sjúklingur",
-    "text": "Ein manneskja liggur hreyfingarlítil í hnipri beint á blautu hrauninu við klett. Engin augljós blæðing eða slys að sjá. Bakpoki við hlið."
+    "text": "Ein manneskja liggur hreyfingarlítil í hnipri beint á blautum mosanum við klettinn, húfulaus. Engin augljós blæðing eða slys að sjá."
    },
    {
     "id": "bakpoki",
-    "x": 56,
-    "y": 68,
+    "x": 38,
+    "y": 53,
     "label": "Bakpoki",
-    "text": "Rauður bakpoki liggur við hlið sjúklingsins – kannski þurr föt og nesti í honum."
+    "text": "Rauður bakpoki liggur við hlið hennar – kannski þurr föt og nesti í honum."
    },
    {
     "id": "vedur",
-    "x": 88,
-    "y": 22,
+    "x": 80,
+    "y": 13,
     "label": "Veður",
-    "text": "Til hægri nálgast dimmur veggur af slyddu og snjó. Strekkingsvindur (vindkæling) – það mun kólna enn meira. Vindur er óvinurinn: streymi eykur hitatap."
+    "text": "Dimmur veggur af slyddu og snjó nálgast. Strekkingsvindur – það mun kólna enn meira. Vindur er óvinurinn: streymi eykur hitatap."
    },
    {
     "id": "hraun",
-    "x": 87,
-    "y": 72,
+    "x": 80,
+    "y": 66,
     "label": "Sprunga í hrauni",
-    "text": "Djúp, hættuleg sprunga liggur þvert yfir hraunið hægra megin og grjótið er úfið og hált af mosa. Göngustígurinn liggur í sveig að klettinum – lengri en öruggari leið."
+    "text": "Djúp, hættuleg sprunga liggur eftir hrauninu hægra megin og grjótið er úfið og hált af mosa. Göngustígurinn vinstra megin liggur í sveig að klettinum – lengri en öruggari leið."
    }
   ],
   "approach": [
@@ -142,7 +152,8 @@
     "flag": "waited",
     "text": "Þú bíður í 6 mínútur. Veðrið versnar og sjúklingurinn kólnar á meðan. Vettvangurinn var ekki hættulegur – að bíða hjálpaði engum. Að lokum ferðu af stað eftir stígnum."
    }
-  ]
+  ],
+  "fit": true
  },
  "close": {
   "groups": [
@@ -178,7 +189,9 @@
     "label": "Spyrja félagann hvað gerðist",
     "minutes": 1,
     "flag": "askedPartner",
-    "text": "„Við lögðum af stað kl. 10, villtumst aðeins. Hún datt í læk fyrir tveimur tímum og er blaut. Ekkert högg. Hún er búin að vera skjálfandi lengi og lagðist bara niður.“"
+    "speaker": "felagi",
+    "say": "Hvað gerðist?",
+    "reply": "„Við lögðum af stað kl. 10 og villtumst aðeins. Hún datt í læk fyrir tveimur tímum og er blaut. Ekkert högg. Hún er búin að vera skjálfandi lengi og lagðist bara niður.“"
    },
    {
     "id": "tala",
@@ -186,7 +199,9 @@
     "label": "Tala við sjúkling",
     "minutes": 1,
     "flag": "talked",
-    "text": "Þú kynnir þig: „Ég heiti … og kann fyrstu hjálp, má ég hjálpa þér?“ Sigga: {talk}"
+    "speaker": "sjuklingur",
+    "say": "Ég heiti {nafn} og er í björgunarsveitinni. Má ég hjálpa þér?",
+    "reply": "{talk}"
    },
    {
     "id": "vase",
@@ -234,7 +249,9 @@
     "label": "O – Ofnæmi",
     "minutes": 0,
     "flag": "olsena_o",
-    "text": "„Nei, ekkert ofnæmi.“"
+    "speaker": "sjuklingur",
+    "say": "Ertu með ofnæmi fyrir einhverju?",
+    "reply": "„Nei, ekkert ofnæmi.“"
    },
    {
     "id": "l",
@@ -242,7 +259,9 @@
     "label": "L – Lyf",
     "minutes": 0,
     "flag": "olsena_l",
-    "text": "„Engin lyf.“"
+    "speaker": "sjuklingur",
+    "say": "Tekurðu einhver lyf?",
+    "reply": "„Engin lyf.“"
    },
    {
     "id": "s",
@@ -250,7 +269,9 @@
     "label": "S – Sjúkrasaga",
     "minutes": 0,
     "flag": "olsena_s",
-    "text": "„Ég er alveg heilbrigð… held ég.“"
+    "speaker": "sjuklingur",
+    "say": "Ertu með einhverja sjúkdóma?",
+    "reply": "„Ég er alveg heilbrigð… held ég.“"
    },
    {
     "id": "e",
@@ -258,7 +279,9 @@
     "label": "E – Einkenni",
     "minutes": 0,
     "flag": "olsena_e",
-    "text": "„Mér er svo kalt… ég er þreytt og ég get ekki rennt upp rennilásnum.“"
+    "speaker": "sjuklingur",
+    "say": "Hvernig líður þér? Hvar finnurðu til?",
+    "reply": "„Mér er svo kalt… ég er þreytt og ég get ekki rennt upp rennilásnum.“"
    },
    {
     "id": "n",
@@ -266,7 +289,10 @@
     "label": "N – Neysla (og útskilnaður)",
     "minutes": 0,
     "flag": "olsena_n",
-    "text": "„Ég borðaði morgunmat kl. 8, svo bara vatnssopa. Pissaði síðast fyrir hádegi.“ (Orkuleysi = áhættuþáttur, lágur blóðsykur.)"
+    "speaker": "sjuklingur",
+    "say": "Hvenær borðaðirðu og drakkst síðast? Hvenær pissaðirðu síðast?",
+    "reply": "„Ég borðaði morgunmat kl. 8, svo bara vatnssopa. Pissaði síðast fyrir hádegi.“",
+    "note": "Orkuleysi og lágur blóðsykur eru áhættuþættir ofkælingar."
    },
    {
     "id": "a",
@@ -274,7 +300,9 @@
     "label": "A – Atvik",
     "minutes": 0,
     "flag": "olsena_a",
-    "text": "„Ég rann ofan í læk upp að mitti… og svo kom þetta veður.“"
+    "speaker": "sjuklingur",
+    "say": "Hvað gerðist?",
+    "reply": "„Ég rann ofan í læk upp að mitti… og svo kom þetta veður.“"
    },
    {
     "id": "lifsmork",
@@ -369,14 +397,6 @@
     "flag": "t_nudda",
     "score": -10,
     "text": "Rangt: að nudda hjálpar ekki og getur skaðað. Við ofkælingu skal hreyfa sjúkling varlega."
-   },
-   {
-    "id": "endurmat",
-    "group": "medferd",
-    "label": "Endurmeta lífsmörk",
-    "minutes": 1,
-    "flag": "reassess",
-    "text": "Endurmat: P: {P} · Ö: {O} · VÁSE: {VASE} · {shiver}."
    }
   ],
   "moveRule": {
@@ -385,7 +405,7 @@
     "flag:t_drykkur",
     "allSources"
    ],
-   "goodText": "Sigga hefur borðað og líður betur. Hún stendur upp og hreyfir sig til að framleiða hita – rétt, samkvæmt glærunum.",
+   "goodText": "Sigga hefur borðað og líður betur. Hún stendur upp og hreyfir sig til að framleiða hita – rétt: hreyfing eftir að viðkomandi hefur borðað og líður betur.",
    "goodScore": 5,
    "badText": "Of snemmt! Hvetja skal til hreyfingar aðeins þegar viðkomandi hefur borðað og líður betur (og hitatap stöðvað). Við alvarlega ofkælingu á að hreyfa varlega og láta liggja.",
    "badScore": -10
@@ -400,8 +420,8 @@
    },
    {
     "id": "c_sjuklingur",
-    "x": 56,
-    "y": 40,
+    "x": 48,
+    "y": 56,
     "label": "Sigga",
     "text": "Sigga liggur í hnipri beint á blautum mosanum við klettinn. Föt hennar eru blaut og hún er húfulaus."
    },
@@ -412,7 +432,19 @@
     "label": "Búnaður",
     "text": "Opinn bakpoki Siggu með þurrum fötum, ullarhúfu og hitabrúsa. Við hliðina er björgunarsveitartaskan með einangrunardýnu, neyðarskýli og hitateppi."
    }
-  ]
+  ],
+  "speakers": {
+   "sjuklingur": {
+    "x": 56,
+    "y": 33,
+    "name": "Sigga"
+   },
+   "felagi": {
+    "x": 11,
+    "y": 35,
+    "name": "Félaginn"
+   }
+  }
  },
  "report": {
   "options": [
@@ -425,8 +457,8 @@
     "okWhen": [
      "mild"
     ],
-    "goodText": "Rétt við alvarlega ofkælingu: hreyfa varlega, láta vita (112/aðgerðarstjórn), endurmeta lífsmörk, flutningur á börum – mögulega á Landspítala.",
-    "okText": "Örugg ákvörðun. Við væga ofkælingu sem lagast hefði þó mátt fylgja henni í skjól (bíl) eftir að hitatap var stöðvað og hún hafði borðað."
+    "goodText": "Rétt við alvarlega ofkælingu: hreyfa varlega, láta vita (112/aðgerðarstjórn), endurmeta lífsmörk reglulega og flytja á börum – huga að flutningi á Landspítala.",
+    "okText": "Örugg ákvörðun. Við væga ofkælingu sem hefur lagast hefði þó mátt fylgja henni gangandi með stuðningi í skjól (bíl) eftir að hitatap var stöðvað og hún hafði borðað – þá þarf ekki burð á börum."
    },
    {
     "id": "skjol",
@@ -456,7 +488,7 @@
    "points": 10,
    "okText": "Þú fórst örugga leið.",
    "badText": "Þú tókst áhættu eða beiðst að óþörfu.",
-   "rule": "Vettvangur kannaður: hætta – eigið öryggi fyrst (FH1 2 Þríhyrningakerfið)."
+   "rule": "Vettvangur kannaður: er hætta á vettvangi? Eigið öryggi fyrst."
   },
   {
    "id": "hotspots",
@@ -467,7 +499,7 @@
    "points": 10,
    "okText": "Þú kannaðir veður, landslag, fjölda og aðstæður.",
    "badText": "Þú kannaðir vettvanginn lítið áður en þú fórst af stað.",
-   "rule": "Vettvangur kannaður: hætta, fjöldi, hvað gerðist (FH1 2)."
+   "rule": "Vettvangur kannaður: hætta, fjöldi sjúklinga og hvað gerðist."
   },
   {
    "id": "call",
@@ -478,7 +510,7 @@
    "points": 10,
    "okText": "Rétt aðstoð kölluð til í tæka tíð.",
    "badText": "Röng, óþörf eða of sein beiðni um aðstoð – sjá sundurliðun.",
-   "rule": "Þarf ég aðstoð? Biðja frekar um aðstoð en ekki; staðsetning + stutt lýsing (FH1 2). Alvarleg ofkæling: láta vita 112/aðgerðarstjórn (FH1 9)."
+   "rule": "Þarf ég aðstoð? Kallaðu eftir þeirri aðstoð sem ástand og flutningur krefjast, frekar of snemma en of seint; staðsetning og stutt lýsing. Alvarleg ofkæling: láta vita 112/aðgerðarstjórn."
   },
   {
    "id": "primary",
@@ -493,7 +525,7 @@
    "points": 15,
    "okText": "Öll lífsnauðsynleg kerfi metin.",
    "badText": "Frumskoðun ófullkomin.",
-   "rule": "Frumskoðun: öndunarvegur, öndun, blóðrás, meðvitund (VÁSE), stuðningur við hrygg (FH1 2)."
+   "rule": "Frumskoðun: öndunarvegur, öndun, blóðrás, meðvitund (VÁSE) og stuðningur við hrygg."
   },
   {
    "id": "history",
@@ -505,7 +537,7 @@
    "points": 10,
    "okText": "Góð saga og lífsmörk.",
    "badText": "Saga eða lífsmörk vantar.",
-   "rule": "Sjúkrasaga (OLSENA) og lífsmörk – klára skoðun áður en meðferð hefst (FH1 2)."
+   "rule": "Sjúkrasaga (OLSENA) og lífsmörk – klára skoðun og svo meðferð."
   },
   {
    "id": "heat",
@@ -516,7 +548,7 @@
    "points": 20,
    "okText": "Leiðni, streymi, geislun og uppgufun stöðvuð.",
    "badText": "Ekki var tekið á öllum hitatapsleiðum.",
-   "rule": "Væg ofkæling – meðferð: einangrið frá jörðu, vindhelt/neyðarskýli, hylja allan líkamann og höfuð, fjarlægja blaut föt (FH1 9)."
+   "rule": "Væg ofkæling – komið í veg fyrir frekara hitatap: dýna undir (leiðni), vindhelt/neyðarskýli (streymi), hylja allan líkamann og höfuð (geislun), fjarlægja blaut föt og þurrka (uppgufun)."
   },
   {
    "id": "energy",
@@ -528,7 +560,18 @@
    "points": 10,
    "okText": "Orkuríkur drykkur gefinn meðan hún gat kyngt.",
    "badText": "Orka gefin ekki eða við ranga aðstæðu.",
-   "rule": "Aukið hitaframleiðslu: orkuríkur drykkur/matur ef viðkomandi getur kyngt (FH1 9)."
+   "rule": "Aukið hitaframleiðslu: orkuríkur drykkur og/eða matur ef viðkomandi getur kyngt."
+  },
+  {
+   "id": "reassess",
+   "label": "Endurmat reglulega eftir að meðferð hófst",
+   "ok": [
+    "reassess>=2"
+   ],
+   "points": 10,
+   "okText": "Þú endurmast lífsmörk og VÁSE reglulega og fylgdist með hvort meðferðin virkaði.",
+   "badText": "Lífsmörk voru ekki endurmetin nógu oft eftir að meðferð hófst (a.m.k. tvisvar).",
+   "rule": "Lífsmörk eru endurmetin og skráð reglulega – oftar ef ástand er óstöðugt. Við alvarlega ofkælingu: hreyfið varlega og endurmetið lífsmörk reglulega."
   },
   {
    "id": "temp",
@@ -539,7 +582,7 @@
    "points": 15,
    "okText": "Hún fór aldrei niður í alvarlega ofkælingu.",
    "badText": "Hún kólnaði niður í alvarlega ofkælingu (<32°C) – of mikill tími leið án meðferðar.",
-   "rule": "Skjálfti er fyrsta viðvörun – bregðumst strax við (FH1 9)."
+   "rule": "Skjálfti er fyrsta viðvörun – bregðumst strax við."
   }
  ],
  "location": {
@@ -571,13 +614,14 @@
    "role": "Flutningur á sjúkrahús og sérhæfð meðferð. Kemst aðeins eftir vegi.",
    "arriveText": "Sjúkrabíllinn er kominn á malarveginn, ~1 km frá. Hann kemst ekki yfir hraunið – bera þarf sjúkling að honum.",
    "needWhen": [
-    "severe"
+    "stretcher"
    ],
    "callBy": 10,
    "needPoints": 5,
    "unneededWhen": [],
-   "needText": "Sjúkrabíll nauðsynlegur við alvarlega ofkælingu (flutningur, mögulega á Landspítala).",
-   "neutralText": "Sjúkrabíll er skynsamleg varúð; við væga ofkælingu sem lagast má þó fylgja henni í skjól (bíl)."
+   "needText": "Sjúkrabíll þarf að bíða við veginn þegar flytja á sjúkling á börum – við alvarlega ofkælingu mögulega á Landspítala.",
+   "neutralText": "Ekki nauðsynlegur: væg ofkæling sem lagaðist og hún komst í skjól í bílnum. Láta samt vita af stöðunni.",
+   "calledNeutralText": "Skynsamleg varúð við fyrstu sýn; við væga ofkælingu sem lagast má fylgja henni í skjól (bíl) og afturkalla."
   },
   {
    "id": "bjorgunarsveit",
@@ -587,12 +631,14 @@
    "role": "Fleiri hendur, börur, burður yfir erfitt landslag, búnaður og skjól.",
    "arriveText": "Björgunarsveitarfélagar koma með börur, dýnu og neyðarskýli. Nú er hægt að bera sjúkling yfir hraunið.",
    "needWhen": [
-    "always"
+    "stretcher"
    ],
    "callBy": 10,
    "needPoints": 10,
    "unneededWhen": [],
-   "needText": "Fleiri björgunarsveitarmenn þarf til burðar á börum yfir hraun – sjúkrabíll kemst ekki að klettinum. Biðja frekar um aðstoð en ekki (FH1 2)."
+   "needText": "Burður á börum yfir hraunið krefst fleiri björgunarsveitarmanna – sjúkrabíll kemst ekki að klettinum.",
+   "neutralText": "Ekki nauðsynlegir: hún var í vægri ofkælingu, hitatap stöðvað og hún gat gengið með stuðningi í bílinn – enginn burður á börum.",
+   "calledNeutralText": "Ekki nauðsynlegir í þetta sinn (hún gat gengið með stuðningi í bílinn), en í lagi að biðja frekar um aðstoð en ekki – alltaf hægt að afturkalla."
   },
   {
    "id": "thyrla",
@@ -613,5 +659,39 @@
  "pan": {
   "wideStart": 48,
   "closeStart": 50
+ },
+ "reassess": {
+  "feelSay": "Hvernig líður þér núna? Er þér eitthvað hlýrra?",
+  "feel": {
+   "severe": "(Svarar með óskiljanlegu muldri og opnar augun aðeins við ávarp.)",
+   "better": "„Mér er aðeins hlýrra núna… skjálftinn er minni. Takk.“",
+   "same": "„Mér er ennþá svo kalt…“",
+   "worse": "„Mér… er… svo kalt…“ (talar hægar en áður)"
+  },
+  "complaints": {
+   "leidni": "„Jörðin er svo köld undir mér.“",
+   "streymi": "„Vindurinn smýgur í gegnum allt.“",
+   "geislun": "„Mér er svo kalt á höfðinu.“",
+   "uppgufun": "„Buxurnar eru ennþá rennblautar.“"
+  },
+  "sources": {
+   "leidni": [
+    "Dýna undir – hún liggur ekki lengur á köldum jarðvegi.",
+    "Liggur enn beint á köldum, blautum jarðvegi."
+   ],
+   "streymi": [
+    "Vindhelt utan um / neyðarskýli – vindurinn nær ekki að kæla.",
+    "Vindurinn blæs enn á hana."
+   ],
+   "geislun": [
+    "Allur líkaminn og höfuðið hulið.",
+    "Líkami eða höfuð enn óhulið."
+   ],
+   "uppgufun": [
+    "Blaut föt fjarlægð og húðin þurrkuð.",
+    "Enn í blautum fötum."
+   ]
+  },
+  "rule": "Lífsmörk eru endurmetin og skráð reglulega – oftar ef ástand er óstöðugt. Við alvarlega ofkælingu: hreyfið varlega og endurmetið lífsmörk reglulega."
  }
 }
