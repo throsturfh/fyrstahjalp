@@ -110,20 +110,6 @@
     "text": "Malarvegur og bíll u.þ.b. 1 km í burtu – mögulegt skjól og flutningsleið. Sjúkrabíll kemst ekki alla leið að klettinum."
    }
   ],
-  "callOptions": [
-   {
-    "id": "sjukrabill",
-    "label": "Sjúkrabíll"
-   },
-   {
-    "id": "bjorgunarsveit",
-    "label": "Björgunarsveit"
-   },
-   {
-    "id": "logregla",
-    "label": "Lögregla"
-   }
-  ],
   "approach": [
    {
     "id": "beint",
@@ -402,7 +388,7 @@
   "options": [
    {
     "id": "112_flutningur",
-    "label": "Hringja í 112: kalla eftir björgunarsveit og sjúkrabíl, flytja á börum, endurmeta reglulega",
+    "label": "Flytja á börum að sjúkrabíl með björgunarsveitarmönnum, endurmeta reglulega",
     "goodWhen": [
      "severe"
     ],
@@ -414,7 +400,7 @@
    },
    {
     "id": "skjol",
-    "label": "Fylgja henni gangandi með stuðningi í bílinn (skjól), láta 112 vita af stöðunni",
+    "label": "Fylgja henni gangandi með stuðningi í bílinn (skjól), láta vita af stöðunni",
     "goodWhen": [
      "mild",
      "allSources",
@@ -455,14 +441,14 @@
   },
   {
    "id": "call",
-   "label": "Kallað eftir aðstoð",
+   "label": "Kallað eftir aðstoð (val og tímasetning)",
    "ok": [
-    "call:bjorgunarsveit"
+    "resourcesOk"
    ],
    "points": 10,
-   "okText": "Björgunarsveit kölluð til – nauðsynleg til burðar yfir hraun.",
-   "badText": "Ekki kallað á björgunarsveit; sjúkrabíll kemst ekki að klettinum.",
-   "rule": "Kalla eftir aðstoð – 112 / Aðgerðarstjórn (FH1 9, alvarleg ofkæling: Látið vita)."
+   "okText": "Rétt aðstoð kölluð til í tæka tíð.",
+   "badText": "Röng, óþörf eða of sein beiðni um aðstoð – sjá sundurliðun.",
+   "rule": "Þarf ég aðstoð? Biðja frekar um aðstoð en ekki; staðsetning + stutt lýsing (FH1 2). Alvarleg ofkæling: láta vita 112/aðgerðarstjórn (FH1 9)."
   },
   {
    "id": "primary",
@@ -524,6 +510,74 @@
    "okText": "Hún fór aldrei niður í alvarlega ofkælingu.",
    "badText": "Hún kólnaði niður í alvarlega ofkælingu (<32°C) – of mikill tími leið án meðferðar.",
    "rule": "Skjálfti er fyrsta viðvörun – bregðumst strax við (FH1 9)."
+  }
+ ],
+ "location": {
+  "type": "hraun-nalaegt-vegi",
+  "label": "Mosavaxið hraun, u.þ.b. 1 km frá malarvegi, 25 km frá næsta þéttbýli",
+  "callText": "Staðsetning: göngustígur á hrauni, ~1 km frá malarvegi. Ein kona, blaut og köld, líklega ofkæling. Veður: slydda og vindur."
+ },
+ "resources": [
+  {
+   "id": "logregla",
+   "label": "Lögregla",
+   "icon": "🚓",
+   "eta": 25,
+   "role": "Umferðarstjórnun, lokun vegar, öryggi á vettvangi, rannsókn slysa.",
+   "arriveText": "Lögreglubíll kemur að malarveginum. Lögreglumenn spyrja hvort þörf sé á aðstoð – hér er engin umferð að stýra.",
+   "needWhen": [],
+   "unneededWhen": [
+    "always"
+   ],
+   "unneededText": "Lögregla var ekki nauðsynleg: engin umferð eða ógn á vettvangi. Hún hentar við umferðarslys og þegar tryggja þarf öryggi vettvangs.",
+   "unneededPoints": -3,
+   "neutralText": "Lögregla ekki kölluð – rétt, engin umferð eða hætta á vettvangi."
+  },
+  {
+   "id": "sjukrabill",
+   "label": "Sjúkrabíll",
+   "icon": "🚑",
+   "eta": 30,
+   "role": "Flutningur á sjúkrahús og sérhæfð meðferð. Kemst aðeins eftir vegi.",
+   "arriveText": "Sjúkrabíllinn er kominn á malarveginn, ~1 km frá. Hann kemst ekki yfir hraunið – bera þarf sjúkling að honum.",
+   "needWhen": [
+    "severe"
+   ],
+   "callBy": 10,
+   "needPoints": 5,
+   "unneededWhen": [],
+   "needText": "Sjúkrabíll nauðsynlegur við alvarlega ofkælingu (flutningur, mögulega á Landspítala).",
+   "neutralText": "Sjúkrabíll er skynsamleg varúð; við væga ofkælingu sem lagast má þó fylgja henni í skjól (bíl)."
+  },
+  {
+   "id": "bjorgunarsveit",
+   "label": "Fleiri björgunarsveitarmenn",
+   "icon": "🧑‍🚒",
+   "eta": 20,
+   "role": "Fleiri hendur, börur, burður yfir erfitt landslag, búnaður og skjól.",
+   "arriveText": "Björgunarsveitarfélagar koma með börur, dýnu og neyðarskýli. Nú er hægt að bera sjúkling yfir hraunið.",
+   "needWhen": [
+    "always"
+   ],
+   "callBy": 10,
+   "needPoints": 10,
+   "unneededWhen": [],
+   "needText": "Fleiri björgunarsveitarmenn þarf til burðar á börum yfir hraun – sjúkrabíll kemst ekki að klettinum. Biðja frekar um aðstoð en ekki (FH1 2)."
+  },
+  {
+   "id": "thyrla",
+   "label": "Þyrla (LHG)",
+   "icon": "🚁",
+   "eta": 50,
+   "role": "Landhelgisgæslan: alvarlega veikir/slasaðir á afskekktum stöðum þar sem landflutningur er of hægur.",
+   "arriveText": "Þyrla Landhelgisgæslunnar lendir á hrauninu.",
+   "needWhen": [],
+   "unneededWhen": [
+    "mild"
+   ],
+   "unneededText": "Þyrla var óþörf: væg ofkæling, stutt í veg og sjúkrabíl. Þyrla er takmörkuð auðlind fyrir alvarleg tilfelli á afskekktum stöðum.",
+   "unneededPoints": -8,
+   "neutralText": "Þyrla er réttlætanleg ef ástand er alvarlegt, en hér er stutt í veg og sjúkrabíll yfirleitt fljótari."
   }
  ]
 }
