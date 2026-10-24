@@ -1,22 +1,37 @@
 {
  "id": "ofkaeling-hraun",
  "track": 1,
+ "order": 1,
  "title": "Kaldur göngumaður á hrauni",
  "intro": "Október, síðdegis. {nafn}, þú ert á leið eftir göngustíg yfir mosavaxið hraun þegar slydduél nálgast. Framundan liggur manneskja í hnipri á hrauninu við stóran klett og önnur veifar til þín.",
  "images": {
-  "distance": "img/fjarlaegd-skammsnid.jpg?v=0.2.1",
-  "close": "img/pano-naermynd.jpg?v=0.2.1",
-  "treated": "img/pano-naermynd-medhondlad.jpg?v=0.2.1"
+  "distance": "img/fjarlaegd-skammsnid.jpg?v=0.3",
+  "close": "img/pano-naermynd.jpg?v=0.3",
+  "treated": "img/pano-naermynd-medhondlad.jpg?v=0.3",
+  "treatedWhen": [
+   "flag:t_dyna",
+   "flag:t_hylja"
+  ]
  },
  "patient": {
   "name": "Sigga",
-  "age": 34
+  "age": 34,
+  "cantAnswer": "(Sigga getur ekki svarað skýrt – félaginn svarar fyrir hana)"
  },
  "temp": {
   "start": 34.5,
   "severeBelow": 32.0,
   "ratePerSource": 0.04,
-  "warmRate": 0.05
+  "warmRate": 0.05,
+  "severeLog": "Ástand versnar! Skjálftinn hættir og hún svarar varla. Alvarleg ofkæling.",
+  "severeLabel": "alvarleg ofkæling",
+  "mildLabel": "væg ofkæling",
+  "valueText": "(áætl. kjarnhiti {v}°C)",
+  "max": 36.5,
+  "recoverWhen": [
+   "flag:t_drykkur",
+   "mild"
+  ]
  },
  "heatSources": [
   {
@@ -378,7 +393,8 @@
     "score": 10,
     "text": "Sigga getur kyngt og drekkur heitt kakó og borðar orkugel og súkkulaði. Eykur hitaframleiðslu.",
     "severeText": "Sigga getur ekki kyngt örugglega – hætta á að vökvi fari ofan í lungu! Við alvarlega ofkælingu má ekki gefa að drekka.",
-    "severeScore": -15
+    "severeScore": -15,
+    "fix": "Orkuríkur drykkur og matur aðeins ef viðkomandi getur kyngt (væg ofkæling)."
    },
    {
     "id": "hreyfa",
@@ -396,7 +412,8 @@
     "minutes": 1,
     "flag": "t_nudda",
     "score": -10,
-    "text": "Rangt: að nudda hjálpar ekki og getur skaðað. Við ofkælingu skal hreyfa sjúkling varlega."
+    "text": "Rangt: að nudda hjálpar ekki og getur skaðað. Við ofkælingu skal hreyfa sjúkling varlega.",
+    "fix": "Hreyfa sjúkling varlega og stöðva hitatap (dýna, vindhelt, hylja, þurr föt) í stað þess að nudda."
    }
   ],
   "moveRule": {
@@ -408,7 +425,8 @@
    "goodText": "Sigga hefur borðað og líður betur. Hún stendur upp og hreyfir sig til að framleiða hita – rétt: hreyfing eftir að viðkomandi hefur borðað og líður betur.",
    "goodScore": 5,
    "badText": "Of snemmt! Hvetja skal til hreyfingar aðeins þegar viðkomandi hefur borðað og líður betur (og hitatap stöðvað). Við alvarlega ofkælingu á að hreyfa varlega og láta liggja.",
-   "badScore": -10
+   "badScore": -10,
+   "fix": "Hvetja til hreyfingar aðeins þegar hitatap hefur verið stöðvað og hún hefur borðað og líður betur."
   },
   "hotspots": [
    {
@@ -692,6 +710,130 @@
     "Enn í blautum fötum."
    ]
   },
-  "rule": "Lífsmörk eru endurmetin og skráð reglulega – oftar ef ástand er óstöðugt. Við alvarlega ofkælingu: hreyfið varlega og endurmetið lífsmörk reglulega."
+  "rule": "Lífsmörk eru endurmetin og skráð reglulega – oftar ef ástand er óstöðugt. Við alvarlega ofkælingu: hreyfið varlega og endurmetið lífsmörk reglulega.",
+  "feelLabel": "Spyrja hvernig henni líður",
+  "allText": "Hitatap stöðvað.",
+  "notAllText": "Hitatap ekki stöðvað að fullu.",
+  "statusSevere": "Skjálfti: enginn – alvarleg ofkæling, hreyfa varlega.",
+  "statusPrefix": "Skjálfti: ",
+  "lines": [
+   [
+    {
+     "when": [
+      "val>=35"
+     ],
+     "text": "Hendur að hlýna, hreyfigeta betri."
+    },
+    {
+     "when": [
+      "trend:betra"
+     ],
+     "text": "Hendur aðeins hlýrri."
+    },
+    {
+     "when": [
+      "always"
+     ],
+     "text": "Hendur ískaldar, stífar og klaufskar."
+    }
+   ],
+   [
+    {
+     "when": [
+      "flag:t_drykkur",
+      "not:flag:drinkSevere"
+     ],
+     "text": "✓ Hefur fengið orkuríkan drykk og mat."
+    }
+   ]
+  ]
+ },
+ "hud": {
+  "icon": "🥶",
+  "title": "Hitatapsleiðir stöðvaðar"
+ },
+ "saga": {
+  "S": [
+   {
+    "when": [
+     "flag:askedPartner",
+     "flag:olsena_a"
+    ],
+    "text": "34 ára kona, rann í læk fyrir u.þ.b. 2 klst, blaut og köld í slydduveðri á hrauni."
+   },
+   {
+    "when": [
+     "flag:olsena_o"
+    ],
+    "text": "Ofnæmi: ekkert."
+   },
+   {
+    "when": [
+     "flag:olsena_l"
+    ],
+    "text": "Lyf: engin."
+   },
+   {
+    "when": [
+     "flag:olsena_s"
+    ],
+    "text": "Sjúkrasaga: heilbrigð."
+   },
+   {
+    "when": [
+     "flag:olsena_e"
+    ],
+    "text": "Einkenni: kuldi, þreyta, klaufskar hendur."
+   },
+   {
+    "when": [
+     "flag:olsena_n"
+    ],
+    "text": "Neysla: morgunmatur kl. 8, lítið síðan."
+   }
+  ],
+  "A": [
+   {
+    "when": [
+     "flag:vase",
+     "flag:vitals"
+    ],
+    "text": "VÁSE: {VASE}."
+   },
+   {
+    "when": [
+     "flag:pulse",
+     "flag:vitals"
+    ],
+    "text": "P: {P}."
+   },
+   {
+    "when": [
+     "flag:breathing",
+     "flag:vitals"
+    ],
+    "text": "Ö: {O}."
+   },
+   {
+    "when": [
+     "flag:vitals"
+    ],
+    "text": "H: {H}. {shiver}."
+   },
+   {
+    "when": [
+     "flag:bleeding"
+    ],
+    "text": "Engar blæðingar."
+   },
+   {
+    "when": [
+     "flag:exam"
+    ],
+    "text": "Blaut föt, húfulaus, engin meiðsli."
+   }
+  ],
+  "Gsevere": "Alvarleg ofkæling (<32°C). G': hjartsláttaróregla, hjartastopp.",
+  "Gmild": "Væg ofkæling (32–35°C). G': alvarleg ofkæling."
  }
 }
