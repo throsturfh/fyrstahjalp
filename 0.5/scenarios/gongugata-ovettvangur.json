@@ -1,0 +1,1017 @@
+{
+ "id": "gongugata-ovettvangur",
+ "track": 2,
+ "order": 8,
+ "title": "Óöruggur vettvangur við göngugötu",
+ "intro": "Laugardagsnótt í miðbæ Reykjavíkur. {nafn}, leitarhópurinn þinn hefur leitað að ungum manni sem skilaði sér ekki heim. Þið komið inn á göngugötuna og sjáið hann liggja á gangstéttinni. Yfir honum stendur ölvaður félagi hans, æstur, með flösku á lofti. Vegfarendur standa hjá og fylgjast með.",
+ "images": {
+  "distance": "img/fjarlaegd-gongugata.jpg?v=0.5",
+  "close": "img/pano-gongugata.jpg?v=0.5",
+  "treated": "img/pano-gongugata-medhondlad.jpg?v=0.5",
+  "treatedWhen": [
+   "addressed:kuldi",
+   "addressed:blaeding"
+  ]
+ },
+ "patient": {
+  "name": "Arnar",
+  "age": 24,
+  "cantAnswer": "(Arnar svarar ekki skýrt – Siggi og vegfarendur svara fyrir hann)"
+ },
+ "felagiName": "Siggi",
+ "state": {
+  "start": 80,
+  "severeBelow": 55,
+  "ratePerSource": 0,
+  "warmRate": 0,
+  "max": 80,
+  "min": 20,
+  "trendEps": 0.5,
+  "baseRate": 0.8,
+  "baseWhen": [
+   "always"
+  ],
+  "recoverWhen": [
+   "never"
+  ],
+  "severeLog": "Ástand Arnars versnar hratt: hann bregst aðeins við sársauka og sjáöldrin eru misstór – merki um hækkaðan innankúpuþrýsting (↑IKÞ).",
+  "severeLabel": "versnandi ↑IKÞ",
+  "mildLabel": "grunur um ↑IKÞ"
+ },
+ "problems": [
+  {
+   "id": "hryggur",
+   "label": "Stuðningur við hrygg (áverkaferli)",
+   "rate": 0.2
+  },
+  {
+   "id": "blaeding",
+   "label": "Blæðing úr sári á höfði",
+   "rate": 0.15
+  },
+  {
+   "id": "kuldi",
+   "label": "Hitatap (liggur á köldum hellum)",
+   "rate": 0.15
+  },
+  {
+   "id": "ondunarvegur",
+   "label": "Öndunarvegur (uppköst)",
+   "rate": 2,
+   "activeWhen": [
+    "flag:uppkost"
+   ]
+  }
+ ],
+ "events": [
+  {
+   "id": "uppkost",
+   "when": [
+    "val<70"
+   ],
+   "flags": [
+    "uppkost"
+   ],
+   "text": "⚠️ Arnar kastar upp! Tryggja þarf öndunarveginn – velta honum á hlið í einu lagi með stuðningi við hrygg.",
+   "cls": "bad"
+  },
+  {
+   "id": "vase",
+   "when": [
+    "val<62"
+   ],
+   "flags": [
+    "ikth_a"
+   ],
+   "text": "⚠️ Meðvitund versnar: Arnar svarar nú aðeins ávarpi (Á á VÁSE) og kvartar um mikinn höfuðverk.",
+   "cls": "bad"
+  },
+  {
+   "id": "sjaa",
+   "when": [
+    "val<52"
+   ],
+   "flags": [
+    "ikth_sja"
+   ],
+   "text": "⚠️ Sjáöldrin eru orðin misstór og hann bregst aðeins við sársauka.",
+   "cls": "bad"
+  },
+  {
+   "id": "krampi",
+   "when": [
+    "val<42"
+   ],
+   "flags": [
+    "krampi"
+   ],
+   "text": "⚠️ Arnar fær krampa. Verja hann gegn skaða – ekki halda honum föstum.",
+   "cls": "bad"
+  }
+ ],
+ "vitals": [
+  {
+   "min": 62,
+   "VASE": "V – vakandi en ringlaður, man ekki hvað gerðist",
+   "P": "64/mín, sterkur",
+   "O": "16/mín, regluleg",
+   "BTH": "Púls sterkur í úlnlið",
+   "L": "Kaldur viðkomu",
+   "H": "Föl, köld húð",
+   "sja": "Sjáöldur jafnstór, bregðast við ljósi",
+   "shiver": "Ringlaður, með höfuðverk og ógleði",
+   "talk": "„Hvað… hvar er ég? Mér er svo illt í hausnum… mér er óglatt.“"
+  },
+  {
+   "min": 52,
+   "VASE": "Á – svarar aðeins ávarpi, óskýrt",
+   "P": "56/mín, sterkur",
+   "O": "20/mín, óregluleg",
+   "BTH": "Púls sterkur í úlnlið",
+   "L": "Kaldur viðkomu",
+   "H": "Föl, köld og rök húð",
+   "sja": "Sjáöldur sein að bregðast við ljósi",
+   "shiver": "Svarar aðeins ávarpi, mikill höfuðverkur",
+   "talk": "(Stynur, opnar augun við ávarp og muldrar óskýrt um höfuðverk.)"
+  },
+  {
+   "min": 0,
+   "VASE": "S – bregst aðeins við sársaukaáreiti",
+   "P": "50/mín, sterkur",
+   "O": "8–24/mín, óregluleg",
+   "BTH": "Púls sterkur í úlnlið",
+   "L": "Kaldur viðkomu",
+   "H": "Föl, köld og rök húð",
+   "sja": "Misstór sjáöldur – annað víkkað",
+   "shiver": "Bregst aðeins við sársauka",
+   "talk": "(Svarar ekki ávarpi – fælist aðeins undan sársaukaáreiti.)"
+  }
+ ],
+ "distance": {
+  "hotspots": [
+   {
+    "id": "arnar",
+    "x": 31,
+    "y": 65,
+    "label": "Sjúklingur",
+    "text": "Ungur maður liggur hreyfingarlítill á hellunum. Þetta er maðurinn sem þið leitið að. Leitin er á enda – en vettvangurinn er ekki öruggur.",
+    "off": [
+     -40,
+     40
+    ]
+   },
+   {
+    "id": "siggi",
+    "x": 56,
+    "y": 43,
+    "label": "Félaginn",
+    "text": "Ölvaður maður stendur yfir honum, æstur og öskrar á vegfarendur. Hann ver sjúklinginn eins og þið séuð óvinir.",
+    "off": [
+     60,
+     20
+    ]
+   },
+   {
+    "id": "flaska",
+    "x": 42,
+    "y": 26,
+    "label": "Flaska",
+    "text": "Hann sveiflar flösku – mögulegt barefli. Hætta fyrir þig, félaga þína og almenning.",
+    "off": [
+     40,
+     -40
+    ]
+   },
+   {
+    "id": "vegf",
+    "x": 16,
+    "y": 38,
+    "label": "Vegfarendur",
+    "text": "Vegfarendur standa hjá, sumir taka upp á síma. Öryggi almennings skiptir líka máli.",
+    "off": [
+     10,
+     60
+    ]
+   },
+   {
+    "id": "bekkur",
+    "x": 89,
+    "y": 62,
+    "label": "Bekkur og leið",
+    "text": "Bekkir og opin gata til hliðar – þaðan er flóttaleið ef hann ræðst að ykkur.",
+    "off": [
+     -35,
+     35
+    ]
+   }
+  ],
+  "approach": [
+   {
+    "id": "stopp",
+    "label": "STOPP – halda fjarlægð og flóttaleið, róa hann með orðum og bíða eftir lögreglu",
+    "minutes": 2,
+    "waitFor": "logregla",
+    "noCallMinutes": 12,
+    "score": 15,
+    "flag": "safeApproach",
+    "goodWhen": [
+     "call:logregla"
+    ],
+    "text": "STOPP – horfa, hlusta, hugsa. Þið haldið fjarlægð með flóttaleið að baki, ögrið honum ekki og talið rólega við hann. Lögreglan kemur, afvopnar félagann og tryggir vettvanginn. Nú er öruggt að fara að sjúklingnum.",
+    "badText": "Þið hélduð fjarlægð – gott – en enginn hringdi í 112 eftir lögreglu. Þið stóðuð og biðuð þar til lögreglubíll átti leið hjá eftir langan tíma. Kallið strax eftir lögreglu með staðsetningu og stuttri lýsingu.",
+    "badScore": -10,
+    "badFlag": "safeApproach"
+   },
+   {
+    "id": "beint",
+    "label": "Ganga beint að sjúklingnum – hann þarf hjálp strax",
+    "minutes": 2,
+    "waitFor": "logregla",
+    "noCallMinutes": 12,
+    "score": -20,
+    "flag": "reckless",
+    "flags": [
+     "hurt"
+    ],
+    "text": "Þú gengur beint að sjúklingnum. Félaginn telur að þú ætlir að ráðast á vin hans og sveiflar flöskunni – þú færð skurð á framhandlegginn og verður að hörfa. Nú eru tveir slasaðir. Vettvangurinn var ekki öruggur: bíða þarf eftir lögreglu."
+   },
+   {
+    "id": "rifast",
+    "label": "Skipa honum að fara frá og rífast við hann þar til hann hlýðir",
+    "minutes": 3,
+    "waitFor": "logregla",
+    "noCallMinutes": 12,
+    "score": -15,
+    "flag": "reckless",
+    "flags": [
+     "argued"
+    ],
+    "text": "Þú hækkar róminn og skipar honum að fara frá. Hann æsist enn meira, kastar glerbrotum í átt að vegfarendum og ástandið versnar. Ekki ögra – tala rólega úr fjarlægð og láta lögreglu sjá um hann."
+   },
+   {
+    "id": "einn",
+    "label": "Fara einn að honum og reyna að taka af honum flöskuna",
+    "minutes": 2,
+    "waitFor": "logregla",
+    "noCallMinutes": 12,
+    "score": -20,
+    "flag": "reckless",
+    "flags": [
+     "hurt"
+    ],
+    "text": "Þú ferð einn að honum. Hann ræðst á þig og þú dettur í glerbrotin – þú meiðist á hendi. Við spilum ekki „sóló“ og afvopnum ekki fólk: það er hlutverk lögreglunnar."
+   }
+  ],
+  "fit": true
+ },
+ "close": {
+  "groups": [
+   {
+    "id": "vettvangur",
+    "label": "1. Vettvangur kannaður"
+   },
+   {
+    "id": "frumskodun",
+    "label": "2. Frumskoðun"
+   },
+   {
+    "id": "saga",
+    "label": "3. Sjúkrasaga og líkamsskoðun"
+   },
+   {
+    "id": "medferd",
+    "label": "Meðferð"
+   }
+  ],
+  "groupIntro": {
+   "frumskodun": "Frumskoðun: VÁSE, öndunarvegur og öndun, blóðrás, miklar blæðingar, stuðningur við hrygg. Bregðumst strax við vandamálum og komum í veg fyrir hitatap.",
+   "medferd": "Grunur um heilaáverka: tryggja öndunarveg, styðja við hrygg, verja gegn hitatapi, fylgjast með VÁSE – og neyðarflutningur ef merki eru um ↑IKÞ."
+  },
+  "hotspots": [
+   {
+    "id": "c_siggi",
+    "x": 81,
+    "y": 22,
+    "label": "Siggi",
+    "text": "Lögreglan heldur Sigga og hefur tekið af honum flöskuna. Hann er rólegri en ölvaður – hann getur sagt frá því sem gerðist.",
+    "off": [
+     -80,
+     60
+    ]
+   },
+   {
+    "id": "c_hofud",
+    "x": 42,
+    "y": 66,
+    "label": "Höfuð",
+    "text": "Skurður og bólga á hnakkanum og blóð í hárinu. Hann var rotaður – höfuðhögg með meðvitundarleysi er mikil áhætta.",
+    "off": [
+     -60,
+     -60
+    ]
+   },
+   {
+    "id": "c_blod",
+    "x": 46,
+    "y": 79,
+    "label": "Blóð",
+    "text": "Lítill blóðpollur við höfuðið – ekki mikil blæðing, en hanskar eru nauðsynlegir.",
+    "off": [
+     -50,
+     50
+    ]
+   },
+   {
+    "id": "c_gler",
+    "x": 87,
+    "y": 60,
+    "label": "Glerbrot",
+    "text": "Glerbrot á hellunum – passið hendur og hné.",
+    "off": [
+     -50,
+     50
+    ]
+   },
+   {
+    "id": "c_vegf",
+    "x": 20,
+    "y": 40,
+    "label": "Vegfarendur",
+    "text": "Vegfarendur taka upp á síma. Einn segist hafa séð hvað gerðist.",
+    "off": [
+     50,
+     -40
+    ]
+   }
+  ],
+  "hotspotsTreated": [
+   {
+    "id": "c_siggi",
+    "x": 82,
+    "y": 35,
+    "label": "Siggi",
+    "text": "Siggi situr á bekknum hjá lögreglunni.",
+    "off": [
+     -80,
+     60
+    ]
+   },
+   {
+    "id": "c_hofud",
+    "x": 44,
+    "y": 57,
+    "label": "Höfuð",
+    "text": "Umbúðir á sárinu á hnakkanum; höfði og hálsi haldið stöðugum.",
+    "off": [
+     -60,
+     -60
+    ]
+   },
+   {
+    "id": "c_teppi",
+    "x": 66,
+    "y": 58,
+    "label": "Teppi",
+    "text": "Álteppi og undirlag – hann liggur ekki lengur beint á köldum hellunum.",
+    "off": [
+     30,
+     60
+    ]
+   },
+   {
+    "id": "c_vegf",
+    "x": 20,
+    "y": 40,
+    "label": "Vegfarendur",
+    "text": "Vegfarendum haldið í hæfilegri fjarlægð.",
+    "off": [
+     50,
+     -40
+    ]
+   }
+  ],
+  "speakers": {
+   "sjuklingur": {
+    "x": 46,
+    "y": 50,
+    "name": "Arnar",
+    "side": "right"
+   },
+   "felagi": {
+    "x": 81,
+    "y": 5,
+    "name": "Siggi",
+    "side": "left"
+   }
+  },
+  "speakersTreated": {
+   "sjuklingur": {
+    "x": 44,
+    "y": 51,
+    "name": "Arnar",
+    "side": "right"
+   },
+   "felagi": {
+    "x": 82,
+    "y": 25,
+    "name": "Siggi",
+    "side": "left"
+   }
+  },
+  "hlidRule": {
+   "goodWhen": [
+    "flag:spine"
+   ],
+   "okFlag": "t_hlid_ok",
+   "goodScore": 5,
+   "badScore": -10,
+   "goodText": "Þið veltið honum í einu lagi á hliðina – einn heldur við höfuð og háls allan tímann – og hreinsið munninn. Öndunarvegurinn er opinn.",
+   "badText": "Þú veltir honum á hlið án þess að styðja við höfuð og háls. Áverkaferlið (rotaður eftir högg eða fall) kallar á stuðning við hrygg.",
+   "fix": "Styðja við höfuð og háls og velta í einu lagi."
+  },
+  "ikthRule": {
+   "goodWhen": [
+    "flag:vase",
+    "or:flag:exam|flag:vitals"
+   ],
+   "okFlag": "t_ikth_ok",
+   "goodScore": 10,
+   "badScore": 0,
+   "retry": true,
+   "goodText": "Mat: mikil áhætta. Hann var rotaður, er enn ringlaður, með höfuðverk og ógleði – grunur um hækkaðan innankúpuþrýsting (↑IKÞ). Þetta kallar á neyðarflutning á sjúkrahús. Fylgist stöðugt með VÁSE, öndun og sjáöldrum og búist við uppköstum.",
+   "badText": "Þú hefur ekki nóg til að meta þetta – metið fyrst VÁSE og gerið skoðun eða lífsmörk."
+  },
+  "actions": [
+   {
+    "id": "hanskar",
+    "group": "vettvangur",
+    "label": "Hanskar (blóð og glerbrot)",
+    "minutes": 0,
+    "flag": "gloves",
+    "text": "Hanskar á. Þið passið glerbrotin á hellunum."
+   },
+   {
+    "id": "vegf",
+    "group": "vettvangur",
+    "label": "Biðja vegfarendur að halda fjarlægð",
+    "minutes": 0,
+    "flag": "t_vegf",
+    "text": "Þú biður vegfarendur rólega að færa sig frá og gefa ykkur pláss. Einn sá hvað gerðist og bíður til að segja frá. Öryggi almennings og sjúklings.",
+    "sagaText": "Vegfarendum haldið frá"
+   },
+   {
+    "id": "atvik",
+    "group": "vettvangur",
+    "label": "Spyrja vegfaranda hvað gerðist",
+    "minutes": 1,
+    "flag": "askedPartner",
+    "text": "Vegfarandi: „Þeir voru að rífast við aðra stráka. Hann fékk högg og datt aftur fyrir sig á hellurnar. Hann var rotaður í kannski mínútu.“"
+   },
+   {
+    "id": "tala",
+    "group": "frumskodun",
+    "label": "Tala við Arnar",
+    "minutes": 0,
+    "flag": "talked",
+    "speaker": "sjuklingur",
+    "say": "Arnar? Ég heiti {nafn}, ég er úr björgunarsveitinni. Ekki hreyfa höfuðið.",
+    "reply": "{talk}"
+   },
+   {
+    "id": "vase",
+    "group": "frumskodun",
+    "label": "Meðvitund (VÁSE)",
+    "minutes": 0,
+    "flag": "vase",
+    "text": "VÁSE: {VASE}."
+   },
+   {
+    "id": "ondun",
+    "group": "frumskodun",
+    "label": "Öndunarvegur og öndun",
+    "minutes": 0,
+    "flag": "breathing",
+    "text": "Öndunarvegur opinn. Öndun: {O}."
+   },
+   {
+    "id": "puls",
+    "group": "frumskodun",
+    "label": "Púls",
+    "minutes": 0,
+    "flag": "pulse",
+    "text": "Púls: {P}. {BTH}."
+   },
+   {
+    "id": "blaedingar",
+    "group": "frumskodun",
+    "label": "Leita að miklum blæðingum",
+    "minutes": 0,
+    "flag": "bleeding",
+    "text": "Engin mikil blæðing. Það blæðir úr skurði á hnakkanum."
+   },
+   {
+    "id": "hryggur",
+    "group": "frumskodun",
+    "label": "Styðja við höfuð og háls (hrygg)",
+    "minutes": 0,
+    "flag": "spine",
+    "addresses": [
+     "hryggur"
+    ],
+    "text": "Áverkaferli: högg og fall aftur fyrir sig – þú heldur höfði og hálsi stöðugum. Hann er ringlaður, svo ekki er hægt að treysta svörum hans um verki í hálsi.",
+    "sagaText": "Stuðningur við hrygg"
+   },
+   {
+    "id": "o",
+    "group": "saga",
+    "label": "O – Ofnæmi",
+    "minutes": 0,
+    "flag": "olsena_o",
+    "speaker": "felagi",
+    "say": "Er hann með ofnæmi fyrir einhverju?",
+    "reply": "„Nei… held ekki.“"
+   },
+   {
+    "id": "l",
+    "group": "saga",
+    "label": "L – Lyf",
+    "minutes": 0,
+    "flag": "olsena_l",
+    "speaker": "felagi",
+    "say": "Tekur hann einhver lyf?",
+    "reply": "„Nei. Bara bjór… og skot.“"
+   },
+   {
+    "id": "s",
+    "group": "saga",
+    "label": "S – Sjúkrasaga",
+    "minutes": 0,
+    "flag": "olsena_s",
+    "speaker": "felagi",
+    "say": "Er hann með einhverja sjúkdóma? Fengið höfuðhögg áður?",
+    "reply": "„Nei, hann er alveg heilbrigður.“"
+   },
+   {
+    "id": "e",
+    "group": "saga",
+    "label": "E – Einkenni",
+    "minutes": 0,
+    "flag": "olsena_e",
+    "speaker": "felagi",
+    "say": "Hvað hefur hann kvartað um?",
+    "reply": "„Hann sagðist vera illt í hausnum… og óglatt.“"
+   },
+   {
+    "id": "n",
+    "group": "saga",
+    "label": "N – Neysla",
+    "minutes": 0,
+    "flag": "olsena_n",
+    "speaker": "felagi",
+    "say": "Hvað hefur hann drukkið og borðað?",
+    "reply": "„Við byrjuðum að drekka um níu… pizza um sjö.“"
+   },
+   {
+    "id": "a",
+    "group": "saga",
+    "label": "A – Atvik",
+    "minutes": 0,
+    "flag": "olsena_a",
+    "speaker": "felagi",
+    "say": "Hvað gerðist?",
+    "reply": "„Einhverjir gaurar… hann datt og rak hausinn í. Hann rotaðist! Ég var bara að verja hann!“"
+   },
+   {
+    "id": "lifsmork",
+    "group": "saga",
+    "label": "Lífsmörk (P, Ö, BÞ, L, H, sjáöldur)",
+    "minutes": 2,
+    "flag": "vitals",
+    "text": "P: {P} · Ö: {O} · BÞ: {BTH} · L: {L} · H: {H} · VÁSE: {VASE} · Sjáöldur: {sja}."
+   },
+   {
+    "id": "skodun",
+    "group": "saga",
+    "label": "Líkamsskoðun frá toppi til táar",
+    "minutes": 1,
+    "flag": "exam",
+    "text": "Skurður og bólga á hnakka. Sjáöldur: {sja}. Engir aðrir áverkar fundust. Áfengislykt – en áfengi skýrir ekki höfuðáverkann."
+   },
+   {
+    "id": "umbudir",
+    "group": "medferd",
+    "label": "Umbúðir á sárið á höfðinu",
+    "minutes": 1,
+    "flag": "t_umbudir",
+    "addresses": [
+     "blaeding"
+    ],
+    "text": "Grisja og léttur þrýstingur á sárið á hnakkanum, án þess að hreyfa höfuðið.",
+    "sagaText": "Umbúðir á höfuðsár"
+   },
+   {
+    "id": "einangra",
+    "group": "medferd",
+    "label": "Undirlag og álteppi – verja gegn hitatapi",
+    "minutes": 1,
+    "flag": "t_einangra",
+    "addresses": [
+     "kuldi"
+    ],
+    "text": "Undirlag undir hann (velt í einu lagi með stuðningi við hrygg) og teppi yfir. Hann liggur ekki lengur á köldum hellunum.",
+    "sagaText": "Undirlag og teppi"
+   },
+   {
+    "id": "hlid",
+    "group": "medferd",
+    "label": "Velta á hlið í einu lagi og hreinsa öndunarveg",
+    "minutes": 1,
+    "flag": "t_hlid",
+    "rule": "hlidRule",
+    "addresses": [
+     "ondunarvegur"
+    ],
+    "sagaText": "Velt á hlið – öndunarvegur tryggður"
+   },
+   {
+    "id": "g_ikth",
+    "group": "medferd",
+    "label": "Meta: grunur um ↑IKÞ – neyðarflutningur",
+    "minutes": 0,
+    "flag": "t_ikth",
+    "rule": "ikthRule",
+    "treat": true,
+    "sagaText": "Grunur um ↑IKÞ – neyðarflutningur"
+   },
+   {
+    "id": "vatn",
+    "group": "medferd",
+    "label": "Gefa honum vatn að drekka",
+    "minutes": 0,
+    "flag": "t_vatn",
+    "score": -10,
+    "text": "Rangt: hann er með skerta meðvitund og ógleði – hætta á að hann kasti upp og svelgist á. Ekkert um munn.",
+    "fix": "Ekkert um munn við skerta meðvitund og uppköst."
+   },
+   {
+    "id": "standa",
+    "group": "medferd",
+    "label": "Hjálpa honum á fætur og ganga með hann að sjúkrabílnum",
+    "minutes": 1,
+    "flag": "t_standa",
+    "score": -15,
+    "text": "Rangt: hann var rotaður og áverkaferlið kallar á stuðning við hrygg. Hann á að liggja og vera fluttur á börum.",
+    "fix": "Styðja við hrygg og flytja liggjandi á börum."
+   }
+  ]
+ },
+ "report": {
+  "options": [
+   {
+    "id": "neydar",
+    "label": "Neyðarflutningur í sjúkrabíl – liggjandi með stuðningi við hrygg, öndunarvegur tryggður",
+    "goodWhen": [
+     "call:sjukrabill",
+     "flag:t_ikth_ok",
+     "addressed:hryggur",
+     "or:not:flag:uppkost|flag:t_hlid_ok"
+    ],
+    "okWhen": [
+     "call:sjukrabill"
+    ],
+    "goodText": "Rétt: grunur um ↑IKÞ kallar á neyðarflutning. Hann fer liggjandi í sjúkrabíl með stuðningi við hrygg og tryggðan öndunarveg – stutt flutningsleið innanbæjar.",
+    "okText": "Sjúkrabíll er rétt leið, en mat, stuðningur við hrygg eða öndunarvegur var ekki fullklárað (sjá hér að neðan).",
+    "badText": "Enginn sjúkrabíll var kallaður."
+   },
+   {
+    "id": "thyrla",
+    "label": "Biðja um þyrlu",
+    "badText": "Rangt: innanbæjar er sjúkrabíll miklu fljótari – stutt á sjúkrahús."
+   },
+   {
+    "id": "heim",
+    "label": "Siggi fylgir honum heim til að sofa úr sér",
+    "badText": "Rangt: hann var rotaður og sýnir merki um ↑IKÞ. Áfengi skýrir ekki einkennin og hann má ekki sofa án eftirlits – neyðarflutningur."
+   }
+  ]
+ },
+ "debrief": [
+  {
+   "id": "safe",
+   "label": "Eigið öryggi: STOPP og beðið eftir lögreglu",
+   "ok": [
+    "flag:safeApproach",
+    "not:flag:hurt",
+    "not:flag:argued"
+   ],
+   "points": 20,
+   "okText": "Þið hélduð fjarlægð og flóttaleið, ögruðuð ekki og fóruð ekki inn fyrr en lögregla hafði tryggt vettvanginn.",
+   "badText": "Þú fórst inn á óöruggan vettvang, ögraðir eða fórst einn.",
+   "rule": "STOPP! Horfa – hlusta – hugsa. Eigið öryggi fyrst. Við spilum ekki „sóló“.",
+   "fix": "Halda fjarlægð og flóttaleið, ekki ögra, róa með orðum, hringja í 112 eftir lögreglu og bíða þar til hún hefur tryggt vettvanginn."
+  },
+  {
+   "id": "call",
+   "label": "Lögregla, sjúkrabíll og aðgerðarstjórn",
+   "ok": [
+    "resourcesOk"
+   ],
+   "points": 15,
+   "okText": "Lögregla og sjúkrabíll strax með staðsetningu og stuttri lýsingu; aðgerðarstjórn veit að sjúklingur er fundinn.",
+   "badText": "Röng, óþörf eða of sein beiðni – sjá sundurliðun.",
+   "rule": "Staðsetning er lykilatriði og stutt lýsing af vettvangi. Biðjum um aðstoð frekar en ekki.",
+   "fix": "Hringja strax í 112 eftir lögreglu og sjúkrabíl og láta aðgerðarstjórn vita að sjúklingur sé fundinn."
+  },
+  {
+   "id": "public",
+   "label": "Öryggi almennings",
+   "ok": [
+    "flag:t_vegf"
+   ],
+   "points": 5,
+   "okText": "Vegfarendum haldið frá.",
+   "badText": "Vegfarendur voru ekki beðnir að halda fjarlægð.",
+   "rule": "Öryggi: eigið, félaganna, almennings og sjúklingsins."
+  },
+  {
+   "id": "primary",
+   "label": "Frumskoðun kláruð",
+   "ok": [
+    "flag:vase",
+    "flag:breathing",
+    "flag:pulse",
+    "flag:bleeding",
+    "flag:spine"
+   ],
+   "points": 10,
+   "okText": "VÁSE, öndun, púls, blæðingar og hryggur.",
+   "badText": "Frumskoðun ófullkomin.",
+   "rule": "Frumskoðun: VÁSE, öndunarvegur og öndun, blóðrás, blæðingar, stuðningur við hrygg."
+  },
+  {
+   "id": "airway",
+   "label": "Hryggur og öndunarvegur",
+   "ok": [
+    "addressed:hryggur",
+    "or:not:flag:uppkost|flag:t_hlid_ok",
+    "not:flag:t_standa",
+    "not:flag:t_vatn"
+   ],
+   "points": 10,
+   "okText": "Stuðningur við hrygg og öndunarvegur tryggður þegar hann kastaði upp.",
+   "badText": "Hrygg ekki studdur, öndunarvegur ekki tryggður eða hann látinn standa/drekka.",
+   "rule": "Búast við uppköstum við ↑IKÞ – tryggja öndunarveg með stuðningi við hrygg.",
+   "fix": "Velta á hlið í einu lagi með stuðningi við höfuð og háls."
+  },
+  {
+   "id": "ikth",
+   "label": "↑IKÞ greint og fylgst með",
+   "ok": [
+    "flag:t_ikth_ok",
+    "reassess>=2"
+   ],
+   "points": 15,
+   "okText": "Grunur um ↑IKÞ greindur og VÁSE endurmetið reglulega.",
+   "badText": "↑IKÞ ekki greint eða ekki fylgst nógu vel með.",
+   "rule": "Einkenni ↑IKÞ: skert meðvitund, höfuðverkur, ógleði/uppköst, krampar, misstór sjáöldur. Neyðarflutningur.",
+   "fix": "Meta VÁSE og sjáöldur, greina grun um ↑IKÞ og endurmeta reglulega."
+  },
+  {
+   "id": "history",
+   "label": "OLSENA og lífsmörk",
+   "ok": [
+    "olsena>=4",
+    "flag:vitals"
+   ],
+   "points": 5,
+   "okText": "Saga frá félaganum og lífsmörk.",
+   "badText": "Saga eða lífsmörk vantar.",
+   "rule": "OLSENA – þegar sjúklingur getur ekki svarað, spyrja félaga eða vitni."
+  },
+  {
+   "id": "warm",
+   "label": "Sár og hitatap",
+   "ok": [
+    "addressed:blaeding",
+    "addressed:kuldi"
+   ],
+   "points": 5,
+   "okText": "Umbúðir og varinn gegn hitatapi.",
+   "badText": "Sár eða hitatap ekki meðhöndlað.",
+   "rule": "Komum í veg fyrir hitatap – líka í bænum."
+  }
+ ],
+ "location": {
+  "type": "baer",
+  "label": "Göngugata í miðbæ Reykjavíkur",
+  "callText": "Leitarhópur: maðurinn sem leitað var að er fundinn á göngugötunni í miðbænum. Hann var rotaður og er ringlaður – grunur um alvarlegan höfuðáverka. Ölvaður og ógnandi félagi með flösku stendur yfir honum. Óskum eftir lögreglu og sjúkrabíl."
+ },
+ "resources": [
+  {
+   "id": "logregla",
+   "label": "112 – lögregla",
+   "icon": "🚓",
+   "eta": 4,
+   "role": "Tryggir vettvanginn og afvopnar félagann.",
+   "arriveText": "Lögreglan er komin og hefur tryggt vettvanginn – félaginn er afvopnaður.",
+   "needWhen": [
+    "always"
+   ],
+   "callBy": 2,
+   "strictCallBy": true,
+   "needPoints": 10,
+   "unneededWhen": [],
+   "needText": "Ógnandi maður með mögulegt vopn: lögregla strax, með staðsetningu og stuttri lýsingu.",
+   "neutralText": ""
+  },
+  {
+   "id": "sjukrabill",
+   "label": "112 – sjúkrabíll",
+   "icon": "🚑",
+   "eta": 10,
+   "role": "Neyðarflutningur á sjúkrahús.",
+   "arriveText": "Sjúkrabíllinn er kominn inn á göngugötuna.",
+   "needWhen": [
+    "always"
+   ],
+   "callBy": 5,
+   "strictCallBy": true,
+   "needPoints": 5,
+   "unneededWhen": [],
+   "needText": "Rotaður með grun um alvarlegan höfuðáverka: sjúkrabíl strax.",
+   "neutralText": ""
+  },
+  {
+   "id": "adgerdarstjorn",
+   "label": "Aðgerðarstjórn – sjúklingur fundinn",
+   "icon": "📡",
+   "eta": 1,
+   "role": "Stjórnar leitinni og þarf að vita að sjúklingur er fundinn.",
+   "arriveText": "Aðgerðarstjórn: móttekið – leit hætt, aðrir hópar kallaðir heim.",
+   "needWhen": [
+    "always"
+   ],
+   "callBy": 10,
+   "needPoints": 5,
+   "unneededWhen": [],
+   "needText": "Tilkynna að sjúklingur sé fundinn, með staðsetningu og ástandi.",
+   "neutralText": ""
+  },
+  {
+   "id": "thyrla",
+   "label": "Þyrla (LHG)",
+   "icon": "🚁",
+   "eta": 30,
+   "role": "Afskekktir staðir.",
+   "arriveText": "Þyrlan kemur.",
+   "needWhen": [],
+   "unneededWhen": [
+    "always"
+   ],
+   "unneededPoints": -5,
+   "unneededText": "Þyrla var óþörf innanbæjar – sjúkrabíll er fljótari.",
+   "neutralText": "Ekki kölluð – rétt."
+  }
+ ],
+ "pan": {
+  "wideStart": 50,
+  "closeStart": 46
+ },
+ "stretcherWhen": [
+  "always"
+ ],
+ "reassess": {
+  "feelSay": "Arnar, heyrirðu í mér? Hvernig líður þér?",
+  "feelLabel": "Spyrja hvernig honum líður",
+  "feelSevereBy": "felagi",
+  "feel": {
+   "severe": "„Hann svarar ekki! Arnar! Hvað er að honum?!“",
+   "better": "„Illt í hausnum…“",
+   "same": "„Hausinn… óglatt…“",
+   "worse": "„Mmm…“ (svarar varla)"
+  },
+  "complaints": {
+   "ondunarvegur": "(Gurglandi hljóð frá öndunarveginum.)",
+   "kuldi": "„Kalt…“"
+  },
+  "sources": {
+   "hryggur": [
+    "Höfði og hálsi haldið stöðugum.",
+    "Enginn styður við höfuð og háls."
+   ],
+   "blaeding": [
+    "Umbúðir á sárinu.",
+    "Blæðir úr sárinu á hnakkanum."
+   ],
+   "kuldi": [
+    "Undirlag og teppi.",
+    "Liggur á köldum hellunum."
+   ],
+   "ondunarvegur": [
+    "Á hlið – öndunarvegur opinn.",
+    "Uppköst í munni – öndunarvegur í hættu!"
+   ]
+  },
+  "rule": "Endurmetið VÁSE, öndun og sjáöldur reglulega – ↑IKÞ getur versnað hratt.",
+  "allText": "Allt meðhöndlað sem hægt er á vettvangi – neyðarflutningur.",
+  "notAllText": "Meðferð ekki lokið.",
+  "statusSevere": "Líðan: versnandi meðvitund, misstór sjáöldur.",
+  "statusPrefix": "Líðan: ",
+  "lines": [
+   [
+    {
+     "when": [
+      "flag:ikth_sja"
+     ],
+     "text": "⚠️ Sjáöldur: {sja}."
+    },
+    {
+     "when": [
+      "always"
+     ],
+     "text": "Sjáöldur: {sja}."
+    }
+   ]
+  ]
+ },
+ "hud": {
+  "icon": "🧠",
+  "title": "Vandamál leyst"
+ },
+ "saga": {
+  "S": [
+   {
+    "when": [
+     "or:flag:askedPartner|flag:olsena_a"
+    ],
+    "text": "24 ára karl, fékk högg og féll aftur fyrir sig á hellur, rotaðist í um mínútu."
+   },
+   {
+    "when": [
+     "flag:olsena_o"
+    ],
+    "text": "Ofnæmi: ekki vitað um."
+   },
+   {
+    "when": [
+     "flag:olsena_l"
+    ],
+    "text": "Lyf: engin. Áfengi."
+   },
+   {
+    "when": [
+     "flag:olsena_s"
+    ],
+    "text": "Sjúkrasaga: heilbrigður, engin fyrri höfuðhögg."
+   },
+   {
+    "when": [
+     "flag:olsena_e"
+    ],
+    "text": "Einkenni: höfuðverkur, ógleði, ringlaður."
+   },
+   {
+    "when": [
+     "flag:olsena_n"
+    ],
+    "text": "Neysla: áfengi frá kl. 21, matur kl. 19."
+   }
+  ],
+  "A": [
+   {
+    "when": [
+     "flag:vase"
+    ],
+    "text": "VÁSE: {VASE}."
+   },
+   {
+    "when": [
+     "flag:breathing"
+    ],
+    "text": "Ö: {O}."
+   },
+   {
+    "when": [
+     "flag:pulse"
+    ],
+    "text": "P: {P}."
+   },
+   {
+    "when": [
+     "or:flag:exam|flag:vitals"
+    ],
+    "text": "Sjáöldur: {sja}."
+   },
+   {
+    "when": [
+     "flag:uppkost"
+    ],
+    "text": "Uppköst."
+   }
+  ],
+  "Gsevere": "Heilaáverki með versnandi ↑IKÞ. G': öndunarvegur (uppköst), krampar, öndunarstopp.",
+  "Gmild": "Heilaáverki eftir högg – rotaðist; grunur um ↑IKÞ. G': versnandi meðvitund, uppköst, krampar."
+ },
+ "short": "Leit að nóttu í miðbænum – óöruggur vettvangur.",
+ "thumb": "img/smamynd-gongugata-ovettvangur.jpg?v=0.5"
+}

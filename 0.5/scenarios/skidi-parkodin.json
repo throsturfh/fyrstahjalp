@@ -1,0 +1,1129 @@
+{
+ "id": "skidi-parkodin",
+ "track": 2,
+ "order": 7,
+ "title": "Fótbrot í skíðaferð – Parkódín forte",
+ "intro": "Mars, −6 °C og strekkingur. {nafn}, þú kemur á vélsleða með félaga úr björgunarsveitinni upp að fjallaskíðakonu sem datt hátt í hlíðinni, langt frá vegi. Ferðafélagi hennar hringdi í 112 fyrir hálftíma. Þið eruð með sjúkrasleða aftan í öðrum vélsleðanum.",
+ "images": {
+  "distance": "img/fjarlaegd-skidi.jpg?v=0.5",
+  "close": "img/pano-skidi.jpg?v=0.5",
+  "treated": "img/pano-skidi-medhondlad.jpg?v=0.5",
+  "treatedWhen": [
+   "flag:t_spelka",
+   "addressed:leidni"
+  ]
+ },
+ "patient": {
+  "name": "Katrín",
+  "age": 45,
+  "cantAnswer": "(Katrín er of sljó til að svara – Jón svarar fyrir hana)"
+ },
+ "felagiName": "Jón",
+ "state": {
+  "start": 35.9,
+  "severeBelow": 35.0,
+  "ratePerSource": 0,
+  "warmRate": 0.03,
+  "max": 36.5,
+  "trendEps": 0.02,
+  "decimals": 1,
+  "recoverWhen": [
+   "allSources"
+  ],
+  "valueText": "(áætl. kjarnhiti {v}°C)",
+  "severeLog": "Katrín er orðin mjög syfjuð, andar hægt og grunnt og er farin að kólna – kódeinið og kuldinn saman.",
+  "severeLabel": "kólnun og sljóleiki (kódein + kuldi)",
+  "mildLabel": "stöðug, vöktuð"
+ },
+ "problems": [
+  {
+   "id": "brot",
+   "label": "Óstöðugt fótbrot (óspelkað, skert BSH)",
+   "rate": 0.015
+  },
+  {
+   "id": "leidni",
+   "label": "Leiðni (situr í snjónum)",
+   "rate": 0.02
+  },
+  {
+   "id": "streymi",
+   "label": "Streymi (vindur)",
+   "rate": 0.01
+  },
+  {
+   "id": "geislun",
+   "label": "Geislun (höfuð óhulið)",
+   "rate": 0.008
+  },
+  {
+   "id": "uppgufun",
+   "label": "Uppgufun (snjór inn á sig, blautt)",
+   "rate": 0.007
+  },
+  {
+   "id": "vakt",
+   "label": "Öndun og VÁSE vöktuð (kódein)",
+   "rate": 0.01
+  }
+ ],
+ "vitals": [
+  {
+   "min": 35.6,
+   "VASE": "V – vakandi en syfjuleg og sljó",
+   "P": "92/mín",
+   "O": "12/mín, frekar grunn",
+   "BTH": "Púls finnst í úlnlið",
+   "L": "Köld viðkomu",
+   "H": "Föl, köld húð",
+   "shiver": "Skelfur aðeins",
+   "talk": "„Ég finn eiginlega ekki svo mikið til… ég er bara svo syfjuð.“"
+  },
+  {
+   "min": 35.0,
+   "VASE": "V – syfjuð, dottar á milli",
+   "P": "100/mín",
+   "O": "10/mín, grunn",
+   "BTH": "Púls finnst í úlnlið",
+   "L": "Köld viðkomu",
+   "H": "Föl, köld og rök húð",
+   "shiver": "Skelfur mikið",
+   "talk": "„Mmm… má ég ekki bara sofa smá…?“"
+  },
+  {
+   "min": 0,
+   "VASE": "Á – vaknar aðeins við ávarp",
+   "P": "108/mín, veikur",
+   "O": "8/mín, hæg og grunn",
+   "BTH": "Púls finnst illa í úlnlið",
+   "L": "Ísköld viðkomu",
+   "H": "Grá-föl, köld",
+   "shiver": "Skjálftinn að minnka – kólnar",
+   "talk": "(Muldrar óskýrt og lokar augunum.)"
+  }
+ ],
+ "distance": {
+  "hotspots": [
+   {
+    "id": "katrin",
+    "x": 50,
+    "y": 42,
+    "label": "Sjúklingur",
+    "text": "Kona í blárri úlpu situr í snjónum hátt í brekkunni. Annað skíðið liggur hjá henni.",
+    "off": [
+     -50,
+     30
+    ]
+   },
+   {
+    "id": "jon",
+    "x": 58,
+    "y": 38,
+    "label": "Félaginn",
+    "text": "Ferðafélaginn veifar til ykkar. Hann er óslasaður.",
+    "off": [
+     30,
+     -46
+    ]
+   },
+   {
+    "id": "hengja",
+    "x": 78,
+    "y": 24,
+    "label": "Hengja",
+    "text": "Snjóhengja efst í hlíðinni og brattur, nýfallinn snjór undir henni. Ekki keyra beint upp undir hana – farið utan við og gangið síðasta spölinn.",
+    "off": [
+     -20,
+     -50
+    ]
+   },
+   {
+    "id": "skidi",
+    "x": 39,
+    "y": 48,
+    "label": "Skíði",
+    "text": "Skíði og stafur í snjónum – hún datt í brekkunni. Áverkaferli: snúningur á fæti.",
+    "off": [
+     -40,
+     40
+    ]
+   },
+   {
+    "id": "sledar",
+    "x": 30,
+    "y": 76,
+    "label": "Vélsleðar",
+    "text": "Vélsleðarnir ykkar og rauður sjúkrasleði (börur sem dregnar eru á eftir vélsleða). Vegurinn og sjúkrabíllinn eru langt fyrir neðan.",
+    "off": [
+     40,
+     -40
+    ]
+   },
+   {
+    "id": "bakpoki",
+    "x": 66,
+    "y": 48,
+    "label": "Bakpoki",
+    "text": "Bakpoki ferðafélagans – í honum er lítil sjúkrataska.",
+    "off": [
+     30,
+     40
+    ]
+   }
+  ],
+  "approach": [
+   {
+    "id": "ganga",
+    "label": "Skilja sleðana eftir á flatanum og ganga upp utan við hengjuna",
+    "minutes": 3,
+    "score": 10,
+    "flag": "safeApproach",
+    "text": "Þið skiljið sleðana eftir á flatanum og gangið upp utan við fallínuna frá hengjunni. Eigið öryggi fyrst – öruggt og komið eftir 3 mínútur."
+   },
+   {
+    "id": "keyra",
+    "label": "Keyra vélsleðann beint upp brekkuna að þeim",
+    "minutes": 1,
+    "score": -10,
+    "flag": "reckless",
+    "text": "Þú ekur beint upp brattan, nýfallinn snjóinn undir hengjunni. Sleðinn spólar og hallar – og þú gætir komið af stað spýju eða velt sleðanum nærri sjúklingnum. Eigið öryggi fyrst."
+   },
+   {
+    "id": "bida",
+    "label": "Bíða við sleðana eftir fleiri björgunarmönnum",
+    "minutes": 6,
+    "score": -15,
+    "flag": "waited",
+    "text": "Sex mínútur liðu á meðan Katrín sat í snjónum og kólnaði. Vettvangurinn er öruggur ef farið er utan við hengjuna – það þarf ekki að bíða."
+   }
+  ],
+  "fit": true
+ },
+ "close": {
+  "groups": [
+   {
+    "id": "vettvangur",
+    "label": "1. Vettvangur kannaður"
+   },
+   {
+    "id": "frumskodun",
+    "label": "2. Frumskoðun"
+   },
+   {
+    "id": "saga",
+    "label": "3. Sjúkrasaga og líkamsskoðun"
+   },
+   {
+    "id": "medferd",
+    "label": "Meðferð"
+   }
+  ],
+  "groupIntro": {
+   "frumskodun": "Frumskoðun: VÁSE, öndunarvegur og öndun, blóðrás, miklar blæðingar, háls og hryggur. Bregðumst strax við vandamálum og komum í veg fyrir hitatap.",
+   "medferd": "Óstöðugur áverki: Meta BSH → toga í rétta stöðu ef BSH er skert → halda stöðugu → spelka → meta BSH. Stöðva allar leiðir hitataps."
+  },
+  "hotspots": [
+   {
+    "id": "c_jon",
+    "x": 17,
+    "y": 34,
+    "label": "Jón",
+    "text": "Jón heldur á litlu lyfjaglasi úr sjúkratöskunni sinni og lítur flóttalega á það.",
+    "off": [
+     50,
+     40
+    ]
+   },
+   {
+    "id": "c_katrin",
+    "x": 52,
+    "y": 30,
+    "label": "Katrín",
+    "text": "Katrín er föl og óvenju róleg og syfjuleg miðað við að vera með brotinn fót. Augnlokin síga.",
+    "off": [
+     -70,
+     40
+    ]
+   },
+   {
+    "id": "c_fotur",
+    "x": 41,
+    "y": 70,
+    "label": "Hægri fótur",
+    "text": "Skíðaskórinn snýr skakkt og sköflungurinn er aflagaður fyrir ofan skóinn – óstöðugur áverki. Hún getur ekki notað fótinn.",
+    "off": [
+     -60,
+     -60
+    ]
+   },
+   {
+    "id": "c_bunadur",
+    "x": 76,
+    "y": 56,
+    "label": "Búnaður",
+    "text": "Í sjúkratöskunni ykkar: SAM-spelka, einangrunardýna, svefnpoki og vindheldur poki, húfa og hitapokar.",
+    "off": [
+     -20,
+     -80
+    ]
+   },
+   {
+    "id": "c_sledar",
+    "x": 40,
+    "y": 24,
+    "label": "Vélsleðar",
+    "text": "Vélsleðarnir neðar í brekkunni. Sjúkrasleðinn: hún getur legið vel einangruð alla leið niður.",
+    "off": [
+     -50,
+     30
+    ]
+   }
+  ],
+  "hotspotsTreated": [
+   {
+    "id": "c_jon",
+    "x": 17,
+    "y": 34,
+    "label": "Jón",
+    "text": "Jón heldur Katrínu vakandi og talar við hana. Lyfjaglasið fer með í sjúkrabílinn.",
+    "off": [
+     50,
+     40
+    ]
+   },
+   {
+    "id": "c_katrin",
+    "x": 58,
+    "y": 30,
+    "label": "Katrín",
+    "text": "Katrín í svefnpoka og vindheldum poka á dýnu, með húfu. Fylgist áfram með öndun og VÁSE – kódeinið getur bælt öndun.",
+    "off": [
+     -70,
+     -40
+    ]
+   },
+   {
+    "id": "c_spelka",
+    "x": 55,
+    "y": 62,
+    "label": "Spelka",
+    "text": "Fóturinn spelkaður í réttri stöðu yfir hné og ökkla, bólstrað. BSH endurmetið reglulega.",
+    "off": [
+     -60,
+     50
+    ]
+   },
+   {
+    "id": "c_sledi",
+    "x": 86,
+    "y": 60,
+    "label": "Sjúkrasleði",
+    "text": "Sjúkrasleðinn tilbúinn – hún liggur út af, einangruð og fest, aftan í vélsleðanum.",
+    "off": [
+     -30,
+     -80
+    ]
+   }
+  ],
+  "speakers": {
+   "sjuklingur": {
+    "x": 53,
+    "y": 12,
+    "name": "Katrín",
+    "side": "right"
+   },
+   "felagi": {
+    "x": 19,
+    "y": 3,
+    "name": "Jón",
+    "side": "right"
+   }
+  },
+  "speakersTreated": {
+   "sjuklingur": {
+    "x": 57,
+    "y": 27,
+    "name": "Katrín",
+    "side": "right"
+   },
+   "felagi": {
+    "x": 19,
+    "y": 3,
+    "name": "Jón",
+    "side": "right"
+   }
+  },
+  "togRule": {
+   "goodWhen": [
+    "flag:bsh1"
+   ],
+   "okFlag": "t_tog_ok",
+   "goodScore": 5,
+   "badScore": -5,
+   "goodText": "BSH var skert, svo þú togar rólega og jafnt í langás fótleggsins þar til hann er kominn í rétta stöðu. Varúð: kódeinið slævir verkinn – fylgstu með mótstöðu og hættu við mótstöðu eða mikla aukningu verkja.",
+   "badText": "Rangt: þú togaðir án þess að meta BSH fyrst. Markmið með togi er að leiðrétta skert BSH.",
+   "fix": "Meta BSH fyrir neðan áverkann fyrst; toga aðeins ef BSH er skert."
+  },
+  "spelkaRule": {
+   "goodWhen": [
+    "flag:t_tog_ok",
+    "flag:t_halda"
+   ],
+   "okFlag": "t_spelka_ok",
+   "goodScore": 10,
+   "badScore": -5,
+   "addressAlways": true,
+   "goodText": "Þið spelkið fótlegginn í réttri stöðu með SAM-spelku yfir hné og ökkla (liðinn fyrir ofan og neðan langa beinið) og bólstrið – engir þrýstipunktar. Skíðaskórinn fær að vera á og styður ökklann.",
+   "badText": "Spelkað, en fóturinn var ekki togaður í rétta stöðu og haldið stöðugum fyrst. Röð: Meta BSH → Toga → Halda stöðugu → Spelka → Meta BSH.",
+   "fix": "Meta BSH → toga í rétta stöðu ef BSH er skert → halda stöðugu → spelka í réttri stöðu yfir liðinn fyrir ofan og neðan → meta BSH eftir spelkun."
+  },
+  "bsh2Rule": {
+   "goodWhen": [
+    "flag:t_spelka"
+   ],
+   "okFlag": "bsh2ok",
+   "goodScore": 5,
+   "badScore": 0,
+   "retry": true,
+   "goodText": "BSH eftir spelkun: tærnar hlýrri, púls finnst á ristinni, hún finnur snertingu og hreyfir tærnar. Fylgjast þarf áfram með BSH (í 24 klst eftir slys).",
+   "badText": "Engin spelka komin enn – BSH er endurmetið eftir spelkun."
+  },
+  "skraRule": {
+   "goodWhen": [
+    "flag:olsena_l"
+   ],
+   "okFlag": "t_skra_ok",
+   "goodScore": 10,
+   "badScore": 0,
+   "retry": true,
+   "goodText": "Þú skráir: 2 töflur Parkódín forte (kódein + parasetamól) fyrir um 40 mínútum – og tilkynnir það í talstöðinni svo sjúkraflutningamenn og læknar viti það. Lyfjaglasið fer með. Ekki meira parasetamól (hætta á ofskömmtun) og ekki fleiri sljóvgandi lyf.",
+   "badText": "Þú veist ekki enn hvaða lyf hún hefur tekið – spurðu um lyf (OLSENA: L)."
+  },
+  "actions": [
+   {
+    "id": "hanskar",
+    "group": "vettvangur",
+    "label": "Hanskar og eigið öryggi",
+    "minutes": 0,
+    "flag": "gloves",
+    "text": "Hanskar á. Þið standið utan við fallínuna frá hengjunni og sleðarnir eru öruggir neðar á flatanum."
+   },
+   {
+    "id": "atvik",
+    "group": "vettvangur",
+    "label": "Spyrja Jón hvað gerðist",
+    "minutes": 1,
+    "flag": "askedPartner",
+    "speaker": "felagi",
+    "say": "Hvað gerðist?",
+    "reply": "„Hún datt fyrir svona 40 mínútum – skíðið losnaði ekki og fóturinn snerist. Ég heyrði smell. Hún rak ekki höfuðið. Hún er búin að vera svo róleg síðan…“"
+   },
+   {
+    "id": "tala",
+    "group": "frumskodun",
+    "label": "Tala við Katrínu",
+    "minutes": 0,
+    "flag": "talked",
+    "speaker": "sjuklingur",
+    "say": "Katrín, ég heiti {nafn} og er í björgunarsveitinni. Hvernig líður þér?",
+    "reply": "{talk}"
+   },
+   {
+    "id": "vase",
+    "group": "frumskodun",
+    "label": "Meðvitund (VÁSE)",
+    "minutes": 0,
+    "flag": "vase",
+    "text": "VÁSE: {VASE}. Óvenju syfjuleg miðað við slæman áverka – hvers vegna?"
+   },
+   {
+    "id": "ondun",
+    "group": "frumskodun",
+    "label": "Öndunarvegur og öndun",
+    "minutes": 0,
+    "flag": "breathing",
+    "text": "Öndunarvegur opinn. Öndun: {O} – fylgjast þarf vel með."
+   },
+   {
+    "id": "puls",
+    "group": "frumskodun",
+    "label": "Púls",
+    "minutes": 0,
+    "flag": "pulse",
+    "text": "Púls: {P}. {BTH}."
+   },
+   {
+    "id": "blaedingar",
+    "group": "frumskodun",
+    "label": "Leita að miklum blæðingum",
+    "minutes": 0,
+    "flag": "bleeding",
+    "text": "Engar miklar blæðingar. Húðin er heil yfir aflöguninni."
+   },
+   {
+    "id": "hryggur",
+    "group": "frumskodun",
+    "label": "Tryggja háls og hrygg",
+    "minutes": 1,
+    "flag": "spine",
+    "text": "Fall á skíðum – þú styður við höfuð og háls og spyrð. Engin eymsli í hálsi eða baki og hún hreyfir hendur og hinn fótinn eðlilega. Athugið: kódein slævir verki, svo eymsli geta dulist – farið varlega við allar hreyfingar."
+   },
+   {
+    "id": "aflogun",
+    "group": "frumskodun",
+    "label": "Er greinilegur áverki sjáanlegur (aflögun)?",
+    "minutes": 0,
+    "flag": "deform",
+    "text": "Já: hægri sköflungur er aflagaður fyrir ofan skíðaskóinn og hún getur ekki notað fótinn – óstöðugur áverki."
+   },
+   {
+    "id": "o",
+    "group": "saga",
+    "label": "O – Ofnæmi",
+    "minutes": 0,
+    "flag": "olsena_o",
+    "speaker": "sjuklingur",
+    "say": "Ertu með ofnæmi fyrir einhverju?",
+    "reply": "„Nei…“"
+   },
+   {
+    "id": "l",
+    "group": "saga",
+    "label": "L – Lyf",
+    "minutes": 0,
+    "flag": "olsena_l",
+    "speaker": "sjuklingur",
+    "say": "Tekurðu einhver lyf – eða hefurðu tekið eitthvað í dag?",
+    "reply": "„Jón gaf mér… tvær Parkódín forte… fyrir svona 40 mínútum. Við verknum.“",
+    "note": "Parkódín forte er blanda af kódeini (ópíóíði) og parasetamóli. Kódein er sljóvgandi og getur haft öndunarbælandi áhrif; meira parasetamól ofan á getur valdið ofskömmtun."
+   },
+   {
+    "id": "s",
+    "group": "saga",
+    "label": "S – Sjúkrasaga",
+    "minutes": 0,
+    "flag": "olsena_s",
+    "speaker": "sjuklingur",
+    "say": "Ertu með einhverja sjúkdóma?",
+    "reply": "„Nei… ég er hraust.“"
+   },
+   {
+    "id": "e",
+    "group": "saga",
+    "label": "E – Einkenni",
+    "minutes": 0,
+    "flag": "olsena_e",
+    "speaker": "sjuklingur",
+    "say": "Hvar finnurðu til?",
+    "reply": "„Í fætinum… en ekki svo mikið. Mér er kalt… og ég er svo syfjuð.“"
+   },
+   {
+    "id": "n",
+    "group": "saga",
+    "label": "N – Neysla",
+    "minutes": 0,
+    "flag": "olsena_n",
+    "speaker": "sjuklingur",
+    "say": "Hvenær borðaðirðu og drakkst síðast?",
+    "reply": "„Nesti… fyrir tveimur tímum.“"
+   },
+   {
+    "id": "a",
+    "group": "saga",
+    "label": "A – Atvik",
+    "minutes": 0,
+    "flag": "olsena_a",
+    "speaker": "sjuklingur",
+    "say": "Hvað gerðist?",
+    "reply": "„Skíðið festist… fóturinn snerist… smellur.“"
+   },
+   {
+    "id": "skra",
+    "group": "saga",
+    "label": "Skrá og tilkynna lyfjatöku (tími og magn)",
+    "minutes": 0,
+    "flag": "t_skra",
+    "rule": "skraRule",
+    "treat": true,
+    "sagaText": "Parkódín forte 2 töflur (fyrir ~40 mín) skráð og tilkynnt"
+   },
+   {
+    "id": "lifsmork",
+    "group": "saga",
+    "label": "Lífsmörk (P, Ö, BÞ, L, H)",
+    "minutes": 2,
+    "flag": "vitals",
+    "text": "P: {P} · Ö: {O} · BÞ: {BTH} · L: {L} · H: {H} · VÁSE: {VASE}. {shiver}."
+   },
+   {
+    "id": "skodun",
+    "group": "saga",
+    "label": "Líkamsskoðun frá toppi til táar",
+    "minutes": 1,
+    "flag": "exam",
+    "text": "Engin önnur meiðsli fundust. Hægri sköflungur aflagaður og bólginn. Fóturinn fyrir neðan er fölur og kaldur. {shiver}."
+   },
+   {
+    "id": "dyna",
+    "group": "medferd",
+    "label": "Einangrunardýna undir (af snjónum)",
+    "minutes": 1,
+    "flag": "t_dyna",
+    "addresses": [
+     "leidni"
+    ],
+    "text": "Þið lyftið Katrínu varlega yfir á einangrunardýnu – hún situr ekki lengur í snjónum (leiðni).",
+    "sagaText": "Einangrunardýna undir"
+   },
+   {
+    "id": "vindheldi",
+    "group": "medferd",
+    "label": "Svefnpoki og vindheldur poki",
+    "minutes": 1,
+    "flag": "t_vind",
+    "addresses": [
+     "streymi"
+    ],
+    "text": "Svefnpoki og vindheldur poki utan um hana – vindurinn nær ekki lengur að kæla hana (streymi).",
+    "sagaText": "Svefnpoki og vindheldur poki"
+   },
+   {
+    "id": "hylja",
+    "group": "medferd",
+    "label": "Húfa og hylja höfuð og háls",
+    "minutes": 1,
+    "flag": "t_hylja",
+    "addresses": [
+     "geislun"
+    ],
+    "text": "Hlý húfa og hálskragi – mikill hiti tapast frá óhuldu höfði (geislun).",
+    "sagaText": "Húfa – höfuð hulið"
+   },
+   {
+    "id": "blautfot",
+    "group": "medferd",
+    "label": "Fjarlægja snjó og blauta hanska",
+    "minutes": 1,
+    "flag": "t_blautt",
+    "addresses": [
+     "uppgufun"
+    ],
+    "text": "Snjór var kominn inn undir buxur og í hanskana. Þið hreinsið hann burt og setjið á hana þurra vettlinga (uppgufun).",
+    "sagaText": "Snjór og blautir vettlingar fjarlægðir"
+   },
+   {
+    "id": "bsh1",
+    "group": "medferd",
+    "label": "1. Meta BSH fyrir neðan áverkann",
+    "minutes": 1,
+    "flag": "bsh1",
+    "treat": true,
+    "text": "Skert BSH: tærnar fölar og kaldar, púls á ristinni finnst illa, hún finnur illa snertingu og hreyfir tærnar varla. Hún kvartar lítið – kódeinið slævir verkinn, svo verkur er óáreiðanlegt merki.",
+    "sagaText": "BSH metið fyrir neðan áverka (skert)"
+   },
+   {
+    "id": "tog",
+    "group": "medferd",
+    "label": "2. Toga í rétta stöðu",
+    "minutes": 1,
+    "flag": "t_tog",
+    "rule": "togRule",
+    "sagaText": "Togað í rétta stöðu"
+   },
+   {
+    "id": "halda",
+    "group": "medferd",
+    "label": "3. Halda stöðugu",
+    "minutes": 0,
+    "flag": "t_halda",
+    "text": "Félagi þinn heldur fótleggnum stöðugum í réttri stöðu á meðan þú undirbýrð spelkuna.",
+    "sagaText": "Haldið stöðugu"
+   },
+   {
+    "id": "spelka",
+    "group": "medferd",
+    "label": "4. Spelka í réttri stöðu (yfir hné og ökkla, bólstrað)",
+    "minutes": 3,
+    "flag": "t_spelka",
+    "rule": "spelkaRule",
+    "addresses": [
+     "brot"
+    ],
+    "sagaText": "Spelkað yfir hné og ökkla (SAM-spelka, bólstrað)"
+   },
+   {
+    "id": "bsh2",
+    "group": "medferd",
+    "label": "5. Endurmeta BSH eftir spelkun",
+    "minutes": 1,
+    "flag": "t_bsh2",
+    "rule": "bsh2Rule",
+    "sagaText": "BSH endurmetið eftir spelkun"
+   },
+   {
+    "id": "vakt",
+    "group": "medferd",
+    "label": "Halda henni vakandi og vakta öndun og VÁSE reglulega",
+    "minutes": 0,
+    "flag": "t_vakt",
+    "addresses": [
+     "vakt"
+    ],
+    "text": "Jón talar við hana og heldur henni vakandi. Þú telur öndunina og metur VÁSE reglulega – kódein getur haft öndunarbælandi áhrif og kuldinn eykur sljóleikann.",
+    "sagaText": "Öndun og VÁSE vöktuð reglulega (kódein)"
+   },
+   {
+    "id": "parasetamol",
+    "group": "medferd",
+    "label": "Gefa henni 2 parasetamól 500 mg við verknum",
+    "minutes": 0,
+    "flag": "t_parasetamol",
+    "score": -15,
+    "text": "Rangt: Parkódín forte inniheldur parasetamól – hún hefur þegar fengið það. Meira ofan á getur valdið ofskömmtun. Hámark er 4000 mg á sólarhring og gefa á 4–6 klst á milli. Spyrja alltaf um lyf (OLSENA) áður en lyf eru gefin.",
+    "fix": "Spyrja um lyf áður en lyf eru gefin – ekkert meira parasetamól ofan á Parkódín forte."
+   },
+   {
+    "id": "standa",
+    "group": "medferd",
+    "label": "Hún finnur lítið til – láta hana prófa að standa í fótinn",
+    "minutes": 1,
+    "flag": "t_standa",
+    "score": -20,
+    "text": "Rangt! Hún finnur lítið til vegna kódeinsins, ekki vegna þess að brotið sé vægt. Óstöðugur áverki – hún getur ekki notað útliminn og þarf að spelka og flytja liggjandi.",
+    "fix": "Óstöðugur áverki: spelka og flytja liggjandi – verkjaleysi eftir verkjalyf er ekki merki um stöðugan áverka."
+   },
+   {
+    "id": "sofa",
+    "group": "medferd",
+    "label": "Leyfa henni að sofa án eftirlits á meðan beðið er",
+    "minutes": 1,
+    "flag": "t_sofa",
+    "score": -10,
+    "text": "Rangt: kódein er sljóvgandi og getur haft öndunarbælandi áhrif – hún má ekki sofa án eftirlits, og sá sem sefur í kulda kólnar hraðar. Haldið henni vakandi og vaktið öndun og VÁSE reglulega.",
+    "fix": "Aldrei láta hana sofa án eftirlits: halda henni vakandi og vakta öndun og VÁSE reglulega."
+   }
+  ]
+ },
+ "report": {
+  "options": [
+   {
+    "id": "sledi",
+    "label": "Liggjandi í sjúkrasleða aftan í vélsleða, vel einangruð – vakta öndun og VÁSE á leiðinni niður að sjúkrabílnum",
+    "goodWhen": [
+     "flag:t_spelka_ok",
+     "flag:bsh2ok",
+     "flag:t_skra_ok",
+     "call:sjukrabill",
+     "addressed:vakt",
+     "allSources"
+    ],
+    "okWhen": [
+     "flag:t_spelka"
+    ],
+    "goodText": "Rétt: spelkuð, einangruð og liggjandi í sjúkrasleðanum. Lyfjatakan er skráð og tilkynnt, og öndun og VÁSE eru vöktuð á leiðinni niður að sjúkrabílnum.",
+    "okText": "Flutningur í sjúkrasleða er rétt leið, en meðferð, eftirlit eða tilkynning var ekki fullkláruð (sjá hér að neðan).",
+    "badText": "Ekki tilbúið: fóturinn er ekki spelkaður."
+   },
+   {
+    "id": "sitja",
+    "label": "Láta hana sitja aftan á vélsleðanum með spelkaðan fótinn",
+    "badText": "Rangt: hún er sljó eftir kódeinið og getur dottið af, brotið hristist og hún kólnar í vindinum. Hún á að liggja einangruð og fest í sjúkrasleða."
+   },
+   {
+    "id": "thyrla",
+    "label": "Bíða á staðnum eftir þyrlu",
+    "goodWhen": [
+     "severe",
+     "call:thyrla"
+    ],
+    "goodText": "Ástandið er orðið alvarlegt og þyrla var kölluð – réttlætanlegt.",
+    "badText": "Óþarfi meðan ástandið er stöðugt: vélsleðar og sjúkrasleði eru á staðnum. Bið í vindinum eykur kælingu."
+   }
+  ]
+ },
+ "debrief": [
+  {
+   "id": "safe",
+   "label": "Örugg nálgun (utan við hengjuna)",
+   "ok": [
+    "flag:safeApproach"
+   ],
+   "points": 10,
+   "okText": "Þið genguð síðasta spölinn utan við fallínu hengjunnar.",
+   "badText": "Þú tókst áhættu eða beiðst að óþörfu.",
+   "rule": "Vettvangur kannaður: eigið öryggi fyrst – en ekki bíða að óþörfu.",
+   "fix": "Skilja sleðana eftir á flatanum og ganga upp utan við hengjuna."
+  },
+  {
+   "id": "hotspots",
+   "label": "Vettvangur kannaður",
+   "ok": [
+    "hotspots>=4"
+   ],
+   "points": 5,
+   "okText": "Hættur, áverkaferli og búnaður kannað.",
+   "badText": "Þú kannaðir vettvanginn lítið.",
+   "rule": "Vettvangur kannaður: hætta, fjöldi, hvað gerðist."
+  },
+  {
+   "id": "call",
+   "label": "Aðstoð og tilkynning",
+   "ok": [
+    "resourcesOk"
+   ],
+   "points": 10,
+   "okText": "Sjúkrabíll að veginum og aðgerðarstjórn látin vita.",
+   "badText": "Röng, óþörf eða of sein beiðni – sjá sundurliðun.",
+   "rule": "Kalla eftir þeirri aðstoð sem ástand og flutningur krefjast – og halda aðgerðarstjórn upplýstri.",
+   "fix": "Láta aðgerðarstjórn vita og kalla sjúkrabíl að veginum. Lögregla er óþörf."
+  },
+  {
+   "id": "primary",
+   "label": "Frumskoðun kláruð",
+   "ok": [
+    "flag:vase",
+    "flag:breathing",
+    "flag:pulse",
+    "flag:bleeding",
+    "flag:spine"
+   ],
+   "points": 10,
+   "okText": "VÁSE, öndun, púls, blæðingar og hryggur metið.",
+   "badText": "Frumskoðun ófullkomin.",
+   "rule": "Frumskoðun: VÁSE, öndunarvegur og öndun, blóðrás, blæðingar, háls og hryggur."
+  },
+  {
+   "id": "history",
+   "label": "OLSENA og lífsmörk",
+   "ok": [
+    "olsena>=4",
+    "flag:vitals"
+   ],
+   "points": 5,
+   "okText": "Góð saga og lífsmörk.",
+   "badText": "Saga eða lífsmörk vantar.",
+   "rule": "OLSENA – L: lyf, líka þau sem tekin voru eftir slysið."
+  },
+  {
+   "id": "parkodin",
+   "label": "Parkódín forte fundið, skráð og tilkynnt",
+   "ok": [
+    "flag:t_skra_ok",
+    "not:flag:t_parasetamol"
+   ],
+   "points": 15,
+   "okText": "Lyfjatakan fannst í OLSENA, var skráð og tilkynnt – og ekkert parasetamól gefið ofan á.",
+   "badText": "Lyfjatakan var ekki skráð/tilkynnt eða parasetamól gefið ofan á.",
+   "rule": "Parkódín forte er blanda af kódeini og parasetamóli – hætta á ofskömmtun parasetamóls ef meira er gefið. Kódein er sljóvgandi og getur bælt öndun.",
+   "fix": "Spyrja um lyf (L), skrá tíma og magn og tilkynna; ekki gefa meira parasetamól."
+  },
+  {
+   "id": "bsh1",
+   "label": "BSH metið fyrir neðan áverkann",
+   "ok": [
+    "flag:bsh1"
+   ],
+   "points": 5,
+   "okText": "Skert BSH fannst áður en meðhöndlað var.",
+   "badText": "BSH ekki metið.",
+   "rule": "Óstöðugir áverkar: 1. Meta BSH."
+  },
+  {
+   "id": "spelka",
+   "label": "Toga, halda stöðugu og spelka rétt",
+   "ok": [
+    "flag:t_tog_ok",
+    "flag:t_spelka_ok",
+    "not:flag:t_standa"
+   ],
+   "points": 10,
+   "okText": "Togað í rétta stöðu, haldið stöðugu og spelkað yfir hné og ökkla.",
+   "badText": "Röð togs og spelkunar ekki rétt – eða hún látin standa í fótinn.",
+   "rule": "Toga ef BSH er skert (hætta við mótstöðu), halda stöðugu, spelka yfir liðinn fyrir ofan og neðan.",
+   "fix": "Meta BSH → toga í rétta stöðu ef BSH er skert → halda stöðugu → spelka í réttri stöðu yfir liðinn fyrir ofan og neðan → meta BSH eftir spelkun."
+  },
+  {
+   "id": "bsh2",
+   "label": "BSH endurmetið eftir spelkun",
+   "ok": [
+    "flag:bsh2ok"
+   ],
+   "points": 5,
+   "okText": "BSH endurmetið eftir spelkun.",
+   "badText": "BSH ekki endurmetið eftir spelkun.",
+   "rule": "Fylgjumst með BSH í 24 klst eftir slys."
+  },
+  {
+   "id": "warm",
+   "label": "Allar leiðir hitataps stöðvaðar",
+   "ok": [
+    "addressed:leidni",
+    "addressed:streymi",
+    "addressed:geislun",
+    "addressed:uppgufun"
+   ],
+   "points": 10,
+   "okText": "Dýna, svefnpoki/vindheldur poki, húfa og blautt fjarlægt.",
+   "badText": "Ekki allar leiðir hitataps stöðvaðar.",
+   "rule": "Kyrrsetinn slasaður kólnar hratt: leiðni, streymi, geislun og uppgufun.",
+   "fix": "Dýna undir, vindheldur poki, hylja höfuð og fjarlægja snjó/blautt."
+  },
+  {
+   "id": "vakt",
+   "label": "Öndun og VÁSE vöktuð (kódein)",
+   "ok": [
+    "addressed:vakt",
+    "reassess>=2",
+    "not:flag:t_sofa"
+   ],
+   "points": 10,
+   "okText": "Hún var höfð vakandi og öndun og VÁSE endurmetin reglulega.",
+   "badText": "Ekki fylgst nógu vel með öndun og meðvitund – eða hún látin sofa án eftirlits.",
+   "rule": "Ópíóíðar eru sljóvgandi og geta haft öndunarbælandi áhrif – vakta öndun og VÁSE.",
+   "fix": "Halda henni vakandi, telja öndun og meta VÁSE reglulega."
+  }
+ ],
+ "location": {
+  "type": "fjall",
+  "label": "Hátt í fjallshlíð, langt frá vegi",
+  "callText": "Kona, 45 ára, óstöðugt fótbrot í hægri sköflungi, syfjuð eftir 2 Parkódín forte. Staðsetning: hátt í hlíðinni ofan við flatann þar sem vélsleðarnir eru. Flutningur á sjúkrasleða að veginum."
+ },
+ "resources": [
+  {
+   "id": "adgerdarstjorn",
+   "label": "Aðgerðarstjórn – tilkynna stöðu",
+   "icon": "📡",
+   "eta": 1,
+   "role": "Heldur utan um aðgerðina og sendir upplýsingar áfram.",
+   "arriveText": "Aðgerðarstjórn staðfestir: sjúkrabíll verður við veginn þegar þið komið niður.",
+   "needWhen": [
+    "always"
+   ],
+   "callBy": 12,
+   "needPoints": 5,
+   "unneededWhen": [],
+   "needText": "Halda aðgerðarstjórn upplýstri um stöðu og ástand sjúklings.",
+   "neutralText": ""
+  },
+  {
+   "id": "sjukrabill",
+   "label": "112 – sjúkrabíll að veginum",
+   "icon": "🚑",
+   "eta": 40,
+   "role": "Sjúkrabíll bíður þar sem vélsleðarnir koma niður að veginum.",
+   "arriveText": "Sjúkrabíllinn er kominn að veginum.",
+   "needWhen": [
+    "always"
+   ],
+   "callBy": 15,
+   "needPoints": 5,
+   "unneededWhen": [],
+   "needText": "Óstöðugt brot og lyfjataka – sjúkrabíll þarf að taka við við veginn.",
+   "neutralText": ""
+  },
+  {
+   "id": "thyrla",
+   "label": "Þyrla (LHG)",
+   "icon": "🚁",
+   "eta": 45,
+   "role": "Alvarlega slasaðir á afskekktum stöðum.",
+   "arriveText": "Þyrlan lendir á flatanum.",
+   "needWhen": [],
+   "unneededWhen": [],
+   "neutralText": "Ekki nauðsynleg meðan ástandið er stöðugt – vélsleðar og sjúkrasleði eru á staðnum."
+  },
+  {
+   "id": "bjorgunarsveit",
+   "label": "Fleiri björgunarsveitarmenn",
+   "icon": "🧑‍🚒",
+   "eta": 30,
+   "role": "Fleiri hendur við burð og flutning.",
+   "arriveText": "Fleiri björgunarsveitarmenn koma á vélsleðum.",
+   "needWhen": [],
+   "unneededWhen": [],
+   "neutralText": "Ekki nauðsynlegt – þið eruð tvö með vélsleða og sjúkrasleða."
+  },
+  {
+   "id": "logregla",
+   "label": "Lögregla",
+   "icon": "🚓",
+   "eta": 60,
+   "role": "Öryggi á vettvangi.",
+   "arriveText": "Lögregla kemur.",
+   "needWhen": [],
+   "unneededWhen": [
+    "always"
+   ],
+   "unneededPoints": -5,
+   "unneededText": "Lögregla var óþörf hér.",
+   "neutralText": "Ekki kölluð – rétt."
+  }
+ ],
+ "pan": {
+  "wideStart": 50,
+  "closeStart": 48
+ },
+ "reassess": {
+  "feelSay": "Katrín, hvernig líður þér núna? Hvernig er fóturinn?",
+  "feelLabel": "Spyrja hvernig henni líður",
+  "feelSevereBy": "felagi",
+  "feel": {
+   "severe": "„Hún dottar bara… og andar svo hægt!“",
+   "better": "„Mér er aðeins hlýrra… ég er vakandi.“",
+   "same": "„Mér er kalt… og syfjuð.“",
+   "worse": "„Svo kalt… svo syfjuð…“"
+  },
+  "complaints": {
+   "brot": "„Fóturinn… er skrýtinn og dofinn.“",
+   "leidni": "„Mér er svo kalt að neðan í snjónum.“",
+   "streymi": "„Vindurinn…“"
+  },
+  "sources": {
+   "brot": [
+    "Spelkað í réttri stöðu yfir hné og ökkla.",
+    "Fótleggurinn óspelkaður og aflagaður."
+   ],
+   "leidni": [
+    "Á einangrunardýnu.",
+    "Situr beint í snjónum."
+   ],
+   "streymi": [
+    "Í svefnpoka og vindheldum poka.",
+    "Vindurinn blæs á hana."
+   ],
+   "geislun": [
+    "Með húfu.",
+    "Höfuðið óhulið."
+   ],
+   "uppgufun": [
+    "Snjór og blautt fjarlægt.",
+    "Snjór inni á henni og blautir vettlingar."
+   ],
+   "vakt": [
+    "Höfð vakandi; öndun og VÁSE vöktuð.",
+    "Enginn fylgist með önduninni."
+   ]
+  },
+  "rule": "Lífsmörk og BSH eru endurmetin reglulega – hér sérstaklega öndun og VÁSE vegna kódeinsins.",
+  "allText": "Spelkuð, hitatap stöðvað og vöktuð.",
+  "notAllText": "Meðferð ekki lokið.",
+  "statusSevere": "Líðan: dottar, andar hægt og kólnar.",
+  "statusPrefix": "Líðan: ",
+  "lines": [
+   [
+    {
+     "when": [
+      "flag:t_skra_ok"
+     ],
+     "text": "✓ Parkódín forte skráð og tilkynnt."
+    },
+    {
+     "when": [
+      "flag:olsena_l"
+     ],
+     "text": "✗ Lyfjatakan ekki skráð/tilkynnt."
+    }
+   ],
+   [
+    {
+     "when": [
+      "flag:bsh2ok"
+     ],
+     "text": "✓ BSH eftir spelkun í lagi."
+    },
+    {
+     "when": [
+      "flag:bsh1"
+     ],
+     "text": "✗ BSH fyrir neðan áverkann er skert."
+    }
+   ]
+  ]
+ },
+ "hud": {
+  "icon": "🎿",
+  "title": "Vandamál leyst"
+ },
+ "saga": {
+  "S": [
+   {
+    "when": [
+     "or:flag:askedPartner|flag:olsena_a"
+    ],
+    "text": "45 ára kona, datt á skíðum fyrir ~40 mín, snúningsáverki á hægri fæti. Rak ekki höfuðið."
+   },
+   {
+    "when": [
+     "flag:olsena_o"
+    ],
+    "text": "Ofnæmi: ekkert."
+   },
+   {
+    "when": [
+     "flag:olsena_l"
+    ],
+    "text": "Lyf: 2 töflur Parkódín forte (kódein + parasetamól) fyrir ~40 mín."
+   },
+   {
+    "when": [
+     "flag:olsena_s"
+    ],
+    "text": "Sjúkrasaga: hraust."
+   },
+   {
+    "when": [
+     "flag:olsena_e"
+    ],
+    "text": "Einkenni: lítill verkur (kódein), kuldi, syfja."
+   },
+   {
+    "when": [
+     "flag:olsena_n"
+    ],
+    "text": "Neysla: nesti fyrir 2 klst."
+   }
+  ],
+  "A": [
+   {
+    "when": [
+     "flag:vase"
+    ],
+    "text": "VÁSE: {VASE}."
+   },
+   {
+    "when": [
+     "flag:breathing"
+    ],
+    "text": "Ö: {O}."
+   },
+   {
+    "when": [
+     "flag:pulse"
+    ],
+    "text": "P: {P}."
+   },
+   {
+    "when": [
+     "flag:deform"
+    ],
+    "text": "Aflagaður hægri sköflungur."
+   },
+   {
+    "when": [
+     "flag:bsh1"
+    ],
+    "text": "BSH fyrir neðan áverka skert."
+   },
+   {
+    "when": [
+     "flag:bsh2ok"
+    ],
+    "text": "BSH eftir spelkun: leiðrétt."
+   }
+  ],
+  "Gsevere": "Óstöðugt brot á hægri sköflungi, ofkæling og sljóleiki eftir kódein. G': öndunarbæling, frekari kólnun.",
+  "Gmild": "Óstöðugt brot á hægri sköflungi; kódein tekið. G': öndunarbæling, kólnun, skert BSH."
+ },
+ "short": "Fótbrot í fjallshlíð og verkjalyf tekin – vakta öndun.",
+ "thumb": "img/smamynd-skidi-parkodin.jpg?v=0.5"
+}
