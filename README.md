@@ -1,6 +1,8 @@
 # Fyrsta hjálp – leikur
 
-Frumgerð af farsímaleik til æfinga í fyrstu hjálp fyrir björgunarsveitir (HSG). Þú ert björgunarsveitarmaður: víðmynd í fullri hæð sem er strokin til hliðar, valmynd í skúffu sem er dregin upp og hægt að kalla eftir lögreglu, sjúkrabíl, fleiri björgunarsveitarmönnum eða þyrlu. Fyrsta atburðarás: ofkæling á hrauni.
+Frumgerð af farsímaleik til æfinga í fyrstu hjálp fyrir björgunarsveitir (HSG). Þú ert björgunarsveitarmaður: upphafsmynd sem sést öll í einu og nærmynd í fullri hæð sem er strokin til hliðar, valmynd í skúffu sem er dregin upp og hægt að kalla eftir lögreglu, sjúkrabíl, fleiri björgunarsveitarmönnum eða þyrlu. Fyrsta atburðarás: ofkæling á hrauni.
+
+Útgáfa 0.2: aðalvalmynd með nafni leikmanns, hlé-valmynd, Endurmat-flipi, talblöðrur og spjöld á myndinni, ný upphafsmynd í skammsniði og aðstoð metin eftir raunverulegu ástandi.
 
 Spila: https://throsturfh.github.io/fyrstahjalp/
 
