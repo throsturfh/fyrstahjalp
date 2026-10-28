@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c2a44"/><stop offset=".55" stop-color="#4a4f6e"/><stop offset=".85" stop-color="#c9785a"/><stop offset="1" stop-color="#e3a070"/></linearGradient>
+<linearGradient id="snow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fb0c4"/><stop offset="1" stop-color="#dfe7ef"/></linearGradient>
+<linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b4048"/><stop offset="1" stop-color="#22262c"/></linearGradient>
+<radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffb74d" stop-opacity=".9"/><stop offset="1" stop-color="#ffb74d" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="480" height="270" fill="url(#sky)"/>
+<path d="M0 132 L60 104 L118 120 L176 92 L238 116 L300 86 L356 112 L420 96 L480 114 L480 150 L0 150Z" fill="#2b3247"/>
+<path d="M0 140 L80 124 L150 136 L230 120 L320 134 L400 122 L480 132 L480 160 L0 160Z" fill="#39415a"/>
+<rect y="146" width="480" height="124" fill="url(#snow)"/>
+<path d="M196 146 L262 146 L420 270 L20 270Z" fill="url(#road)"/>
+<path d="M228 150 L232 150 L236 170 L228 170Z M238 186 L246 186 L254 214 L240 214Z M258 232 L272 232 L284 270 L264 270Z" fill="#e8d36a" opacity=".85"/>
+<!-- bíllinn okkar með hættuljósum -->
+<g transform="translate(40 180)"><rect x="0" y="10" width="62" height="22" rx="6" fill="#c62828"/><path d="M10 10 L18 0 L44 0 L54 10Z" fill="#8e1c1c"/><path d="M14 9 L20 2 L42 2 L49 9Z" fill="#9fc3e0" opacity=".7"/><circle cx="14" cy="33" r="6" fill="#111"/><circle cx="48" cy="33" r="6" fill="#111"/>
+<circle cx="2" cy="18" r="9" fill="url(#glow)"/><circle cx="60" cy="18" r="9" fill="url(#glow)"/></g>
+<!-- viðvörunarþríhyrningur -->
+<g transform="translate(186 214)"><path d="M10 0 L20 18 L0 18Z" fill="none" stroke="#ff5252" stroke-width="3"/></g>
+<!-- oltinn bíll í vegkantinum -->
+<g transform="translate(318 150) rotate(-78 40 30)"><rect x="0" y="14" width="86" height="30" rx="8" fill="#5c7fa3"/><path d="M14 14 L26 0 L62 0 L76 14Z" fill="#46627f"/><path d="M19 13 L28 3 L60 3 L70 13Z" fill="#b8d4ea" opacity=".55"/><circle cx="18" cy="45" r="8" fill="#151515"/><circle cx="68" cy="45" r="8" fill="#151515"/></g>
+<!-- glerbrot -->
+<g fill="#cfe3f3" opacity=".8"><rect x="300" y="222" width="4" height="3"/><rect x="312" y="230" width="3" height="3"/><rect x="292" y="236" width="3" height="2"/></g>
+<!-- standandi kona sem veifar -->
+<g transform="translate(262 168)" fill="#263238"><circle cx="8" cy="4" r="5"/><path d="M2 10 h12 l2 24 h-16Z" fill="#6a1b9a"/><path d="M14 12 l10 -14" stroke="#6a1b9a" stroke-width="4" stroke-linecap="round"/><rect x="3" y="34" width="4" height="16"/><rect x="9" y="34" width="4" height="16"/></g>
+<!-- ungur maður situr í snjónum -->
+<g transform="translate(396 224)" fill="#263238"><circle cx="8" cy="0" r="5"/><path d="M1 6 h14 l2 18 h-18Z" fill="#2e7d32"/><path d="M-2 24 h28 v6 h-28Z"/><path d="M15 10 l8 8" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/></g>
+<rect width="480" height="270" fill="#0b1020" opacity=".12"/>
+</svg>
