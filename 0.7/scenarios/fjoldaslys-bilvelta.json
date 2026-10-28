@@ -1,0 +1,279 @@
+{
+ "id": "fjoldaslys-bilvelta",
+ "type": "fjoldaslys",
+ "track": 2,
+ "order": 20,
+ "title": "Bílvelta – þrír slasaðir",
+ "short": "Fjöldaslys: tryggðu vettvang, forgangsraðaðu þremur slösuðum og endurmettu.",
+ "thumb": "img/fjoldaslys.svg?v=0.7",
+ "images": {
+  "distance": "img/fjoldaslys.svg?v=0.7"
+ },
+ "ambience": "vindur",
+ "intro": "Janúar, í rökkri. {nafn}, þú ekur heim af æfingu með björgunarsveitinni þegar þú kemur að bíl sem hefur oltið út af þjóðveginum og liggur á hliðinni í vegkantinum. Kona stendur við veginn og veifar, ungur maður situr í snjónum og heldur um handlegginn – og í bílstjórasætinu sérðu mann sem hreyfir sig ekki. Vegurinn er háll og umferð er á honum. Næsti sjúkrabíll er langt undan.",
+ "location": "Þjóðvegur 1, um 3 km austan við afleggjarann, bíll oltinn út af veginum",
+ "phases": [
+  {
+   "id": "safe",
+   "cat": "oryggi",
+   "title": "Vettvangur kannaður",
+   "q": "Hvað gerirðu fyrst?",
+   "opts": [
+    {
+     "l": "Leggja bílnum utan vegar, kveikja á hættuljósum, fara í endurskinsvesti, setja upp viðvörunarþríhyrning og meta hættur við bílinn (reykur, leki)",
+     "min": 2,
+     "pts": 15,
+     "good": 1,
+     "r": "Rétt: öryggi þitt og vettvangsins fyrst. Engin merki um eld eða leka – þú getur farið að slösuðum."
+    },
+    {
+     "l": "Hlaupa beint að bílnum til að athuga bílstjórann",
+     "min": 1,
+     "pts": 0,
+     "r": "Vegurinn er hættusvæði – umferð í rökkri og hálku. Tryggðu fyrst eigið öryggi og vettvang, annars gætu slasaðir orðið fleiri.",
+     "fix": "Leggja utan vegar, hættuljós, endurskinsvesti og viðvörunarþríhyrningur – meta svo hættur við bílinn."
+    },
+    {
+     "l": "Stöðva bílinn á miðjum veginum til að loka honum",
+     "min": 1,
+     "pts": 5,
+     "r": "Bíll á miðjum vegi í rökkri skapar nýja hættu. Leggðu utan vegar og varaðu umferð við með hættuljósum og þríhyrningi.",
+     "fix": "Leggja utan vegar, hættuljós, endurskinsvesti og viðvörunarþríhyrningur."
+    }
+   ]
+  },
+  {
+   "id": "call",
+   "cat": "adstod",
+   "title": "Kallað eftir aðstoð",
+   "q": "Þú hringir í 112. Hvað segirðu?",
+   "opts": [
+    {
+     "l": "„Bílvelta á þjóðvegi 1, þrír slasaðir, einn meðvitundarskertur fastur í bílnum. Þurfum fleiri en einn sjúkrabíl, lögreglu og tækjabíl.“",
+     "min": 2,
+     "pts": 15,
+     "good": 1,
+     "eta": 15,
+     "r": "Rétt: staðsetning, hvað gerðist og fjöldi slasaðra. 112 sendir tvo sjúkrabíla, lögreglu og tækjabíl og boðar björgunarsveit."
+    },
+    {
+     "l": "„Bílvelta á þjóðvegi 1, einn slasaður.“",
+     "min": 1,
+     "pts": 5,
+     "eta": 15,
+     "r": "112 þarf að vita fjölda slasaðra til að senda nægan mannskap og búnað. Nú kemur aðeins einn sjúkrabíll í fyrstu.",
+     "fix": "Segja frá staðsetningu, hvað gerðist og fjölda slasaðra – þá sendir 112 nægan mannskap."
+    },
+    {
+     "l": "Bíða með að hringja þar til þú hefur skoðað alla",
+     "min": 0,
+     "pts": 0,
+     "eta": 25,
+     "delay": 5,
+     "r": "Hringdu strax þegar þú sérð að slasaðir eru fleiri en einn – aðstoð er langt undan og hver mínúta skiptir máli.",
+     "fix": "Hringja strax í 112 og segja frá fjölda slasaðra."
+    }
+   ]
+  },
+  {
+   "id": "walk",
+   "cat": "forgangur",
+   "title": "Fleiri slasaðir en hendur",
+   "q": "Þrír slasaðir og þú ein(n). Hvað gerirðu?",
+   "opts": [
+    {
+     "l": "Kalla: „Allir sem geta gengið, komið hingað til mín!“ – og fara svo til þeirra sem ekki hreyfa sig",
+     "min": 1,
+     "pts": 6,
+     "good": 1,
+     "r": "Rétt: Elín gengur til þín. Þeir sem geta gengið eru yfirleitt minnst slasaðir – nú veistu hvar þú átt að byrja."
+    },
+    {
+     "l": "Sinna fyrst þeim sem kallar mest",
+     "min": 2,
+     "pts": 0,
+     "r": "Sá sem kallar hæst er oft ekki verst haldinn. Sá sem er hljóður og hreyfingarlaus getur verið í lífshættu.",
+     "fix": "Biðja alla sem geta gengið að koma til þín og fara svo til þeirra sem ekki hreyfa sig."
+    },
+    {
+     "l": "Byrja á þeim sem er næst þér og skoða hann vandlega",
+     "min": 3,
+     "pts": 0,
+     "r": "Ítarleg skoðun á fyrsta sjúklingi tefur mat á hinum. Í fjöldaslysi er fyrst gerð stutt frumskoðun á öllum og forgangsraðað.",
+     "fix": "Stutt frumskoðun á öllum fyrst – svo forgangsröðun."
+    }
+   ]
+  }
+ ],
+ "patients": [
+  {
+   "id": "halldor",
+   "name": "Halldór",
+   "age": 60,
+   "who": "Bílstjórinn, fastur í beltinu, bíllinn á hliðinni",
+   "find": "VÁSE: Á – bregst aðeins við áreiti. Öndun 28/mín, grunn. Púls 124, veikur. Fölur, kaldsveittur, húðin köld. Engin sjáanleg blæðing.",
+   "pri": 1,
+   "pts": 12,
+   "why": "Skert meðvitund og merki um lost (hröð, grunn öndun, hraður og veikur púls, föl og köld húð) – lífshætta."
+  },
+  {
+   "id": "kari",
+   "name": "Kári",
+   "age": 19,
+   "who": "Farþegi í aftursæti, komst sjálfur út, situr í snjónum",
+   "find": "VÁSE: V – vakandi og áttaður. Öndun 22/mín. Púls 110. Aflögun á framhandlegg, fingurnir kaldir og dofnir (skert BSH). Svimar þegar hann reynir að standa.",
+   "pri": 2,
+   "pts": 6,
+   "why": "Ekki í bráðri lífshættu, en brot með skertri blóðrás og skynjun (BSH) og hann getur ekki gengið."
+  },
+  {
+   "id": "elin",
+   "name": "Elín",
+   "age": 45,
+   "who": "Farþegi í framsæti, gengur sjálf",
+   "find": "VÁSE: V – vakandi og áttuð. Öndun 18/mín, eðlileg. Púls 96, sterkur. Skurður á enni, kvartar um höfuðverk og verk í hálsi.",
+   "pri": 3,
+   "pts": 6,
+   "why": "Gengur sjálf, vakandi og með eðlileg lífsmörk – minnst slösuð í fyrstu. Höfuðhögg: endurmeta reglulega."
+  }
+ ],
+ "assessMin": 1,
+ "treat": [
+  {
+   "id": "t1",
+   "cat": "medferd",
+   "title": "Meðferð – forgangur 1",
+   "q": "Hvað gerirðu fyrir Halldór?",
+   "opts": [
+    {
+     "l": "Styðja við höfuð og háls í bílnum, tryggja öndunarveg, hlúa að honum (teppi, hlýja) og fylgjast með öndun",
+     "min": 3,
+     "pts": 10,
+     "good": 1,
+     "r": "Rétt: öndunarvegur og lostmeðferð. Ekki færa hann úr bílnum nema bráð hætta sé – tækjabíll og sjúkraflutningamenn losa hann."
+    },
+    {
+     "l": "Draga hann strax út úr bílnum",
+     "min": 3,
+     "pts": 0,
+     "w": 1,
+     "r": "Ekki færa slasaðan úr bíl nema bráð hætta sé (eldur, öndunarvegur sem ekki er hægt að tryggja). Hætta á mænuskaða og lostið versnar.",
+     "fix": "Styðja við höfuð og háls í bílnum, tryggja öndunarveg og veita lostmeðferð."
+    },
+    {
+     "l": "Gefa honum vatn að drekka",
+     "min": 1,
+     "pts": 0,
+     "w": 1,
+     "r": "Aldrei gefa meðvitundarskertum að drekka – hætta á ásvelgingu. Hann er í losti og gæti þurft aðgerð.",
+     "fix": "Ekkert um munn. Tryggja öndunarveg, styðja við höfuð og háls og hlúa að honum."
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "cat": "medferd",
+   "title": "Meðferð – hinir slösuðu",
+   "q": "Hvernig sinnirðu Kára og Elínu á meðan?",
+   "opts": [
+    {
+     "l": "Biðja Elínu að sitja hjá Kára og styðja við handlegginn, hlúa að þeim báðum og biðja hana að láta þig vita ef eitthvað breytist",
+     "min": 2,
+     "pts": 10,
+     "good": 1,
+     "r": "Rétt: sá sem er minnst slasaður getur aðstoðað. Þú getur haldið áfram að sinna Halldóri og haft auga með þeim."
+    },
+    {
+     "team": 1,
+     "l": "Fela {m1} að sinna Kára (stuðningur við handlegg, hlýja) og {m2} að vera hjá Elínu og fylgjast með henni",
+     "min": 1,
+     "pts": 10,
+     "good": 1,
+     "r": "Rétt: góð verkaskipting. Félagarnir sinna Kára og Elínu og þú heldur yfirsýn og sinnir Halldóri."
+    },
+    {
+     "l": "Spelka handlegg Kára vandlega áður en þú ferð aftur til Halldórs",
+     "min": 6,
+     "pts": 3,
+     "r": "Spelkun má bíða – sá sem er í lífshættu gengur fyrir. Stuðningur við handlegginn og hlýja dugar í bili.",
+     "fix": "Láta Elínu (eða félaga) styðja við handlegg Kára og fara aftur til Halldórs."
+    }
+   ]
+  }
+ ],
+ "twist": {
+  "id": "twist",
+  "cat": "endurmat",
+  "title": "Endurmat",
+  "ev": "Þú lítur til Elínar: hún er orðin syfjuleg, svarar hægt og kastar upp. Höfuðverkurinn hefur versnað.",
+  "q": "Hvað gerirðu?",
+  "opts": [
+   {
+    "l": "Endurmeta Elínu: merki um aukinn innankúpuþrýsting – hækka forgang hennar, fylgjast náið með öndunarvegi og meðvitund og láta 112 vita",
+    "min": 2,
+    "pts": 10,
+    "good": 1,
+    "r": "Rétt: syfja, uppköst og versnandi meðvitund eftir höfuðhögg eru merki um aukinn innankúpuþrýsting (↑IKÞ). Elín fer í forgang 2."
+   },
+   {
+    "l": "Hún er bara bílveik eftir veltuna – halda áfram með Halldór",
+    "min": 0,
+    "pts": 0,
+    "r": "Syfja, uppköst og versnandi meðvitund eftir höfuðhögg eru merki um aukinn innankúpuþrýsting (↑IKÞ). Endurmetið alla reglulega – forgangur getur breyst.",
+    "fix": "Endurmeta alla reglulega. Versnandi meðvitund og uppköst eftir höfuðhögg = hækka forgang og láta 112 vita."
+   }
+  ]
+ },
+ "transport": {
+  "id": "flutn",
+  "cat": "flutningur",
+  "title": "Flutningur",
+  "q": "Fyrsti sjúkrabíllinn er kominn. Hvern á hann að taka fyrst?",
+  "opts": [
+   {
+    "p": "halldor",
+    "pts": 10,
+    "good": 1,
+    "r": "Rétt: Halldór er í mestri lífshættu (lost og skert meðvitund). Tækjabíllinn losar hann úr bílnum og næsti sjúkrabíll tekur Elínu og Kára."
+   },
+   {
+    "p": "elin",
+    "pts": 5,
+    "r": "Elín hefur versnað og þarf að komast fljótt undir læknishendur – en Halldór er enn í mestri lífshættu og fer fyrstur.",
+    "fix": "Halldór fyrst (lost, skert meðvitund), svo Elín (↑IKÞ), svo Kári."
+   },
+   {
+    "p": "kari",
+    "pts": 0,
+    "r": "Kári er ekki í lífshættu. Sá sem er verst haldinn fer fyrstur: Halldór, svo Elín og síðast Kári.",
+    "fix": "Halldór fyrst (lost, skert meðvitund), svo Elín (↑IKÞ), svo Kári."
+   }
+  ]
+ },
+ "cats": {
+  "oryggi": [
+   "Öryggi á vettvangi",
+   15
+  ],
+  "adstod": [
+   "Kallað eftir aðstoð",
+   15
+  ],
+  "forgangur": [
+   "Forgangsröðun",
+   30
+  ],
+  "medferd": [
+   "Meðferð",
+   20
+  ],
+  "endurmat": [
+   "Endurmat",
+   10
+  ],
+  "flutningur": [
+   "Flutningur",
+   10
+  ]
+ }
+}

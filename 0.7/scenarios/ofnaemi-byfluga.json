@@ -1,0 +1,1013 @@
+{
+ "id": "ofnaemi-byfluga",
+ "track": 3,
+ "order": 6,
+ "title": "Býflugnastunga og ofnæmislost",
+ "intro": "Júlí, hlýtt og sólríkt. {nafn}, þú ert á leið heim úr gönguferð með WFR-sjúkratöskuna á bakinu. Á malarslóða við býflugnabú á sveitabæ veifar kona til þín: vinkona hennar var stungin af býflugu fyrir nokkrum mínútum og líður skyndilega mjög illa. Vegurinn er 1,5 km í burtu. (WFR-stig: lyfjagjöf samkvæmt WFR-námsefni.)",
+ "images": {
+  "distance": "img/fjarlaegd-ofnaemi.jpg?v=0.7",
+  "close": "img/pano-ofnaemi.jpg?v=0.7",
+  "treated": "img/pano-ofnaemi-medhondlad.jpg?v=0.7",
+  "treatedWhen": [
+   "addressed:adr1",
+   "flag:t_teppi"
+  ]
+ },
+ "patient": {
+  "name": "Sara",
+  "age": 34,
+  "cantAnswer": "(Sara nær varla andanum – Hildur svarar fyrir hana)"
+ },
+ "felagiName": "Hildur",
+ "state": {
+  "start": 70,
+  "severeBelow": 45,
+  "ratePerSource": 0,
+  "warmRate": 1,
+  "max": 90,
+  "min": 5,
+  "trendEps": 0.5,
+  "recoverWhen": [
+   "allSources"
+  ],
+  "severeLog": "Sara er orðin sljó og föl, hvæsir við hvern andardrátt – ofnæmislostið versnar hratt.",
+  "severeLabel": "versnandi ofnæmislost (sljó, mikil andnauð)",
+  "mildLabel": "betri líðan – andar léttar"
+ },
+ "problems": [
+  {
+   "id": "adr1",
+   "label": "Adrenalín 0,3 mg í vöðva (1. skammtur)",
+   "rate": 2.5
+  },
+  {
+   "id": "stada",
+   "label": "Stelling sem auðveldar öndun",
+   "rate": 0.5
+  },
+  {
+   "id": "lyf",
+   "label": "Cetirizine og dexamethason",
+   "rate": 0.3
+  },
+  {
+   "id": "adr2",
+   "label": "Seinni adrenalínskammtur",
+   "rate": 3,
+   "activeWhen": [
+    "flag:recur"
+   ]
+  }
+ ],
+ "events": [
+  {
+   "id": "recur",
+   "when": [
+    "since:t_adr1>=5"
+   ],
+   "flags": [
+    "recur"
+   ],
+   "addVal": -15,
+   "cls": "bad",
+   "text": "⚠️ Fimm mínútum eftir adrenalínið versnar Söru aftur: þrengsli í hálsi, hvæsandi öndun og hún verður fölari og sljórri. Ofnæmislost getur lagast og versnað svo aftur."
+  }
+ ],
+ "vitals": [
+  {
+   "min": 75,
+   "VASE": "V – vakandi, rólegri",
+   "P": "98/mín",
+   "O": "18/mín, léttari",
+   "BTH": "Púls sterkur í úlnlið",
+   "L": "Hlý",
+   "H": "Útbrot að dofna, varir minna bólgnar",
+   "shiver": "Andar léttar",
+   "talk": "„Ég næ andanum aftur… þetta var hræðilegt.“"
+  },
+  {
+   "min": 58,
+   "VASE": "V – vakandi en mjög kvíðin",
+   "P": "122/mín",
+   "O": "26/mín, hvæsandi",
+   "BTH": "Púls veikur í úlnlið",
+   "L": "Heit og rjóð",
+   "H": "Ofsakláði og rauð útbrot um háls og handleggi, bólgnar varir",
+   "shiver": "Þrengsli í hálsi og andnauð",
+   "talk": "„Ég… næ ekki… andanum… hálsinn… lokast…“"
+  },
+  {
+   "min": 45,
+   "VASE": "Á – sljó, svarar þegar talað er við hana",
+   "P": "136/mín, veikur",
+   "O": "30/mín, hvæsandi",
+   "BTH": "Púls finnst illa í úlnlið",
+   "L": "Köld og sveitt",
+   "H": "Föl undir útbrotunum, bláleitar varir",
+   "shiver": "Mikil andnauð, sljó",
+   "talk": "„…(hvæs)… get ekki…“"
+  },
+  {
+   "min": 0,
+   "VASE": "S – bregst aðeins við sársauka",
+   "P": "150/mín, mjög veikur",
+   "O": "10/mín, grunn",
+   "BTH": "Enginn púls í úlnlið",
+   "L": "Köld, sveitt",
+   "H": "Grá-blá",
+   "shiver": "Meðvitund að fjara út – lost",
+   "talk": "(Stynur aðeins.)"
+  }
+ ],
+ "distance": {
+  "hotspots": [
+   {
+    "id": "bu",
+    "x": 17,
+    "y": 46,
+    "label": "Býflugnabú",
+    "text": "Röð býflugnabúa rétt við slóðann. Býflugurnar eru æstar eftir lætin – fleiri stungur eru hætta, bæði fyrir Söru og þig.",
+    "off": [
+     14,
+     -60
+    ]
+   },
+   {
+    "id": "sara",
+    "x": 48,
+    "y": 53,
+    "label": "Sjúklingur",
+    "text": "Kona situr í grasinu og heldur um hálsinn. Hún andar hratt og virðist í andnauð.",
+    "off": [
+     -34,
+     52
+    ]
+   },
+   {
+    "id": "hildur",
+    "x": 70,
+    "y": 48,
+    "label": "Vinkonan",
+    "text": "Vinkonan veifar: „Hjálp! Hún var stungin og nær ekki andanum!“",
+    "off": [
+     16,
+     -56
+    ]
+   },
+   {
+    "id": "bakpoki",
+    "x": 70,
+    "y": 69,
+    "label": "Bakpoki",
+    "text": "Bakpoki í grasinu. Í þinni eigin tösku: tveir adrenalínpennar (epi-pennar), cetirizine og dexamethason – WFR-sjúkrataska.",
+    "off": [
+     -40,
+     46
+    ]
+   },
+   {
+    "id": "vegur",
+    "x": 62,
+    "y": 36,
+    "label": "Vegurinn",
+    "text": "Bíll á veginum, um 1,5 km í burtu. Sjúkrabíll kemst þangað – ekki nær.",
+    "off": [
+     -30,
+     -50
+    ]
+   }
+  ],
+  "approach": [
+   {
+    "id": "fjarri",
+    "label": "Fara í sveig fjarri búunum og færa hana tugi metra frá þeim",
+    "minutes": 2,
+    "score": 10,
+    "flag": "safeApproach",
+    "text": "Þú ferð í sveig fjarri búunum, og þið Hildur styðjið Söru nokkra tugi metra frá. Engar fleiri stungur – öruggur staður fyrir meðferð."
+   },
+   {
+    "id": "beint",
+    "label": "Hlaupa beint til hennar meðfram búunum",
+    "minutes": 1,
+    "score": -10,
+    "flag": "stung",
+    "text": "Býflugurnar eru æstar: þú færð tvær stungur á handlegginn og Sara aðra í viðbót. Eigið öryggi fyrst – og fjarlægja sjúkling frá ofnæmisvakanum."
+   },
+   {
+    "id": "bida",
+    "label": "Bíða í öruggri fjarlægð þar til býflugurnar róast",
+    "minutes": 5,
+    "score": -15,
+    "flag": "waited",
+    "text": "Fimm mínútur liðu meðan Sara versnaði. Ofnæmislost getur versnað hratt – farðu í sveig fjarri búunum og hjálpaðu strax."
+   }
+  ],
+  "fit": true
+ },
+ "close": {
+  "choices": {
+   "mat": {
+    "title": "Mat á ástandi",
+    "icon": "🩺",
+    "note": "Aðeins eitt svar er rétt. Matið læsist þegar þú hefur staðfest það.",
+    "locked": "Matið hefur verið valið – ekki er hægt að breyta því."
+   }
+  },
+  "groups": [
+   {
+    "id": "vettvangur",
+    "label": "1. Vettvangur kannaður"
+   },
+   {
+    "id": "frumskodun",
+    "label": "2. Frumskoðun og mat"
+   },
+   {
+    "id": "saga",
+    "label": "3. Sjúkrasaga og líkamsskoðun"
+   },
+   {
+    "id": "medferd",
+    "label": "Meðferð (WFR)"
+   }
+  ],
+  "groupIntro": {
+   "frumskodun": "Ofnæmisviðbrögð eru þrenns konar: staðbundin, væg útbreidd og ofnæmislost. Merki ofnæmislosts: útbrot/bólgur, þrengsli í hálsi, öndunarerfiðleikar, lost og breyting á hugarstarfi.",
+   "medferd": "Ofnæmislost: adrenalín 0,3 mg í vöðva (utanvert læri best) – endurtaka eftir 5 mín ef þörf krefur. Síðan cetirizine 10 mg og dexamethason 10 mg um munn."
+  },
+  "hotspots": [
+   {
+    "id": "c_hildur",
+    "x": 20,
+    "y": 40,
+    "label": "Hildur",
+    "text": "Hildur, vinkona Söru, er hrædd en róleg. Hún getur svarað fyrir Söru og hjálpað.",
+    "off": [
+     40,
+     -70
+    ]
+   },
+   {
+    "id": "c_hals",
+    "x": 49,
+    "y": 28,
+    "label": "Háls",
+    "text": "Stungan er á hálsinum – rauð og bólgin. Sara heldur um hálsinn og segir að hann sé að lokast. Varir eru bólgnar.",
+    "off": [
+     70,
+     30
+    ]
+   },
+   {
+    "id": "c_utbrot",
+    "x": 46,
+    "y": 62,
+    "label": "Útbrot",
+    "text": "Rauð, upphleypt útbrot (ofsakláði) á handleggjum og hálsi – útbreidd viðbrögð, ekki bara við stunguna.",
+    "off": [
+     -70,
+     30
+    ]
+   },
+   {
+    "id": "c_taska",
+    "x": 79,
+    "y": 73,
+    "label": "WFR-taska",
+    "text": "Í töskunni: tveir adrenalínpennar (0,3 mg), cetirizine 10 mg og dexamethason 10 mg töflur.",
+    "off": [
+     -30,
+     -70
+    ]
+   },
+   {
+    "id": "c_bu",
+    "x": 85,
+    "y": 26,
+    "label": "Búin",
+    "text": "Búin eru nú í öruggri fjarlægð. Haldið ykkur hér.",
+    "off": [
+     -40,
+     60
+    ]
+   }
+  ],
+  "hotspotsTreated": [
+   {
+    "id": "c_hildur",
+    "x": 28,
+    "y": 53,
+    "label": "Hildur",
+    "text": "Hildur heldur á vatnsflösku – Sara tók töflurnar með smá vatni.",
+    "off": [
+     -40,
+     -80
+    ]
+   },
+   {
+    "id": "c_sara",
+    "x": 48,
+    "y": 38,
+    "label": "Sara",
+    "text": "Sara situr upprétt með teppi utan um sig. Hún andar léttar en er enn lasin – fylgist vel með: einkennin geta komið aftur.",
+    "off": [
+     60,
+     -30
+    ]
+   },
+   {
+    "id": "c_pennar",
+    "x": 43,
+    "y": 80,
+    "label": "Notaðir pennar",
+    "text": "Notuðu adrenalínpennarnir. Skráið tímana og sendið þá með í sjúkrabílinn – nálin er varin.",
+    "off": [
+     -60,
+     -50
+    ]
+   },
+   {
+    "id": "c_taska",
+    "x": 85,
+    "y": 72,
+    "label": "Taskan",
+    "text": "Nýr adrenalínpenni þarf að vera tiltækur í flutningnum – einkennin geta komið aftur.",
+    "off": [
+     -30,
+     -80
+    ]
+   }
+  ],
+  "speakers": {
+   "sjuklingur": {
+    "x": 45,
+    "y": 8,
+    "name": "Sara",
+    "side": "right"
+   },
+   "felagi": {
+    "x": 20,
+    "y": 3,
+    "name": "Hildur",
+    "side": "right"
+   }
+  },
+  "speakersTreated": {
+   "sjuklingur": {
+    "x": 46,
+    "y": 9,
+    "name": "Sara",
+    "side": "right"
+   },
+   "felagi": {
+    "x": 20,
+    "y": 3,
+    "name": "Hildur",
+    "side": "right"
+   }
+  },
+  "adr2Rule": {
+   "goodWhen": [
+    "flag:recur",
+    "addressed:adr1"
+   ],
+   "okFlag": "t_adr2_ok",
+   "goodScore": 10,
+   "badScore": -5,
+   "retry": true,
+   "goodText": "Þú notar seinni pennann á hitt lærið (utanvert). Eftir mínútu léttir aftur á önduninni. Hún hefur nú þurft fleiri en einn skammt – það merkir mikla áhættu: flutningur á sjúkrahús.",
+   "badText": "Of snemmt: hún er að lagast eftir fyrsta skammtinn. Endurtaka á adrenalín eftir 5 mínútur ef þörf krefur – fylgstu vel með.",
+   "fix": "Endurtaka adrenalín ef einkennin koma aftur eða lagast ekki – eftir 5 mín."
+  },
+  "lyfRule": {
+   "goodWhen": [
+    "addressed:adr1"
+   ],
+   "okFlag": "t_lyf_ok",
+   "goodScore": 10,
+   "badScore": -15,
+   "retry": true,
+   "goodText": "Sara gleypir cetirizine 10 mg og dexamethason 10 mg (stakur skammtur) með smá vatni – hún getur kyngt. Andhistamín dregur úr útbrotum og kláða; dexamethason hjálpar til við að koma í veg fyrir að einkennin taki sig upp aftur.",
+   "badText": "Rangt: töflur virka of hægt og hjálpa ekki öndunarveginum í ofnæmislosti. Adrenalín fyrst!",
+   "fix": "Adrenalín 0,3 mg í vöðva fyrst; svo cetirizine og dexamethason um munn."
+  },
+  "actions": [
+   {
+    "id": "hanskar",
+    "group": "vettvangur",
+    "label": "Hanskar – og líta eftir býflugum",
+    "minutes": 0,
+    "flag": "gloves",
+    "text": "Hanskar á. Engar býflugur hér – búin eru í öruggri fjarlægð."
+   },
+   {
+    "id": "atvik",
+    "group": "vettvangur",
+    "label": "Spyrja Hildi hvað gerðist",
+    "minutes": 0,
+    "flag": "askedPartner",
+    "speaker": "felagi",
+    "say": "Hvað gerðist?",
+    "reply": "„Hún var stungin í hálsinn fyrir svona fimm mínútum. Svo fór hana að klæja allstaðar, varirnar bólgnuðu og nú segir hún að hálsinn sé að lokast!“"
+   },
+   {
+    "id": "tala",
+    "group": "frumskodun",
+    "label": "Tala við Söru",
+    "minutes": 0,
+    "flag": "talked",
+    "speaker": "sjuklingur",
+    "say": "Sara, ég heiti {nafn} og er í björgunarsveit. Hvernig líður þér?",
+    "reply": "{talk}"
+   },
+   {
+    "id": "vase",
+    "group": "frumskodun",
+    "label": "Meðvitund (VÁSE)",
+    "minutes": 0,
+    "flag": "vase",
+    "text": "VÁSE: {VASE}."
+   },
+   {
+    "id": "ondun",
+    "group": "frumskodun",
+    "label": "Öndunarvegur og öndun",
+    "minutes": 0,
+    "flag": "breathing",
+    "text": "Öndun: {O}. Hún kvartar undan þrengslum í hálsinum – öndunarvegurinn er í hættu."
+   },
+   {
+    "id": "puls",
+    "group": "frumskodun",
+    "label": "Púls og húð",
+    "minutes": 0,
+    "flag": "pulse",
+    "text": "Púls: {P}. {BTH}. Húð: {H}."
+   },
+   {
+    "id": "g_stad",
+    "group": "frumskodun",
+    "label": "Staðbundin ofnæmisviðbrögð",
+    "minutes": 0,
+    "flag": "g_stad",
+    "choice": "mat",
+    "sub": "kæla og bíða",
+    "score": -10,
+    "text": "Rangt mat: útbrotin eru um allan líkamann og hún er með andnauð og þrengsli í hálsi – það er ofnæmislost, ekki staðbundin viðbrögð.",
+    "fix": "Útbreidd útbrot + þrengsli í hálsi/andnauð = ofnæmislost."
+   },
+   {
+    "id": "g_vaegt",
+    "group": "frumskodun",
+    "label": "Vægt útbreitt ofnæmi",
+    "minutes": 0,
+    "flag": "g_vaegt",
+    "choice": "mat",
+    "sub": "andhistamín og fylgjast með",
+    "score": -15,
+    "text": "Rangt mat: vægt útbreitt ofnæmi er útbrot og kláði án öndunarerfiðleika og losts. Þrengsli í hálsi, andnauð og hraður, veikur púls = ofnæmislost.",
+    "fix": "Merki ofnæmislosts: þrengsli í hálsi, öndunarerfiðleikar, lost, breyting á hugarstarfi."
+   },
+   {
+    "id": "g_lost",
+    "group": "frumskodun",
+    "label": "Ofnæmislost",
+    "minutes": 0,
+    "flag": "g_lost",
+    "choice": "mat",
+    "sub": "adrenalín strax",
+    "text": "Rétt mat: útbrot og bólgur, þrengsli í hálsi, hvæsandi öndun og hraður, veikur púls – ofnæmislost. Lífshættulegt: adrenalín strax."
+   },
+   {
+    "id": "o",
+    "group": "saga",
+    "label": "O – Ofnæmi",
+    "minutes": 0,
+    "flag": "olsena_o",
+    "speaker": "sjuklingur",
+    "say": "Ertu með ofnæmi fyrir einhverju?",
+    "reply": "„Ég… bólgnaði mikið einu sinni eftir stungu…“"
+   },
+   {
+    "id": "l",
+    "group": "saga",
+    "label": "L – Lyf",
+    "minutes": 0,
+    "flag": "olsena_l",
+    "speaker": "sjuklingur",
+    "say": "Tekurðu einhver lyf?",
+    "reply": "„Bara… getnaðarvarnarpilluna.“"
+   },
+   {
+    "id": "s",
+    "group": "saga",
+    "label": "S – Sjúkrasaga",
+    "minutes": 0,
+    "flag": "olsena_s",
+    "speaker": "sjuklingur",
+    "say": "Ertu með einhverja sjúkdóma?",
+    "reply": "„Astma… sem barn.“"
+   },
+   {
+    "id": "e",
+    "group": "saga",
+    "label": "E – Einkenni",
+    "minutes": 0,
+    "flag": "olsena_e",
+    "speaker": "sjuklingur",
+    "say": "Hvað finnurðu?",
+    "reply": "„Klæjar… allstaðar… hálsinn þrengist… svimar…“"
+   },
+   {
+    "id": "n",
+    "group": "saga",
+    "label": "N – Neysla",
+    "minutes": 0,
+    "flag": "olsena_n",
+    "speaker": "sjuklingur",
+    "say": "Hvenær borðaðirðu og drakkst síðast?",
+    "reply": "„Hádegismat… fyrir tveimur tímum.“"
+   },
+   {
+    "id": "a",
+    "group": "saga",
+    "label": "A – Atvik",
+    "minutes": 0,
+    "flag": "olsena_a",
+    "speaker": "sjuklingur",
+    "say": "Hvað gerðist?",
+    "reply": "„Býfluga… stakk mig í hálsinn… fyrir svona tíu mínútum.“"
+   },
+   {
+    "id": "lifsmork",
+    "group": "saga",
+    "label": "Lífsmörk (P, Ö, BÞ, L, H)",
+    "minutes": 2,
+    "flag": "vitals",
+    "text": "P: {P} · Ö: {O} · BÞ: {BTH} · L: {L} · H: {H} · VÁSE: {VASE}."
+   },
+   {
+    "id": "skodun",
+    "group": "saga",
+    "label": "Líkamsskoðun frá toppi til táar",
+    "minutes": 1,
+    "flag": "exam",
+    "text": "Stungustaður á hálsinum, rauður og bólginn. Ofsakláði um háls, bringu og handleggi; varir bólgnar. Engir aðrir áverkar."
+   },
+   {
+    "id": "adr1",
+    "group": "medferd",
+    "label": "Adrenalín 0,3 mg í vöðva – utanvert læri (epi-penni)",
+    "minutes": 1,
+    "flag": "t_adr1",
+    "addresses": [
+     "adr1"
+    ],
+    "text": "Þú tekur hettuna af pennanum, þrýstir honum þétt að utanverðu lærinu (má fara í gegnum buxurnar) og heldur í nokkrar sekúndur. Tími skráður. Utanvert læri er besti staðurinn; öxl kemur til greina.",
+    "sagaText": "Adrenalín 0,3 mg í vöðva (utanvert læri), tími skráður"
+   },
+   {
+    "id": "stada",
+    "group": "medferd",
+    "label": "Láta hana sitja upprétta (leggja út af ef hana sundlar)",
+    "minutes": 0,
+    "flag": "t_stada",
+    "addresses": [
+     "stada"
+    ],
+    "text": "Sara situr upprétt – það léttir henni andardráttinn. Ef hana fer að sundla eða hún verður sljó á að leggja hana út af.",
+    "sagaText": "Situr upprétt til að auðvelda öndun"
+   },
+   {
+    "id": "broddur",
+    "group": "medferd",
+    "label": "Fjarlægja broddinn úr stungunni",
+    "minutes": 0,
+    "flag": "t_broddur",
+    "text": "Þú fjarlægir broddinn. Rétt að fjarlægja ofnæmisvakann – en það kemur ekki í stað adrenalíns.",
+    "sagaText": "Broddur fjarlægður"
+   },
+   {
+    "id": "lyf",
+    "group": "medferd",
+    "label": "Cetirizine 10 mg og dexamethason 10 mg um munn",
+    "minutes": 1,
+    "flag": "t_lyf",
+    "rule": "lyfRule",
+    "addresses": [
+     "lyf"
+    ],
+    "sagaText": "Cetirizine 10 mg og dexamethason 10 mg um munn"
+   },
+   {
+    "id": "adr2",
+    "group": "medferd",
+    "label": "Seinni adrenalínskammtur 0,3 mg í vöðva",
+    "minutes": 1,
+    "flag": "t_adr2",
+    "rule": "adr2Rule",
+    "addresses": [
+     "adr2"
+    ],
+    "sagaText": "Seinni adrenalínskammtur gefinn"
+   },
+   {
+    "id": "teppi",
+    "group": "medferd",
+    "label": "Teppi utan um hana",
+    "minutes": 0,
+    "flag": "t_teppi",
+    "text": "Teppi utan um Söru – lost: halda henni hlýrri.",
+    "sagaText": "Teppi – haldið hlýrri"
+   },
+   {
+    "id": "kaelipoki",
+    "group": "medferd",
+    "label": "Setja kælipoka á stunguna og sjá hvort þetta lagist",
+    "minutes": 2,
+    "flag": "t_kaeli",
+    "score": -15,
+    "text": "Rangt: kæling hjálpar við staðbundin viðbrögð – en þetta er ofnæmislost. Tvær mínútur fóru til spillis meðan öndunarvegurinn þrengdist.",
+    "fix": "Ofnæmislost: adrenalín strax – ekki bíða og sjá."
+   },
+   {
+    "id": "ganga",
+    "group": "medferd",
+    "label": "Ganga með hana niður að bílnum (1,5 km)",
+    "minutes": 1,
+    "flag": "t_ganga",
+    "score": -15,
+    "text": "Rangt: áreynsla eykur lostið og hún nær ekki andanum á göngunni. Hún sest niður eftir 100 metra. Meðhöndla á staðnum og kalla eftir flutningi.",
+    "fix": "Meðhöndla á staðnum; sjúklingur í losti gengur ekki."
+   }
+  ]
+ },
+ "report": {
+  "options": [
+   {
+    "id": "flutningur",
+    "label": "Flytja hana með sjúkrabíl á sjúkrahús – auka adrenalínpenni tilbúinn í flutningnum",
+    "goodWhen": [
+     "call:sjukrabill",
+     "flag:t_adr2_ok",
+     "flag:t_lyf_ok"
+    ],
+    "okWhen": [
+     "call:sjukrabill",
+     "flag:t_adr1"
+    ],
+    "goodText": "Rétt: hún þurfti meira en einn skammt af adrenalíni – mikil áhætta, og einkennin geta komið aftur. Hún fer á sjúkrahús með auka adrenalín tiltækt í flutningnum.",
+    "okText": "Rétt ákvörðun – en meðferðinni var ekki lokið eða hún var ekki fullkomin (sjá hér að neðan).",
+    "badText": "Kalla þarf eftir sjúkrabíl og gefa adrenalín – ofnæmislost er lífshættulegt."
+   },
+   {
+    "id": "afram",
+    "label": "Hún er orðin góð – halda göngunni áfram",
+    "badText": "Rangt: ofnæmislost getur lagast og versnað svo aftur. Sá sem þarf fleiri en einn skammt af adrenalíni, svarar ekki meðferð að fullu eða versnar er í mikilli áhættu og þarf flutning."
+   },
+   {
+    "id": "keyra",
+    "label": "Hildur keyrir hana sjálf heim – hún hringir ef hún versnar",
+    "badText": "Rangt: einkennin geta komið aftur á leiðinni og þá er enginn með adrenalín og þjálfun. Flytja á sjúkrahús með sjúkrabíl og auka adrenalín."
+   }
+  ]
+ },
+ "debrief": [
+  {
+   "id": "safe",
+   "label": "Örugg nálgun – fjarri búunum",
+   "ok": [
+    "flag:safeApproach"
+   ],
+   "points": 10,
+   "okText": "Þú fórst fjarri búunum og færðir hana frá ofnæmisvakanum.",
+   "badText": "Þú fórst inn á milli æstra býflugna eða tafðir þig.",
+   "rule": "Eigið öryggi fyrst – og fjarlægja/þynna ofnæmisvakann.",
+   "fix": "Fara í sveig fjarri búunum og færa sjúklinginn frá þeim."
+  },
+  {
+   "id": "hotspots",
+   "label": "Vettvangur kannaður",
+   "ok": [
+    "hotspots>=4"
+   ],
+   "points": 5,
+   "okText": "Þú sást hættuna, sjúklinginn og búnaðinn.",
+   "badText": "Þú kannaðir vettvanginn lítið.",
+   "rule": "Vettvangur kannaður: hætta, fjöldi, hvað gerðist."
+  },
+  {
+   "id": "call",
+   "label": "Rétt aðstoð kölluð",
+   "ok": [
+    "resourcesOk"
+   ],
+   "points": 10,
+   "okText": "Sjúkrabíll kallaður snemma að veginum.",
+   "badText": "Of seint eða rangt kallað eftir aðstoð – sjá sundurliðun.",
+   "rule": "Ofnæmislost: kalla snemma eftir flutningi – biðjum um aðstoð frekar en ekki.",
+   "fix": "Hringja í 112 strax (sjúkrabíll að veginum)."
+  },
+  {
+   "id": "primary",
+   "label": "Frumskoðun (VÁSE, öndun, púls)",
+   "ok": [
+    "flag:vase",
+    "flag:breathing",
+    "flag:pulse"
+   ],
+   "points": 10,
+   "okText": "Meðvitund, öndun og blóðrás metin.",
+   "badText": "Frumskoðun ófullkomin.",
+   "rule": "Frumskoðun: bregðast strax við vandamálum sem finnast."
+  },
+  {
+   "id": "greining",
+   "label": "Rétt metið: ofnæmislost",
+   "ok": [
+    "flag:g_lost",
+    "not:flag:g_stad",
+    "not:flag:g_vaegt"
+   ],
+   "points": 10,
+   "okText": "Þú greindir ofnæmislost.",
+   "badText": "Rangt mat á alvarleikastigi.",
+   "rule": "Staðbundið – vægt útbreitt – ofnæmislost: þrengsli í hálsi, andnauð, lost eða breytt hugarstarf = ofnæmislost.",
+   "fix": "Meta merki ofnæmislosts: háls, öndun, lost, hugarstarf."
+  },
+  {
+   "id": "adr1",
+   "label": "Adrenalín strax",
+   "ok": [
+    "addressedBy:adr1:6",
+    "not:flag:t_kaeli"
+   ],
+   "points": 15,
+   "okText": "Adrenalín 0,3 mg í utanvert læri innan fárra mínútna.",
+   "badText": "Adrenalín gefið seint eða ekki.",
+   "rule": "Adrenalín 0,3 mg í vöðva (1 epi-penni) strax – utanvert læri best.",
+   "fix": "Gefa adrenalín um leið og ofnæmislost er greint."
+  },
+  {
+   "id": "adr2",
+   "label": "Seinni skammtur þegar einkennin komu aftur",
+   "ok": [
+    "flag:t_adr2_ok"
+   ],
+   "points": 10,
+   "okText": "Þú endurtókst adrenalínið þegar einkennin tóku sig upp.",
+   "badText": "Seinni skammtur ekki gefinn þegar einkennin komu aftur.",
+   "rule": "Endurtaka adrenalín eftir 5 mín ef þörf krefur.",
+   "fix": "Fylgjast með eftir fyrsta skammt og endurtaka ef hún versnar."
+  },
+  {
+   "id": "lyf",
+   "label": "Cetirizine og dexamethason á eftir adrenalíni",
+   "ok": [
+    "flag:t_lyf_ok"
+   ],
+   "points": 10,
+   "okText": "Töflur gefnar á eftir adrenalíninu.",
+   "badText": "Cetirizine/dexamethason vantaði eða gefið á undan adrenalíni.",
+   "rule": "Cetirizine 10 mg og dexamethason 10 mg um munn (stakur skammtur) – eftir adrenalín."
+  },
+  {
+   "id": "history",
+   "label": "OLSENA",
+   "ok": [
+    "olsena>=4"
+   ],
+   "points": 5,
+   "okText": "Saga tekin.",
+   "badText": "Saga ófullkomin.",
+   "rule": "OLSENA: m.a. fyrri viðbrögð við stungum."
+  },
+  {
+   "id": "reassess",
+   "label": "Endurmat",
+   "ok": [
+    "reassess>=2"
+   ],
+   "points": 5,
+   "okText": "Ástand endurmetið reglulega.",
+   "badText": "Ekki endurmetið nógu oft.",
+   "rule": "Ofnæmislost getur versnað aftur – endurmeta oft."
+  }
+ ],
+ "location": {
+  "type": "slodi",
+  "label": "Malarslóði við býflugnabú, 1,5 km frá vegi",
+  "callText": "Kona, 34 ára, ofnæmislost eftir býflugnastungu í háls – adrenalín gefið. Staðsetning: malarslóði við býflugnabúin, 1,5 km frá veginum. Vinkona tekur á móti ykkur við veginn."
+ },
+ "resources": [
+  {
+   "id": "sjukrabill",
+   "label": "112 – sjúkrabíll",
+   "icon": "🚑",
+   "eta": 20,
+   "role": "Sjúkrabíll að veginum og sjúkraflutningamenn með lyf og búnað.",
+   "arriveText": "Sjúkrabíllinn er kominn – sjúkraflutningamenn koma upp slóðann með börur.",
+   "needWhen": [
+    "always"
+   ],
+   "callBy": 5,
+   "strictCallBy": true,
+   "needPoints": 10,
+   "unneededWhen": [],
+   "needText": "Ofnæmislost er lífshættulegt – kalla strax eftir sjúkrabíl.",
+   "neutralText": ""
+  },
+  {
+   "id": "thyrla",
+   "label": "Þyrla (LHG)",
+   "icon": "🚁",
+   "eta": 40,
+   "role": "Alvarlega veikir á afskekktum stöðum.",
+   "arriveText": "Þyrlan lendir á túninu.",
+   "needWhen": [],
+   "unneededWhen": [
+    "mild"
+   ],
+   "unneededPoints": -5,
+   "unneededText": "Þyrla var óþörf: sjúkrabíll kemst að veginum og hún svaraði meðferð.",
+   "neutralText": "Ekki kölluð – rétt, sjúkrabíll kemst nærri."
+  },
+  {
+   "id": "bjorgunarsveit",
+   "label": "Björgunarsveit",
+   "icon": "🧑‍🚒",
+   "eta": 30,
+   "role": "Burður og fleiri hendur.",
+   "arriveText": "Björgunarsveitin kemur.",
+   "needWhen": [],
+   "unneededWhen": [],
+   "neutralText": "Ekki nauðsynlegt – sjúkraflutningamenn bera hana 1,5 km með börum eða hún fer í hjólastól á slóðanum."
+  },
+  {
+   "id": "logregla",
+   "label": "Lögregla",
+   "icon": "🚓",
+   "eta": 25,
+   "role": "Öryggi á vettvangi.",
+   "arriveText": "Lögregla kemur.",
+   "needWhen": [],
+   "unneededWhen": [],
+   "neutralText": "Ekki þörf."
+  }
+ ],
+ "pan": {
+  "wideStart": 50,
+  "closeStart": 48
+ },
+ "reassess": {
+  "feelSay": "Hvernig líður þér núna, Sara?",
+  "feelLabel": "Spyrja hvernig henni líður",
+  "feelSevereBy": "felagi",
+  "feel": {
+   "severe": "„Hún svarar varla lengur… hún er orðin svo föl!“",
+   "better": "„Aðeins betra… ég næ andanum.“",
+   "same": "„Hálsinn… er enn þröngur…“",
+   "worse": "„Verra… ég næ… ekki andanum…“"
+  },
+  "complaints": {
+   "adr2": "„Hálsinn lokast aftur…“",
+   "lyf": "„Það klæjar svo…“"
+  },
+  "sources": {
+   "adr1": [
+    "Adrenalín gefið (1. skammtur).",
+    "Ekkert adrenalín gefið!"
+   ],
+   "stada": [
+    "Situr upprétt.",
+    "Liggur í keng – erfitt að anda."
+   ],
+   "lyf": [
+    "Cetirizine og dexamethason gefin.",
+    "Engin andhistamín/stera-tafla gefin."
+   ],
+   "adr2": [
+    "Seinni skammtur gefinn.",
+    "Einkennin komin aftur – seinni skammtur ekki gefinn!"
+   ]
+  },
+  "rule": "Eftir adrenalín: fylgjast vel með – einkennin geta komið aftur.",
+  "allText": "Meðferð við ofnæmislosti lokið – fylgjast áfram með.",
+  "notAllText": "Meðferð ekki fullkláruð.",
+  "statusSevere": "Ástand: sljó, föl og í andnauð – versnandi lost.",
+  "statusPrefix": "Ástand: ",
+  "lines": [
+   [
+    {
+     "when": [
+      "flag:t_adr2_ok"
+     ],
+     "text": "✓ Fleiri en einn skammtur gefinn = mikil áhætta – flutningur á sjúkrahús."
+    }
+   ]
+  ]
+ },
+ "hud": {
+  "icon": "🐝",
+  "title": "Ofnæmislost"
+ },
+ "saga": {
+  "S": [
+   {
+    "when": [
+     "or:flag:askedPartner|flag:olsena_a"
+    ],
+    "text": "34 ára kona stungin af býflugu í hálsinn fyrir ~10 mín."
+   },
+   {
+    "when": [
+     "flag:olsena_o"
+    ],
+    "text": "Ofnæmi: bólgnaði mikið áður eftir stungu."
+   },
+   {
+    "when": [
+     "flag:olsena_l"
+    ],
+    "text": "Lyf: getnaðarvarnarpilla."
+   },
+   {
+    "when": [
+     "flag:olsena_s"
+    ],
+    "text": "Sjúkrasaga: astmi sem barn."
+   },
+   {
+    "when": [
+     "flag:olsena_e"
+    ],
+    "text": "Einkenni: kláði, þrengsli í hálsi, svimi."
+   },
+   {
+    "when": [
+     "flag:olsena_n"
+    ],
+    "text": "Neysla: hádegismatur fyrir 2 klst."
+   }
+  ],
+  "A": [
+   {
+    "when": [
+     "flag:breathing"
+    ],
+    "text": "Hvæsandi öndun, þrengsli í hálsi."
+   },
+   {
+    "when": [
+     "flag:pulse"
+    ],
+    "text": "P: {P}."
+   },
+   {
+    "when": [
+     "flag:exam"
+    ],
+    "text": "Ofsakláði, bólgnar varir, stunga á hálsi."
+   },
+   {
+    "when": [
+     "flag:recur"
+    ],
+    "text": "Einkenni komu aftur ~5 mín eftir 1. skammt."
+   },
+   {
+    "when": [
+     "flag:vitals"
+    ],
+    "text": "Ö: {O}. H: {H}."
+   }
+  ],
+  "Gsevere": "Ofnæmislost eftir býflugnastungu. G': öndunarvegur lokast, lost.",
+  "Gmild": "Ofnæmislost – svarar meðferð. G': einkennin taka sig upp aftur."
+ },
+ "short": "Býflugnastunga – ofnæmislost og adrenalín.",
+ "thumb": "img/smamynd-ofnaemi-byfluga.jpg?v=0.7",
+ "ambience": "gola",
+ "moods": {
+  "who": {
+   "bad": "felagi"
+  },
+  "good": [
+   "Það er auðveldara að anda núna.",
+   "Ég er hrædd… en þetta er að lagast."
+  ],
+  "mid": [
+   "Það er … erfitt … að anda…",
+   "Hálsinn er að lokast… hjálp…"
+  ],
+  "bad": [
+   "Hún er orðin svo föl – hún nær varla andanum!",
+   "Sara! Sara, horfðu á mig!"
+  ],
+  "treated": [
+   "Ég get andað. Takk… takk.",
+   "Kláðinn er að hverfa."
+  ]
+ }
+}
